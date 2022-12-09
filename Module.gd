@@ -1,5 +1,6 @@
 extends Node
 
+class_name Module
 #-----------Parameters----------------'
 var currentStashValue  = 0 : set = _set_currentStashValue, get = _get_currentStashValue
 

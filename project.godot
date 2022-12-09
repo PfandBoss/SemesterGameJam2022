@@ -8,6 +8,22 @@
 
 config_version=5
 
+_global_script_classes=[{
+"base": "Module",
+"class": &"Cannon",
+"language": &"GDScript",
+"path": "res://Cannon.gd"
+}, {
+"base": "Node",
+"class": &"Module",
+"language": &"GDScript",
+"path": "res://Module.gd"
+}]
+_global_script_class_icons={
+"Cannon": "",
+"Module": ""
+}
+
 [application]
 
 config/name="Semester Game Jam 2022"
