@@ -107,7 +107,7 @@ shape = SubResource("BoxShape3D_psmwd")
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 2.84217e-14, 3, -8)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D"]
-transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, -2, 0)
+transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, -1, 0)
 frames = SubResource("SpriteFrames_ltjyh")
 animation = &"walking_coal"
 speed_scale = 2.0

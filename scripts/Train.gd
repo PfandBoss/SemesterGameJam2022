@@ -30,6 +30,7 @@ func _on_signal_shooting():
 
 func is_dead():
 	if current_speed <= 0:
+		current_speed = 0
 		game_over.emit()
 		return true
 	return false

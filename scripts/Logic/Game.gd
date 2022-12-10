@@ -96,12 +96,11 @@ func mapSimulation(delta):
 		var distance_delta = p2_train.current_distance - p2_node.LENGTH
 		p2_node = p2_node._on_train_exit(p2_train)
 		p2_train.current_distance = distance_delta
-	$Control/VSlider.value = p1_train.distance_from_start
-	$Control/VSlider2.value = p2_train.distance_from_start
+	$Control/VSlider.value = p2_train.distance_from_startgit 
+	$Control/VSlider2.value = p1_train.distance_from_start
 	
 func fightSimulation():
 	#FIGHT SIMULATION
-	print(p1_train.current_distance - p2_train.current_distance)
 	if(p1_node == p2_node && abs(p1_train.current_distance - p2_train.current_distance) < 0.5):
 		if(fight_state == CHILL):
 			fight_state = FIGHTING
@@ -111,7 +110,7 @@ func fightSimulation():
 			var speed_differene = p1_train.current_speed - p2_train.current_speed
 			tween.set_parallel()
 			tween.tween_property($Camera3D, "position", initial_camera_pos + Vector3(0,80,20), 1.4)
-			if(speed_differene < 0):
+			if(speed_differene > 0):
 				var new_pos_p1 = p1_train.position + Vector3(-30 ,0,+30)
 				tween.tween_property(p1_train, "position",new_pos_p1, 0.5)
 				var new_pos_p2 = p2_train.position + Vector3(30,0,-30)
@@ -145,7 +144,7 @@ func approach():
 	tween.set_ease(Tween.EASE_OUT)
 	tween.set_parallel()
 	var speed_differene = p1_train.current_speed - p2_train.current_speed
-	if(speed_differene < 0):
+	if(speed_differene > 0):
 		tween.tween_property(p1_train, "position", Vector3(p1_train.position.x, p1_train.position.y, p2_train.position.z), 0.7)
 	else:
 		tween.tween_property(p2_train, "position", Vector3(p2_train.position.x, p2_train.position.y, p1_train.position.z), 0.7)
@@ -158,7 +157,7 @@ func fight():
 	tween.set_ease(Tween.EASE_IN_OUT)
 	tween.set_parallel()
 	var speed_differene = p1_train.current_speed - p2_train.current_speed
-	if(speed_differene < 0):
+	if(speed_differene > 0):
 		tween.tween_property(p1_train, "position", Vector3(p1_train.position.x, p1_train.position.y, p2_train.position.z - 90), 0.7)
 	else:
 		tween.tween_property(p2_train, "position", Vector3(p2_train.position.x, p2_train.position.y, p1_train.position.z - 90), 0.7)
