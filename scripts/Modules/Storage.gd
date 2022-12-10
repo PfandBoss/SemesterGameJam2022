@@ -2,7 +2,7 @@ extends Module
 
 class_name Storage
 
-enum TYPE {AMMO, GUNPOWDER, COAL}
+enum TYPE {AMMO, GUNPOWDER, COAL, LARGE, GIANT}
 
 
 @export var currentType: TYPE
