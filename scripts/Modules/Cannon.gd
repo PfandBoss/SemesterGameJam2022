@@ -24,7 +24,7 @@ func interact(player):
 				currentStashValue += 1
 				player.clearInventory()
 			return
-		return
+		
 		if player.getResource() == 1:
 			if currentPowderStashValue < maxPowderStashValue:
 				currentPowderStashValue += 1
