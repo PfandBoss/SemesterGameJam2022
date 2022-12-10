@@ -7,7 +7,7 @@ enum STATE {INACTIVE, RELOADING, SHOOTING}
 #------------Methods-------------#
 func _ready():
 	var root = get_tree().root.get_child(0)
-	root.shooting.connect(_on_signal_shooting)
+	root.shoot.connect(_on_signal_shooting)
 	maxStashValue = 1
 	currentStashValue = 0
 	currentState = STATE.INACTIVE
@@ -17,15 +17,16 @@ func interact():
 		#TODO: RELOADING
 		if currentStashValue < maxStashValue:
 			currentState = STATE.RELOADING
-			++currentStashValue
+			currentStashValue += 1
 		return
 		
 	return
 
 func _on_signal_shooting():
+	print("hit")
 	if currentStashValue >= 1 and currentState == STATE.INACTIVE:
 		currentState = STATE.SHOOTING
-		--currentStashValue
+		currentStashValue -= 1
 		#TODO: SHOOTING
 		currentState = STATE.INACTIVE
 	return

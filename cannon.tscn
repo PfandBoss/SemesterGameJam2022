@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2g0of2prwwj4"]
-
-[ext_resource type="Script" path="res://Cannon.gd" id="1_mopo1"]
-
-[node name="Cannon" type="Node"]
-script = ExtResource("1_mopo1")

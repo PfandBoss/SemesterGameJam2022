@@ -17,7 +17,6 @@ func interact():
 			currentStashValue += 10 
 			if currentStashValue > maxStashValue:
 				currentStashValue = maxStashValue
-				
 		return
 	#TODO: Repair Train
 	currentState = STATE.RUNNING
