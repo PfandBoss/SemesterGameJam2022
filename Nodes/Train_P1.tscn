@@ -170,6 +170,27 @@ hframes = 5
 vframes = 8
 frame = 26
 
+[node name="MiniGameButton3" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, -50, 0)
+texture = ExtResource("13_d8wle")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton4" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, -50, 0)
+texture = ExtResource("13_d8wle")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton5" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, -50, 0)
+texture = ExtResource("13_d8wle")
+hframes = 5
+vframes = 8
+frame = 26
+
 [node name="Storage" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, -5.2771)
 

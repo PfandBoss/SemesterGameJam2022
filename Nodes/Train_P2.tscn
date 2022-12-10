@@ -154,22 +154,43 @@ animation = &"walking_giant"
 speed_scale = 2.0
 playing = true
 
-[node name="MiniGameButton0" type="Sprite3D" parent="CharacterBody3D"]
+[node name="MiniGameButton3" type="Sprite3D" parent="CharacterBody3D"]
 transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, 6, 0)
 texture = ExtResource("14_otf4l")
 hframes = 5
 vframes = 8
 frame = 26
 
-[node name="MiniGameButton1" type="Sprite3D" parent="CharacterBody3D"]
+[node name="MiniGameButton4" type="Sprite3D" parent="CharacterBody3D"]
 transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 1.5, 6, 0)
 texture = ExtResource("14_otf4l")
 hframes = 5
 vframes = 8
 frame = 26
 
-[node name="MiniGameButton2" type="Sprite3D" parent="CharacterBody3D"]
+[node name="MiniGameButton5" type="Sprite3D" parent="CharacterBody3D"]
 transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, 6, 0)
+texture = ExtResource("14_otf4l")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton0" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, -50, 0)
+texture = ExtResource("14_otf4l")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton1" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, -50, 0)
+texture = ExtResource("14_otf4l")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton2" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, -50, 0)
 texture = ExtResource("14_otf4l")
 hframes = 5
 vframes = 8
