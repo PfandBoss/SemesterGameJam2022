@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://33i0mf37sy3o"]
+[gd_scene load_steps=5 format=3 uid="uid://csh4o2b15qltk"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_4xmv0"]
+[ext_resource type="Script" path="res://scripts/Player.gd" id="1_dta8q"]
 [ext_resource type="Texture2D" uid="uid://cy6x8d3xe8lux" path="res://icon.svg" id="2_yjfj7"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_p76ml"]
@@ -11,7 +11,7 @@ height = 1.99403
 radius = 0.567567
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-script = ExtResource("1_4xmv0")
+script = ExtResource("1_dta8q")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 visible = false
