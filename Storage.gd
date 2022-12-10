@@ -1,11 +1,23 @@
-extends "res://Module.gd"
+extends Module
 
+class_name Storage
 
-# Called when the node enters the scene tree for the first time.
+enum TYPE {AMMO, GUNPOWDER, FUEL}
+
+@export var currentType: TYPE
+
+#------------Methods-------------#
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+	var root = get_tree().root.get_child(0)
+	root.shooting.connect(_on_signal_storing)
+	maxStashValue = 5
+	currentStashValue = 0
+func interact():
+	if currentStashValue >= 1:
+		--currentStashValue
+	return
+func _on_signal_storing():
+	if currentStashValue < maxStashValue:
+			++currentStashValue
+	return
+	

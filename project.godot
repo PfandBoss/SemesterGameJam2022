@@ -20,6 +20,11 @@ _global_script_classes=[{
 "path": "res://Module.gd"
 }, {
 "base": "Module",
+"class": &"Storage",
+"language": &"GDScript",
+"path": "res://Storage.gd"
+}, {
+"base": "Module",
 "class": &"TrainEngine",
 "language": &"GDScript",
 "path": "res://Engine.gd"
@@ -27,6 +32,7 @@ _global_script_classes=[{
 _global_script_class_icons={
 "Cannon": "",
 "Module": "",
+"Storage": "",
 "TrainEngine": ""
 }
 

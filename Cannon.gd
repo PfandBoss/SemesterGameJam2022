@@ -17,15 +17,15 @@ func interact():
 		#TODO: RELOADING
 		if currentStashValue < maxStashValue:
 			currentState = STATE.RELOADING
-			currentStashValue = maxStashValue
+			++currentStashValue
 		return
 		
 	return
 
 func _on_signal_shooting():
-	if currentStashValue == 1 and currentState == STATE.INACTIVE:
+	if currentStashValue >= 1 and currentState == STATE.INACTIVE:
 		currentState = STATE.SHOOTING
+		--currentStashValue
 		#TODO: SHOOTING
 		currentState = STATE.INACTIVE
-	
 	return
