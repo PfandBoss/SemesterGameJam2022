@@ -1,7 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://cet80w4yr8rse"]
+[gd_scene load_steps=4 format=3 uid="uid://cet80w4yr8rse"]
 
 [ext_resource type="Script" path="res://scripts/Modules/Storage.gd" id="1_guwoh"]
+[ext_resource type="Texture2D" uid="uid://cjc4wohtjb73j" path="res://Chest.png" id="2_a5kei"]
 
-[node name="Storage" type="Node"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_c1ipa"]
+height = 3.60519
+radius = 1.29067
+
+[node name="Storage" type="StaticBody3D"]
 script = ExtResource("1_guwoh")
 currentType = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_c1ipa")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 0)
+texture = ExtResource("2_a5kei")

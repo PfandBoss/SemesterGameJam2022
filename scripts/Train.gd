@@ -6,6 +6,7 @@ signal game_over
 
 var is_P1 = true
 var current_distance = 0
+var distance_from_start = 0
 var current_speed = 5
 var CANNONS = []
 var STORAGES = []
@@ -30,4 +31,5 @@ func _on_signal_shooting():
 func is_dead():
 	if current_speed <= 0:
 		game_over.emit()
-	
+		return true
+	return false

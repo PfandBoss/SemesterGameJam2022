@@ -10,6 +10,11 @@ config_version=5
 
 _global_script_classes=[{
 "base": "Module",
+"class": &"Bin",
+"language": &"GDScript",
+"path": "res://scripts/Modules/Bin.gd"
+}, {
+"base": "Module",
 "class": &"Cannon",
 "language": &"GDScript",
 "path": "res://scripts/Modules/Cannon.gd"
@@ -24,7 +29,7 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://scripts/Logic/MapNode.gd"
 }, {
-"base": "Node",
+"base": "StaticBody3D",
 "class": &"Module",
 "language": &"GDScript",
 "path": "res://scripts/Modules/Module.gd"
@@ -55,6 +60,7 @@ _global_script_classes=[{
 "path": "res://scripts/Logic/TurnMapNode.gd"
 }]
 _global_script_class_icons={
+"Bin": "",
 "Cannon": "",
 "Game": "",
 "MapNode": "",

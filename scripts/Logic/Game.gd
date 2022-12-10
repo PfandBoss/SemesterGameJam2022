@@ -44,7 +44,14 @@ func _on_hit_player(player1,dmg):
 func _process(delta):
 	p1_train.current_distance += p1_train.current_speed * delta
 	p2_train.current_distance += p2_train.current_speed * delta
+	p1_train.distance_from_start += p1_train.current_speed * delta
+	p2_train.distance_from_start += p1_train.current_speed * delta
 	
+	if(p1_node == StartNode && p1_train.distance_from_start > 5):
+		p1_train.distance_from_start = 0
+	if(p2_node == StartNode && p2_train.distance_from_start > 5):
+		p2_train.distance_from_start = 0
+		
 	if(p1_train.current_distance >= p1_node.LENGTH):
 		var distance_delta = p1_train.current_distance - p1_node.LENGTH
 		p1_node = p1_node._on_train_exit(p1_train)
