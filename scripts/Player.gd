@@ -95,3 +95,5 @@ func getResource():
 	
 func clearInventory():
 	inventory = 0
+	walking = "walking"
+	idle = "idle"
