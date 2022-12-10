@@ -1,29 +1,21 @@
-<<<<<<< HEAD
-[gd_scene load_steps=8 format=3 uid="uid://db0pxwq1hvs45"]
-=======
-[gd_scene load_steps=10 format=3 uid="uid://db0pxwq1hvs45"]
->>>>>>> cd6cd181d2f12c2b4200ebdaf38efa2858e2802d
+[gd_scene load_steps=10 format=3 uid="uid://cqkd0g15r5btu"]
 
-[ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_iox18"]
-[ext_resource type="PackedScene" uid="uid://bqe8ucbruto1j" path="res://Nodes/StartNode.tscn" id="2_61aog"]
-[ext_resource type="PackedScene" path="res://Nodes/light_setup.tscn" id="2_v8535"]
-[ext_resource type="PackedScene" uid="uid://md2ofbviios3" path="res://Nodes/Train_P1.tscn" id="3_0be5n"]
-[ext_resource type="PackedScene" uid="uid://cys06pnxfjl2m" path="res://Nodes/UI.tscn" id="4_kxuy0"]
-[ext_resource type="PackedScene" uid="uid://bikdn7ep2vpxw" path="res://Nodes/Train_P2.tscn" id="4_lmu0s"]
-<<<<<<< HEAD
-[ext_resource type="PackedScene" uid="uid://bw3yluhr72n2t" path="res://Nodes/InfiniteScroller.tscn" id="7_yyvws"]
-=======
-[ext_resource type="AudioStream" uid="uid://c5jhukuk8r3mf" path="res://Assets/Sounds/_MUSIC_/GameJamGameLoop.wav" id="7_0yxka"]
-[ext_resource type="AudioStream" uid="uid://n4ynf7hg2pcl" path="res://Assets/Sounds/_SOUNDFX_/GleiseLoop.wav" id="8_4y7wx"]
-[ext_resource type="AudioStream" uid="uid://dovvnflvxtqpi" path="res://Assets/Sounds/_SOUNDFX_/WindLoop.wav" id="9_ip7lg"]
->>>>>>> cd6cd181d2f12c2b4200ebdaf38efa2858e2802d
+[ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_gf730"]
+[ext_resource type="PackedScene" path="res://Nodes/light_setup.tscn" id="2_8im8o"]
+[ext_resource type="PackedScene" uid="uid://bqe8ucbruto1j" path="res://Nodes/StartNode.tscn" id="3_s558u"]
+[ext_resource type="PackedScene" uid="uid://md2ofbviios3" path="res://Nodes/Train_P1.tscn" id="4_05mbx"]
+[ext_resource type="PackedScene" uid="uid://bikdn7ep2vpxw" path="res://Nodes/Train_P2.tscn" id="5_gee2r"]
+[ext_resource type="PackedScene" uid="uid://cys06pnxfjl2m" path="res://Nodes/UI.tscn" id="6_l0q7q"]
+[ext_resource type="AudioStream" uid="uid://c5jhukuk8r3mf" path="res://Assets/Sounds/_MUSIC_/GameJamGameLoop.wav" id="7_0xbd4"]
+[ext_resource type="AudioStream" uid="uid://n4ynf7hg2pcl" path="res://Assets/Sounds/_SOUNDFX_/GleiseLoop.wav" id="8_1d2gk"]
+[ext_resource type="AudioStream" uid="uid://dovvnflvxtqpi" path="res://Assets/Sounds/_SOUNDFX_/WindLoop.wav" id="9_8qwj6"]
 
 [node name="Game" type="Node"]
-script = ExtResource("1_iox18")
+script = ExtResource("1_gf730")
 
-[node name="LightSetup" parent="." instance=ExtResource("2_v8535")]
+[node name="LightSetup" parent="." instance=ExtResource("2_8im8o")]
 
-[node name="StartNode" parent="." instance=ExtResource("2_61aog")]
+[node name="StartNode" parent="." instance=ExtResource("3_s558u")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 43, 26.0132)
@@ -32,33 +24,29 @@ fov = 30.0
 size = 32.0
 near = 0.041
 
-[node name="Train1" parent="." instance=ExtResource("3_0be5n")]
+[node name="Train1" parent="." instance=ExtResource("4_05mbx")]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -10, 0, 0)
 
-[node name="Train2" parent="." instance=ExtResource("4_lmu0s")]
+[node name="Train2" parent="." instance=ExtResource("5_gee2r")]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 9.90113, -0.0549407, -0.085681)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.875944, -0.294781, 0.381872, -0.106805, 0.65344, 0.749406, -0.470441, -0.697224, 0.540892, 0, 8.25958, 0)
 visible = false
 
-[node name="Control" parent="." instance=ExtResource("4_kxuy0")]
+[node name="Control" parent="." instance=ExtResource("6_l0q7q")]
 
-<<<<<<< HEAD
-[node name="InfiniteScroller" parent="." instance=ExtResource("7_yyvws")]
-=======
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_0yxka")
+stream = ExtResource("7_0xbd4")
 volume_db = -27.238
 autoplay = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("8_4y7wx")
+stream = ExtResource("8_1d2gk")
 volume_db = -10.0
 autoplay = true
 
 [node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_ip7lg")
+stream = ExtResource("9_8qwj6")
 volume_db = -2.476
 autoplay = true
->>>>>>> cd6cd181d2f12c2b4200ebdaf38efa2858e2802d
