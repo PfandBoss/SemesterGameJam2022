@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_hyw8p")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -21,6 +22,7 @@ grow_vertical = 2
 color = Color(0.513726, 0.403922, 0.27451, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -66,8 +68,13 @@ offset_right = 72.0
 offset_bottom = 156.0
 text = "Quit"
 
+[node name="FullScreen" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Fullscreen"
+
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="value_changed" from="VBoxContainer/VolSlider" to="VBoxContainer/VolSlider" method="_on_value_changed"]
 [connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="VBoxContainer/FullScreen" to="." method="_on_full_screen_pressed"]

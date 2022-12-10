@@ -24,3 +24,12 @@ func _on_tutorial_pressed():
 func _on_quit_pressed():
 	get_tree().quit()
 
+
+
+func _on_full_screen_pressed():
+		if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN:
+			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_EXCLUSIVE_FULLSCREEN)
+		else:
+			if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
+				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+		
