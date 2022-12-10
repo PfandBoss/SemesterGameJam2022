@@ -1,10 +1,11 @@
 extends StraightMapNode
+class_name TurnMapNode
 
 signal turnEvent
 
-var is_left_turn = false
 var turn = false
-var turn_node : MapNode
+@export var is_left_turn = false
+@export var turn_node : MapNode
 
 func _on_train_entered(train):
 	super._on_train_entered(train)
@@ -14,5 +15,7 @@ func _on_train_exit(train):
 	if(turn):
 		turn_node._on_train_entered(train)
 		current_trains.erase(train)
+		return turn_node
 	else:
 		super._on_train_exit(train)
+		return next

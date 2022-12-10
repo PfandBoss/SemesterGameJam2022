@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqe8ucbruto1j"]
+
+[ext_resource type="Script" path="res://scripts/Logic/StraightMapNode.gd" id="1_a5pbl"]
+[ext_resource type="PackedScene" uid="uid://bup2ps8l2ifj8" path="res://Nodes/StraightMapNode.tscn" id="2_wj4hp"]
+[ext_resource type="PackedScene" uid="uid://c3ynfb5ky5p8g" path="res://Nodes/TurnMapNode.tscn" id="3_xy8vi"]
+
+[node name="StartNode" type="Node" node_paths=PackedStringArray("next")]
+script = ExtResource("1_a5pbl")
+next = NodePath("StraightMapNode")
+
+[node name="StraightMapNode" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode2")
+
+[node name="StraightMapNode2" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../TurnMapNode")
+
+[node name="TurnMapNode" parent="." node_paths=PackedStringArray("turn_node", "next") instance=ExtResource("3_xy8vi")]
+turn_node = NodePath("StraightMapNode")
+next = NodePath("../StraightMapNode3")
+
+[node name="StraightMapNode" parent="TurnMapNode" node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode2")
+
+[node name="StraightMapNode2" parent="TurnMapNode" node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode3")
+
+[node name="StraightMapNode3" parent="TurnMapNode" node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode4")
+
+[node name="StraightMapNode4" parent="TurnMapNode" node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode5")
+
+[node name="StraightMapNode5" parent="TurnMapNode" node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode6")
+
+[node name="StraightMapNode6" parent="TurnMapNode" node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode7")
+
+[node name="StraightMapNode7" parent="TurnMapNode" node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../../StraightMapNode11")
+
+[node name="StraightMapNode3" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode4")
+
+[node name="StraightMapNode4" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode5")
+
+[node name="StraightMapNode5" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode6")
+
+[node name="StraightMapNode6" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode7")
+
+[node name="StraightMapNode7" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode8")
+
+[node name="StraightMapNode8" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode9")
+
+[node name="StraightMapNode9" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode10")
+
+[node name="StraightMapNode10" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode11")
+
+[node name="StraightMapNode11" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode12")
+
+[node name="StraightMapNode12" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("../StraightMapNode13")
+
+[node name="StraightMapNode13" parent="." node_paths=PackedStringArray("next") instance=ExtResource("2_wj4hp")]
+next = NodePath("..")

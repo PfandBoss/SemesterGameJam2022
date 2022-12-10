@@ -15,7 +15,9 @@ func _ready():
 func interact():
 	if currentStashValue >= 1:
 		currentStashValue -= 1
+		
 	return
+	
 func _on_signal_storing():
 	if currentStashValue < maxStashValue:
 			currentStashValue += 1
