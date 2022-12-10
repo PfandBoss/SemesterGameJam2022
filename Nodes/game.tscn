@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://n7w0ff7u25yc"]
+[gd_scene load_steps=9 format=3 uid="uid://n7w0ff7u25yc"]
 
 [ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_iox18"]
 [ext_resource type="PackedScene" uid="uid://bqe8ucbruto1j" path="res://Nodes/StartNode.tscn" id="2_61aog"]
 [ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="2_vrf6k"]
 [ext_resource type="Script" path="res://scripts/Train.gd" id="2_xl0he"]
 [ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="4_1ipcp"]
-[ext_resource type="Script" path="res://Nodes/Backgroundspawner.gd" id="6_dvu7i"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ognqx"]
 size = Vector3(13, 1, 25)
@@ -25,13 +24,12 @@ script = ExtResource("1_iox18")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0)
 
 [node name="Player1" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -8, 0, 8)
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -10, 0, 0)
 script = ExtResource("2_xl0he")
 
 [node name="Cannon" parent="Player1" instance=ExtResource("2_vrf6k")]
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Player1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8)
 mesh = SubResource("BoxMesh_ognqx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Player1/MeshInstance3D2"]
@@ -40,16 +38,16 @@ mesh = SubResource("BoxMesh_ognqx")
 shape = SubResource("ConcavePolygonShape3D_p3d4e")
 
 [node name="CharacterBody3D" parent="Player1" instance=ExtResource("4_1ipcp")]
-transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -1.18815, 1, -11.064)
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 
 [node name="Cannon2" parent="Player1" instance=ExtResource("2_vrf6k")]
 
 [node name="Player2" type="Node3D" parent="."]
-transform = Transform3D(-0.0154456, -6.75145e-10, -0.999879, -5.21344e-12, 1, -6.75146e-10, 0.999879, -5.2134e-12, -0.0154456, -8, 0, -32)
+transform = Transform3D(-0.0154456, -6.75145e-10, -0.999879, -5.21344e-12, 1, -6.75146e-10, 0.999879, -5.2134e-12, -0.0154456, 10, 0, 0)
 script = ExtResource("2_xl0he")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player2"]
-transform = Transform3D(-0.0154456, -5.21524e-12, 0.999881, -6.75146e-10, 1, -5.21521e-12, -0.999881, -6.75146e-10, -0.0154456, 31.7182, -1.23195e-08, -18.4921)
+transform = Transform3D(-0.0154456, -5.21524e-12, 0.999881, -6.75146e-10, 1, -5.21521e-12, -0.999881, -6.75146e-10, -0.0154456, 0, 0, 0)
 mesh = SubResource("BoxMesh_ognqx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Player2/MeshInstance3D"]
@@ -59,11 +57,29 @@ transform = Transform3D(1, 8.23952e-25, 0, -1.6479e-25, 1, 0, 0, -1.65436e-24, 1
 shape = SubResource("ConcavePolygonShape3D_l76gd")
 
 [node name="CharacterBody3D" parent="Player2" instance=ExtResource("4_1ipcp")]
-transform = Transform3D(-0.0154457, -5.21527e-12, 0.999882, -6.75147e-10, 1, -5.21524e-12, -0.999882, -6.75146e-10, -0.0154457, 31.3762, 1.5, -17.7157)
+transform = Transform3D(-0.0154457, -5.21527e-12, 0.999882, -6.75147e-10, 1, -5.21524e-12, -0.999882, -6.75146e-10, -0.0154457, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0)
 
-[node name="Backgroundspawner" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
-script = ExtResource("6_dvu7i")
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="Control"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4

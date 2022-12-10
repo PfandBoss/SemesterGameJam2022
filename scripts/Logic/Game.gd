@@ -20,12 +20,17 @@ var t = 0.0
 var p1_node : MapNode
 var p2_node : MapNode
 
+var initial_pos_p1 : Vector3
+var initial_pos_p2 : Vector3
+
 func _ready():
+	initial_pos_p1 = p1_train.position
+	initial_pos_p2 = p2_train.position
 	p1_node = StartNode
 	p2_node = StartNode
 	p2_train.get_node("CharacterBody3D").is_player1 = false
 	p2_train.is_P1 = false
-	p1_train.current_speed = 10
+	p1_train.current_speed = 5
 	p1_train.hit.connect(_on_hit_player)
 	p2_train.hit.connect(_on_hit_player)
 	
@@ -52,14 +57,28 @@ func _process(delta):
 
 	if(p1_node == p2_node && p1_train.current_distance - p2_train.current_distance < 2):
 		if(fight_state == CHILL):
-			var tween = create_tween()
-			tween.tween_property($Camera3D, "position", Vector3(0,10,0), 1)
 			fight_state = FIGHTING
-	else:
+			var tween = create_tween()
+			tween.set_trans(Tween.TRANS_EXPO)
+			tween.set_ease(Tween.EASE_OUT)
+			var new_pos_p1 = p1_train.position + Vector3(-15,0,0)
+			var new_pos_p2 = p2_train.position + Vector3(15,0,0)
+			tween.tween_property($Camera3D, "position", Vector3(0,40,0), 1.4)
+			tween.set_parallel()
+			tween.tween_property(p1_train, "position",new_pos_p1, 1)
+			tween.tween_property(p2_train, "position",new_pos_p2, 1)
+			tween.tween_property($Control/Panel, "custom_minimum_size", Vector2(0,0), 1)
+			
+	elif(fight_state == FIGHTING):
 		fight_state = CHILL
 		var tween = create_tween()
-		tween.tween_property($Camera3D, "position", Vector3(0,20,0), 1)
-		
+		tween.set_trans(Tween.TRANS_EXPO)
+		tween.set_ease(Tween.EASE_OUT)
+		tween.tween_property($Camera3D, "position", Vector3(0,20,0), 1.4)
+		tween.set_parallel()
+		tween.tween_property(p1_train, "position",initial_pos_p1, 1)
+		tween.tween_property(p2_train, "position", initial_pos_p2, 1)
+		tween.tween_property($Control/Panel, "custom_minimum_size", Vector2(15,0), 1)
 		
 	if Input.is_action_pressed("test"):
 		emit_signal("shoot")
