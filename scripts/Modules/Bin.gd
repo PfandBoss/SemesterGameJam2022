@@ -6,4 +6,4 @@ class_name Bin
 
 #------------Methods-------------#
 func interact(player):
-	train.get_node("CharacterBody3D").inventory = 0
+	player.inventory = 0

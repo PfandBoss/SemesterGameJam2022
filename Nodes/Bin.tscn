@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://iuoepenpnktv"]
+
+[ext_resource type="Texture2D" uid="uid://pwyskequsdls" path="res://bin.png" id="1_krl02"]
+[ext_resource type="Script" path="res://scripts/Modules/Bin.gd" id="1_saxpo"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0suy8"]
+height = 3.84361
+radius = 1.33448
+
+[node name="Bin" type="StaticBody3D"]
+script = ExtResource("1_saxpo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_0suy8")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 0)
+texture = ExtResource("1_krl02")
