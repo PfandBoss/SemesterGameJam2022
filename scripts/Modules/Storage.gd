@@ -14,10 +14,10 @@ func _ready():
 	currentStashValue = 0
 func interact():
 	if currentStashValue >= 1:
-		--currentStashValue
+		currentStashValue -= 1
 	return
 func _on_signal_storing():
 	if currentStashValue < maxStashValue:
-			++currentStashValue
+			currentStashValue += 1
 	return
 	
