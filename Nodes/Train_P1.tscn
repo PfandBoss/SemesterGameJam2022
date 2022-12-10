@@ -1,6 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://md2ofbviios3"]
+[gd_scene load_steps=21 format=3 uid="uid://md2ofbviios3"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
+[ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="3_1ix85"]
 [ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="3_in6up"]
 [ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="3_jmv6b"]
 [ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="4_5jw5g"]
@@ -123,3 +124,6 @@ currentType = 2
 
 [node name="Cannon" parent="." instance=ExtResource("5_vgxqe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4817, 1.2303, 0.0486939)
+
+[node name="Engine" parent="." instance=ExtResource("3_1ix85")]
+transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -3.45639, 1.1688, 9)
