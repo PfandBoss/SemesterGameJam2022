@@ -1,0 +1,13 @@
+res://MainMenu.gd
+res://main_menu.tscn
+res://menu/main_menu.tscn
+res://VolumeSlider.gd
+res://menu/settings_menu.tscn
+res://menu/VolumeSlider.gd
+res://menu/VBoxContainer.gd
+res://menu/input_menu/InputMenu.tscn
+res://InputMenu.gd
+res://menu/input_menu.tscn
+res://menu/VolSlider.gd
+res://menu/credits_screen.tscn
+res://menu/MainMenu.gd

@@ -63,6 +63,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Semester Game Jam 2022"
+run/main_scene="res://menu/settings_menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 

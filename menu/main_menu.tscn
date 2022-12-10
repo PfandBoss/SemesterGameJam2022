@@ -1,0 +1,66 @@
+[gd_scene load_steps=3 format=3 uid="uid://bad6he0psvv6c"]
+
+[ext_resource type="Script" path="res://menu/MainMenu.gd" id="1_hyw8p"]
+[ext_resource type="Script" path="res://menu/VolSlider.gd" id="2_h85ei"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hyw8p")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.513726, 0.403922, 0.27451, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -28.0
+offset_right = 20.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start
+"
+
+[node name="Tutorial" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Tutorial
+"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Volume:"
+
+[node name="VolSlider" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+min_value = -30.0
+max_value = 0.0
+script = ExtResource("2_h85ei")
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="value_changed" from="VBoxContainer/VolSlider" to="VBoxContainer/VolSlider" method="_on_value_changed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]
