@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+class_name Player
 #-----------Parameters--------------#
 var SPEED = 10
 var movement = Vector3(0,0,0)
@@ -12,11 +13,11 @@ var is_alive = true
 var walking
 var idle
 
-enum TYPE {AMMO, GUNPOWDER, FUEL}
+enum TYPE {AMMO, GUNPOWDER, FUEL, LARGE, GIANT}
 
 var P1inMiniGame = 0
 var P2inMiniGame = 0
-var MiniGame = [-1, -1, -1]
+var MiniGame = [0, 0, 0]
 var MiniGamePos = 0 
 var rng = RandomNumberGenerator.new()
 #---------------Methods--------------#
@@ -26,6 +27,12 @@ func _ready():
 	$MiniGameButton0.hide()
 	$MiniGameButton1.hide()
 	$MiniGameButton2.hide()
+	$MiniGameButton3.hide()
+	$MiniGameButton4.hide()
+	$MiniGameButton5.hide()
+	#get_parent().find_child("CharacterBody3D").find_child("MiniGameButton0").hide() 
+	#get_parent().find_child("CharacterBody3D").find_child("MiniGameButton1").hide()
+	#get_parent().find_child("CharacterBody3D").find_child("MiniGameButton2").hide()
 
 func miniGameColor(input: int, red: int):
 	if(input == 0):
@@ -34,18 +41,35 @@ func miniGameColor(input: int, red: int):
 		$MiniGameButton1.modulate = Color(1,1,red)
 	if(input == 2):
 		$MiniGameButton2.modulate = Color(1,1,red)
+	if(input == 3):
+		$MiniGameButton3.modulate = Color(1,1,red)
+	if(input == 4):
+		$MiniGameButton4.modulate = Color(1,1,red)
+	if(input == 5):
+		$MiniGameButton5.modulate = Color(1,1,red)
 
 func miniGameReset():
 	MiniGamePos = 0
-	miniGameColor(0,1)
-	miniGameColor(1,1)
-	miniGameColor(2,1)
-	MiniGame[0] = rng.randi_range(0, 3)
-	miniGameSetArrow(0)
-	MiniGame[1] = rng.randi_range(0, 3)
-	miniGameSetArrow(1)
-	MiniGame[2] = rng.randi_range(0, 3)
-	miniGameSetArrow(2)
+	if(is_player1):
+		miniGameColor(0,1)
+		miniGameColor(1,1)
+		miniGameColor(2,1)
+		MiniGame[0] = rng.randi_range(0, 3)
+		miniGameSetArrow(0)
+		MiniGame[1] = rng.randi_range(0, 3)
+		miniGameSetArrow(1)
+		MiniGame[2] = rng.randi_range(0, 3)
+		miniGameSetArrow(2)
+	else:
+		miniGameColor(3,1)
+		miniGameColor(4,1)
+		miniGameColor(5,1)
+		MiniGame[0] = rng.randi_range(0, 3)
+		miniGameSetArrow(3)
+		MiniGame[1] = rng.randi_range(0, 3)
+		miniGameSetArrow(4)
+		MiniGame[2] = rng.randi_range(0, 3)
+		miniGameSetArrow(5)
 
 func miniGameSetArrow(buttonNr: int):
 	if(buttonNr == 0):
@@ -54,21 +78,41 @@ func miniGameSetArrow(buttonNr: int):
 		$MiniGameButton1.frame = 26 + MiniGame[1]
 	if(buttonNr == 2):
 		$MiniGameButton2.frame = 26 + MiniGame[2]
+	if(buttonNr == 3):
+		$MiniGameButton3.frame = 26 + MiniGame[0]
+	if(buttonNr == 4):
+		$MiniGameButton4.frame = 26 + MiniGame[1]
+	if(buttonNr == 5):
+		$MiniGameButton5.frame = 26 + MiniGame[2]
 	
 func miniGameCheck(input : int):
-	if(input == MiniGame[MiniGamePos]):
-		miniGameColor(MiniGamePos, 0)
-		MiniGamePos = MiniGamePos +1
+	if(is_player1):
+		if(input == MiniGame[MiniGamePos]):
+			miniGameColor(MiniGamePos, 0)
+			MiniGamePos = MiniGamePos +1
+		else:
+			miniGameReset()
+		
+		if(MiniGamePos >= 3):
+			$MiniGameButton0.hide()
+			$MiniGameButton1.hide()
+			$MiniGameButton2.hide()
+			P1inMiniGame = 0
+			miniGameReset()
 	else:
-		miniGameReset()
-	
-	if(MiniGamePos >= 3):
-		$MiniGameButton0.hide()
-		$MiniGameButton1.hide()
-		$MiniGameButton2.hide()
-		P1inMiniGame = 0
-		miniGameReset()
-	
+		if(input == MiniGame[MiniGamePos]):
+			miniGameColor(MiniGamePos+3, 0)
+			MiniGamePos = MiniGamePos +1
+		else:
+			miniGameReset()
+		
+		if(MiniGamePos >= 3):
+			$MiniGameButton3.hide()
+			$MiniGameButton4.hide()
+			$MiniGameButton5.hide()
+			P2inMiniGame = 0
+			miniGameReset()
+			
 func _process(delta):
 	if Input.is_action_just_pressed("p1_extra"):
 		if(P1inMiniGame == 0):
@@ -76,6 +120,13 @@ func _process(delta):
 			$MiniGameButton0.show()
 			$MiniGameButton1.show()
 			$MiniGameButton2.show()
+	
+	if Input.is_action_just_pressed("p2_extra"):
+		if(P2inMiniGame == 0):
+			P2inMiniGame = 1
+			$MiniGameButton3.show()
+			$MiniGameButton4.show()
+			$MiniGameButton5.show()
 
 func _physics_process(delta):
 	if(velocity.length() > 0):
@@ -166,6 +217,12 @@ func fill_inventory(type):
 		2:
 			walking = "walking_coal"
 			idle = "idle_coal"
+		3:
+			walking = "walking_large"
+			idle = "idle_large"
+		4:
+			walking = "walking_giant"
+			idle = "idle_giant"
 
 
 func getResource():
@@ -176,4 +233,6 @@ func clearInventory():
 	print("cleared")
 	walking = "walking"
 	idle = "idle"
-	
+
+
+

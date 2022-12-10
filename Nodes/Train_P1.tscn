@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://md2ofbviios3"]
+[gd_scene load_steps=20 format=3 uid="uid://md2ofbviios3"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
 [ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="3_1ix85"]
@@ -15,20 +15,9 @@
 [ext_resource type="Texture2D" uid="uid://ctbxpx6p36bdi" path="res://walking_ball2.png" id="8_0u1e2"]
 [ext_resource type="Texture2D" uid="uid://ckdlv6b7okseq" path="res://walking_powder2.png" id="10_a137a"]
 [ext_resource type="Texture2D" uid="uid://b5ioch3ad8y6r" path="res://walking_coal2.png" id="11_1jgcf"]
+[ext_resource type="Texture2D" uid="uid://7qppu15lvd1j" path="res://Nodes/Keys.png" id="13_d8wle"]
 [ext_resource type="PackedScene" uid="uid://bkpnrgcfr1jgl" path="res://Nodes/Bin.tscn" id="16_q3kvk"]
 [ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_ajifv"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_okaqh"]
-size = Vector3(1, 3.77669, 24)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_0svax"]
-size = Vector3(12, 1, 24)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_torlc"]
-size = Vector3(12, 4, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_sm5ue"]
-size = Vector3(1, 6, 9.05915)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6p0y6"]
 animations = [{
@@ -77,36 +66,6 @@ animations = [{
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
 script = ExtResource("1_0x664")
 
-[node name="train" parent="." instance=ExtResource("3_jmv6b")]
-transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 3, 0, 9)
-
-[node name="StaticBody3D" type="StaticBody3D" parent="train"]
-transform = Transform3D(-2.91409e-08, 0, -0.666667, 0, 0.666667, 0, 0.666667, 0, -2.91409e-08, 6, -0.137826, -1.33333)
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="train/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 4.23516e-22)
-shape = SubResource("BoxShape3D_okaqh")
-
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="train/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2, 3.55271e-15)
-shape = SubResource("BoxShape3D_okaqh")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="train/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3.55271e-15)
-shape = SubResource("BoxShape3D_0svax")
-
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="train/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -12)
-shape = SubResource("BoxShape3D_torlc")
-
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="train/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 12)
-shape = SubResource("BoxShape3D_torlc")
-
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="train/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -1.52864)
-shape = SubResource("BoxShape3D_sm5ue")
-
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_in6up")]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 3.19744e-14, 3, -9)
 
@@ -116,6 +75,27 @@ frames = SubResource("SpriteFrames_6p0y6")
 animation = &"walking_coal"
 speed_scale = 2.0
 playing = true
+
+[node name="MiniGameButton0" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, 6, 0)
+texture = ExtResource("13_d8wle")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton1" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 1.5, 6, 0)
+texture = ExtResource("13_d8wle")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton2" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, 6, 0)
+texture = ExtResource("13_d8wle")
+hframes = 5
+vframes = 8
+frame = 26
 
 [node name="Storage" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, -5.2771)
@@ -140,3 +120,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.7029
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63306, -0.501894, -11.5457)
 currentType = 1
 audioClip = ExtResource("17_ajifv")
+
+[node name="train" parent="." instance=ExtResource("3_jmv6b")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
