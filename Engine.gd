@@ -21,12 +21,6 @@ func interact():
 		return
 	#TODO: Repair Train
 	currentState = STATE.RUNNING
-
-	if currentStashValue == 1 and currentState == STATE.INACTIVE:
-		currentState = STATE.SHOOTING
-		#TODO: SHOOTING
-		currentState = STATE.INACTIVE
 	
-	return
 
 
