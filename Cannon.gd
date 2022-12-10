@@ -3,6 +3,7 @@ extends Module
 class_name Cannon
 
 enum STATE {INACTIVE, RELOADING, SHOOTING}
+
 #------------Methods-------------#
 func _ready():
 	var root = get_tree().root.get_child(0)
@@ -22,8 +23,9 @@ func interact():
 	return
 
 func _on_signal_shooting():
-	if currentStashValue == 1:
+	if currentStashValue == 1 and currentState == STATE.INACTIVE:
 		currentState = STATE.SHOOTING
-	#TODO: SHOOTING
-	currentState = STATE.INACTIVE
-	pass
+		#TODO: SHOOTING
+		currentState = STATE.INACTIVE
+	
+	return
