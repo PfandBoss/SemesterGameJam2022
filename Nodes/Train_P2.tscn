@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://bikdn7ep2vpxw"]
+[gd_scene load_steps=24 format=3 uid="uid://bikdn7ep2vpxw"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_mcmgl"]
 [ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="2_xoa1a"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="15_sof53"]
 [ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="16_7dojn"]
 [ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="17_regf7"]
+[ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_xnc4h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dijw3"]
 size = Vector3(1, 3.77669, 24)
@@ -136,6 +137,7 @@ currentType = 1
 [node name="Storage3" parent="." instance=ExtResource("16_7dojn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79878, 0.293261, 6.13508)
 currentType = 2
+audioClip = ExtResource("17_xnc4h")
 
 [node name="Engine" parent="." instance=ExtResource("17_regf7")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.86451, 1.17834, 10.1923)
