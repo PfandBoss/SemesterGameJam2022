@@ -1,8 +1,15 @@
-[gd_scene load_steps=8 format=3 uid="uid://lvlbpfnwlngv"]
+[gd_scene load_steps=16 format=3 uid="uid://lvlbpfnwlngv"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
 [ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="3_in6up"]
 [ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="3_jmv6b"]
+[ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="4_5jw5g"]
+[ext_resource type="Texture2D" uid="uid://dsphpbpt27t1i" path="res://a3TCqhg.png" id="4_c3xfc"]
+[ext_resource type="Texture2D" uid="uid://d1m2jplf8u0h0" path="res://Nodes/walking_ball1.png" id="5_rgwud"]
+[ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="5_vgxqe"]
+[ext_resource type="Texture2D" uid="uid://eg0k8esm2scp" path="res://p5lFkJY.png" id="6_m0hj7"]
+[ext_resource type="Texture2D" uid="uid://du7d6fk4dabd7" path="res://cVOQuID.png" id="7_d8go0"]
+[ext_resource type="Texture2D" uid="uid://ctbxpx6p36bdi" path="res://walking_ball2.png" id="8_0u1e2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_okaqh"]
 size = Vector3(1, 3.77669, 24)
@@ -15,6 +22,29 @@ size = Vector3(12, 4, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_sm5ue"]
 size = Vector3(1, 6, 9.05915)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6p0y6"]
+animations = [{
+"frames": [ExtResource("4_c3xfc")],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
+"frames": [ExtResource("5_rgwud")],
+"loop": true,
+"name": &"idle_ball",
+"speed": 1.0
+}, {
+"frames": [ExtResource("6_m0hj7"), ExtResource("7_d8go0")],
+"loop": true,
+"name": &"walking",
+"speed": 2.0
+}, {
+"frames": [ExtResource("5_rgwud"), ExtResource("8_0u1e2")],
+"loop": true,
+"name": &"walking_ball",
+"speed": 2.0
+}]
 
 [node name="Train1" type="Node3D"]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
@@ -52,3 +82,16 @@ shape = SubResource("BoxShape3D_sm5ue")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_in6up")]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 3.19744e-14, 3, -9)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, -2, 0)
+frames = SubResource("SpriteFrames_6p0y6")
+animation = &"idle_ball"
+speed_scale = 2.0
+playing = true
+
+[node name="Storage" parent="." instance=ExtResource("4_5jw5g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, -5.2771)
+
+[node name="Cannon" parent="." instance=ExtResource("5_vgxqe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4817, 1.2303, 0.0486939)
