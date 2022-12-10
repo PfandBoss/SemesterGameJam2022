@@ -15,6 +15,16 @@ _global_script_classes=[{
 "path": "res://scripts/Modules/Cannon.gd"
 }, {
 "base": "Node",
+"class": &"Game",
+"language": &"GDScript",
+"path": "res://scripts/Logic/Game.gd"
+}, {
+"base": "Node",
+"class": &"MapNode",
+"language": &"GDScript",
+"path": "res://scripts/Logic/MapNode.gd"
+}, {
+"base": "Node",
 "class": &"Module",
 "language": &"GDScript",
 "path": "res://scripts/Modules/Module.gd"
@@ -24,6 +34,16 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://scripts/Modules/Storage.gd"
 }, {
+"base": "MapNode",
+"class": &"StraightMapNode",
+"language": &"GDScript",
+"path": "res://scripts/Logic/StraightMapNode.gd"
+}, {
+"base": "Node",
+"class": &"Train",
+"language": &"GDScript",
+"path": "res://scripts/Train.gd"
+}, {
 "base": "Module",
 "class": &"TrainEngine",
 "language": &"GDScript",
@@ -31,8 +51,12 @@ _global_script_classes=[{
 }]
 _global_script_class_icons={
 "Cannon": "",
+"Game": "",
+"MapNode": "",
 "Module": "",
 "Storage": "",
+"StraightMapNode": "",
+"Train": "",
 "TrainEngine": ""
 }
 

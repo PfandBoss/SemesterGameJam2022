@@ -5,13 +5,13 @@ class_name Cannon
 enum STATE {INACTIVE, RELOADING, SHOOTING}
 
 var CAN_ENGAGE = true
+var DAMAGE = 5
+@onready var train = get_parent() as Train
 
 #------------Methods-------------#
 func _ready():
-	var root = get_tree().root.get_child(0)
-	root.shoot.connect(_on_signal_shooting)
 	maxStashValue = 1
-	currentStashValue = 0
+	currentStashValue = 1
 	currentState = STATE.INACTIVE
 #TODO: FINISH
 func interact():
@@ -24,15 +24,15 @@ func interact():
 		
 	return
 
-func _on_signal_shooting():
+func shoot():
 	if not CAN_ENGAGE:
-		return
+		return false
 	CAN_ENGAGE = false
 	create_tween().tween_callback(func(): CAN_ENGAGE = true).set_delay(2)
 	
 	if currentStashValue >= 1 and currentState == STATE.INACTIVE:
 		currentState = STATE.SHOOTING
 		currentStashValue -= 1
-		print("hit")
 		currentState = STATE.INACTIVE
-	return
+		return true
+	return false
