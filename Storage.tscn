@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cet80w4yr8rse"]
+
+[ext_resource type="Script" path="res://scripts/Modules/Storage.gd" id="1_guwoh"]
+
+[node name="Storage" type="Node"]
+script = ExtResource("1_guwoh")
+currentType = 0
