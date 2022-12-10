@@ -7,7 +7,7 @@ enum TYPE {AMMO, GUNPOWDER, COAL}
 
 @export var currentType: TYPE
 
-
+@export var icon : Texture2D
 @export var audioClip : AudioStreamWAV
 #------------Methods-------------#
 func _ready():
@@ -15,6 +15,7 @@ func _ready():
 	#root.ammo_pickup.connect(_on_signal_storing)
 	maxStashValue = 10
 	currentStashValue = 10
+	$Sprite3D2.texture = icon
 	$AudioStreamPlayer.stream = audioClip
 	
 func interact(player):
@@ -28,4 +29,10 @@ func _on_signal_storing():
 	if currentStashValue < maxStashValue:
 			currentStashValue += 1
 	return
-	
+
+func on_Player_enter(blub):
+	var bodies = $Area3D.get_overlapping_bodies()
+	$Sprite3D2.visible = true
+			
+func on_Player_exit(blub):			
+	$Sprite3D2.visible = false

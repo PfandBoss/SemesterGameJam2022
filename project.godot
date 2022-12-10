@@ -29,10 +29,15 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://scripts/Logic/MapNode.gd"
 }, {
-"base": "Node",
+"base": "StaticBody3D",
 "class": &"Module",
 "language": &"GDScript",
 "path": "res://scripts/Modules/Module.gd"
+}, {
+"base": "CharacterBody3D",
+"class": &"Player",
+"language": &"GDScript",
+"path": "res://scripts/Player.gd"
 }, {
 "base": "Module",
 "class": &"Storage",
@@ -65,6 +70,7 @@ _global_script_class_icons={
 "Game": "",
 "MapNode": "",
 "Module": "",
+"Player": "",
 "Storage": "",
 "StraightMapNode": "",
 "Train": "",

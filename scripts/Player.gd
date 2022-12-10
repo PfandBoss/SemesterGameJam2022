@@ -1,5 +1,6 @@
 extends CharacterBody3D
 
+class_name Player
 #-----------Parameters--------------#
 var SPEED = 10
 var movement = Vector3(0,0,0)
@@ -176,4 +177,6 @@ func clearInventory():
 	print("cleared")
 	walking = "walking"
 	idle = "idle"
-	
+
+
+
