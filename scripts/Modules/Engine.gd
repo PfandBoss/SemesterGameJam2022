@@ -22,6 +22,7 @@ func interact(player):
 		if (train.current_speed + refuelRate) <= maxSpeed:
 			train.current_speed += refuelRate
 			player.clearInventory()
+			$AudioStreamPlayer.play()
 		if train.current_speed >= maxSpeed:
 				train.current_speed = maxSpeed
 				

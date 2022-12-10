@@ -23,12 +23,14 @@ func interact(player):
 			if currentStashValue < maxStashValue:
 				currentStashValue += 1
 				player.clearInventory()
+				$AudioStreamPlayer2.play()
 			return
 		
 		if player.getResource() == 1:
 			if currentPowderStashValue < maxPowderStashValue:
 				currentPowderStashValue += 1
 				player.clearInventory()
+				$AudioStreamPlayer2.play()
 			return
 		return
 
@@ -38,6 +40,6 @@ func shoot():
 		currentStashValue -= 1
 		currentPowderStashValue = 0
 		currentState = STATE.INACTIVE
-		$AudioStreamPlayer3D.play(0)
+		$AudioStreamPlayer.play(0)
 		return true
 	return false
