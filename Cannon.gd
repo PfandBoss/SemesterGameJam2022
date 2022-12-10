@@ -17,7 +17,7 @@ func interact():
 		#TODO: RELOADING
 		if currentStashValue < maxStashValue:
 			currentState = STATE.RELOADING
-			++currentStashValue
+			currentStashValue += 1
 		return
 		
 	return
@@ -25,7 +25,7 @@ func interact():
 func _on_signal_shooting():
 	if currentStashValue >= 1 and currentState == STATE.INACTIVE:
 		currentState = STATE.SHOOTING
-		--currentStashValue
+		currentStashValue -= 1
 		#TODO: SHOOTING
 		currentState = STATE.INACTIVE
 	return
