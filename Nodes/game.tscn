@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://n7w0ff7u25yc"]
+[gd_scene load_steps=10 format=3 uid="uid://n7w0ff7u25yc"]
 
 [ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_iox18"]
 [ext_resource type="PackedScene" uid="uid://bqe8ucbruto1j" path="res://Nodes/StartNode.tscn" id="2_61aog"]
 [ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="2_vrf6k"]
 [ext_resource type="Script" path="res://scripts/Train.gd" id="2_xl0he"]
 [ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="4_1ipcp"]
+[ext_resource type="Script" path="res://Nodes/Backgroundspawner.gd" id="6_dvu7i"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ognqx"]
 size = Vector3(13, 1, 25)
@@ -62,3 +63,7 @@ transform = Transform3D(-0.0154457, -5.21527e-12, 0.999882, -6.75147e-10, 1, -5.
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0)
+
+[node name="Backgroundspawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+script = ExtResource("6_dvu7i")

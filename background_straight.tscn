@@ -1,8 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://cgnegi0q52i3n"]
+[gd_scene load_steps=2 format=3 uid="uid://bp0po6m6eby8h"]
 
-[ext_resource type="Texture2D" uid="uid://cy6x8d3xe8lux" path="res://icon.svg" id="1_a2wr2"]
+[ext_resource type="Texture2D" uid="uid://cy6x8d3xe8lux" path="res://icon.svg" id="1_52lw3"]
 
-[node name="Background_straight" type="Node"]
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_a2wr2")
+[node name="TextureRect" type="TextureRect"]
+offset_right = 1150.0
+offset_bottom = 645.0
+scale = Vector2(1.00103, 1.009)
+texture = ExtResource("1_52lw3")
