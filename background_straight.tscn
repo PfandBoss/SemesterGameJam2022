@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://bp0po6m6eby8h"]
+[gd_scene load_steps=5 format=3 uid="uid://r5ulnwvlrya6"]
 
 [ext_resource type="Texture2D" uid="uid://cy6x8d3xe8lux" path="res://icon.svg" id="1_52lw3"]
+[ext_resource type="Script" path="res://background_straight.gd" id="1_obhgk"]
 
-[node name="TextureRect" type="TextureRect"]
-offset_right = 1150.0
-offset_bottom = 645.0
-scale = Vector2(1.00103, 1.009)
-texture = ExtResource("1_52lw3")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aoi7r"]
+albedo_texture = ExtResource("1_52lw3")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_xipx2"]
+material = SubResource("StandardMaterial3D_aoi7r")
+size = Vector2(5, 5)
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+script = ExtResource("1_obhgk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_xipx2")
