@@ -32,8 +32,7 @@ func _ready():
 	initial_camera_pos = $Camera3D.position
 	initial_pos_p1 = p1_train.position
 	initial_pos_p2 = p2_train.position
-	p1_node = StartNode
-	p2_node = StartNode
+	_set_starting_Positions()
 	p2_train.get_node("CharacterBody3D").is_player1 = false
 	p2_train.is_P1 = false
 	p1_train.hit.connect(_on_hit_player)
@@ -58,6 +57,14 @@ func _on_turn_event():
 	#
 	pass
 	
+func _set_starting_Positions():
+	p1_node = StartNode
+	
+	p2_node = StartNode.next
+	for n in 8:
+			p2_node = p2_node.next
+	p2_train.distance_from_start = 10 * 8
+
 
 func _on_hit_player(player1,dmg):
 	if not player1:
