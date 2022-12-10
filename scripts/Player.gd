@@ -14,10 +14,68 @@ var idle
 
 enum TYPE {AMMO, GUNPOWDER, FUEL}
 
+var P1inMiniGame = 0
+var P2inMiniGame = 0
+var MiniGame = [-1, -1, -1]
+var MiniGamePos = 0 
+var rng = RandomNumberGenerator.new()
 #---------------Methods--------------#
 func _ready():
 	walking = "walking"
 	idle = "idle"
+	$MiniGameButton0.hide()
+	$MiniGameButton1.hide()
+	$MiniGameButton2.hide()
+
+func miniGameColor(input: int, red: int):
+	if(input == 0):
+		$MiniGameButton0.modulate = Color(1,1,red)
+	if(input == 1):
+		$MiniGameButton1.modulate = Color(1,1,red)
+	if(input == 2):
+		$MiniGameButton2.modulate = Color(1,1,red)
+
+func miniGameReset():
+	MiniGamePos = 0
+	miniGameColor(0,1)
+	miniGameColor(1,1)
+	miniGameColor(2,1)
+	MiniGame[0] = rng.randi_range(0, 3)
+	miniGameSetArrow(0)
+	MiniGame[1] = rng.randi_range(0, 3)
+	miniGameSetArrow(1)
+	MiniGame[2] = rng.randi_range(0, 3)
+	miniGameSetArrow(2)
+
+func miniGameSetArrow(buttonNr: int):
+	if(buttonNr == 0):
+		$MiniGameButton0.frame = 26 + MiniGame[0]
+	if(buttonNr == 1):
+		$MiniGameButton1.frame = 26 + MiniGame[1]
+	if(buttonNr == 2):
+		$MiniGameButton2.frame = 26 + MiniGame[2]
+	
+func miniGameCheck(input : int):
+	if(input == MiniGame[MiniGamePos]):
+		miniGameColor(MiniGamePos, 0)
+		MiniGamePos = MiniGamePos +1
+	else:
+		miniGameReset()
+	
+	if(MiniGamePos >= 3):
+		$MiniGameButton0.hide()
+		$MiniGameButton1.hide()
+		$MiniGameButton2.hide()
+		P1inMiniGame = 0
+		miniGameReset()
+	
+func _process(delta):
+	if Input.is_action_just_pressed("p1_extra"):
+		if(P1inMiniGame == 0):
+			P1inMiniGame = 1
+			$MiniGameButton0.show()
+			$MiniGameButton1.show()
+			$MiniGameButton2.show()
 
 func _physics_process(delta):
 	if(velocity.length() > 0):
@@ -40,23 +98,43 @@ func _physics_process(delta):
 	
 func check_input():
 	if is_player1:
-		if Input.is_action_pressed("p1_left"):
-			movement.x -= 1
-		if Input.is_action_pressed("p1_right"):
-			movement.x += 1
-		if Input.is_action_pressed("p1_up"):
-			movement.z -= 1
-		if Input.is_action_pressed("p1_down"):
-			movement.z += 1
+		if(!P1inMiniGame):
+			if Input.is_action_pressed("p1_left"):
+				movement.x -= 1
+			if Input.is_action_pressed("p1_right"):
+				movement.x += 1
+			if Input.is_action_pressed("p1_up"):
+				movement.z -= 1
+			if Input.is_action_pressed("p1_down"):
+				movement.z += 1
+		else:
+			if Input.is_action_just_pressed("p1_up"):
+				miniGameCheck(0)
+			if Input.is_action_just_pressed("p1_right"):
+				miniGameCheck(1)
+			if Input.is_action_just_pressed("p1_down"):
+				miniGameCheck(2)
+			if Input.is_action_just_pressed("p1_left"):
+				miniGameCheck(3)
 	else:
-		if Input.is_action_pressed("p2_left"):
-			movement.x -= 1
-		if Input.is_action_pressed("p2_right"):
-			movement.x += 1
-		if Input.is_action_pressed("p2_up"):
-			movement.z -= 1
-		if Input.is_action_pressed("p2_down"):
-			movement.z += 1
+		if(!P2inMiniGame):
+			if Input.is_action_pressed("p2_left"):
+				movement.x -= 1
+			if Input.is_action_pressed("p2_right"):
+				movement.x += 1
+			if Input.is_action_pressed("p2_up"):
+				movement.z -= 1
+			if Input.is_action_pressed("p2_down"):
+				movement.z += 1
+		else:
+			if Input.is_action_just_pressed("p2_up"):
+				miniGameCheck(0)
+			if Input.is_action_just_pressed("p2_right"):
+				miniGameCheck(1)
+			if Input.is_action_just_pressed("p2_down"):
+				miniGameCheck(2)
+			if Input.is_action_just_pressed("p2_left"):
+				miniGameCheck(3)
 		
 func check_interaction():
 	var action
