@@ -48,11 +48,6 @@ _global_script_classes=[{
 "class": &"TrainEngine",
 "language": &"GDScript",
 "path": "res://scripts/Modules/Engine.gd"
-}, {
-"base": "StraightMapNode",
-"class": &"TurnMapNode",
-"language": &"GDScript",
-"path": "res://scripts/Logic/TurnMapNode.gd"
 }]
 _global_script_class_icons={
 "Cannon": "",
@@ -62,8 +57,7 @@ _global_script_class_icons={
 "Storage": "",
 "StraightMapNode": "",
 "Train": "",
-"TrainEngine": "",
-"TurnMapNode": ""
+"TrainEngine": ""
 }
 
 [application]
