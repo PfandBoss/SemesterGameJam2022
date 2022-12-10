@@ -3,8 +3,6 @@ extends Module
 class_name Cannon
 
 enum STATE {INACTIVE, RELOADING, SHOOTING}
-enum AMMO {NORMAL, HEAVY, LIGHT}
-var currentAmmo: AMMO
 var currentPowderStashValue = 0
 var maxPowderStashValue = 3
 var CAN_ENGAGE = false

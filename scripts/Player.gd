@@ -12,7 +12,7 @@ var is_alive = true
 var walking
 var idle
 
-enum TYPE {AMMO, GUNPOWDER, FUEL}
+enum TYPE {AMMO, GUNPOWDER, FUEL, LARGE, GIANT}
 
 var P1inMiniGame = 0
 var P2inMiniGame = 0
@@ -172,6 +172,12 @@ func fill_inventory(type):
 		2:
 			walking = "walking_coal"
 			idle = "idle_coal"
+		3:
+			walking = "walking_large"
+			idle = "idle_large"
+		4:
+			walking = "walking_giant"
+			idle = "idle_giant"
 
 
 func getResource():
