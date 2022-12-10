@@ -1,0 +1,165 @@
+[gd_scene load_steps=25 format=3 uid="uid://cq6vbhvrpqkiy"]
+
+[ext_resource type="Script" path="res://scripts/Train.gd" id="1_hjs75"]
+[ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="2_jaa8m"]
+[ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="3_mmqok"]
+[ext_resource type="Texture2D" uid="uid://cxfybbp5idjwg" path="res://o_idle1.png" id="4_tox2m"]
+[ext_resource type="Texture2D" uid="uid://dh6hvv1lfdnm1" path="res://o_idle2.png" id="5_jipmo"]
+[ext_resource type="Texture2D" uid="uid://c1v5tc8lk8pdo" path="res://o_walking_ball1.png" id="6_ndwd0"]
+[ext_resource type="Texture2D" uid="uid://ci4yd4vjr17o1" path="res://o_walking_coal1.png" id="7_ehq5f"]
+[ext_resource type="Texture2D" uid="uid://os0kogn0mkus" path="res://o_walking_powder1.png" id="8_scx2e"]
+[ext_resource type="Texture2D" uid="uid://bjrhp4dqckoxf" path="res://o_walking1.png" id="9_c8uyv"]
+[ext_resource type="Texture2D" uid="uid://j7jwtqmvg0m8" path="res://o_walking2.png" id="10_eceo1"]
+[ext_resource type="Texture2D" uid="uid://djsergj3l4t2c" path="res://o_walking_ball2.png" id="11_ryiak"]
+[ext_resource type="Texture2D" uid="uid://nctqw3vt5q0y" path="res://o_walking_coal2.png" id="12_w8c3m"]
+[ext_resource type="Texture2D" uid="uid://ctssikrodjqvc" path="res://o_walking_powder2.png" id="13_vxnkq"]
+[ext_resource type="Texture2D" uid="uid://7qppu15lvd1j" path="res://Nodes/Keys.png" id="14_xklxf"]
+[ext_resource type="PackedScene" uid="uid://bkpnrgcfr1jgl" path="res://Nodes/Bin.tscn" id="15_q7blv"]
+[ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="16_bmbr8"]
+[ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="17_rdygb"]
+[ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="18_skoud"]
+[ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="19_ubtn3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dijw3"]
+size = Vector3(1, 3.77669, 24)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ao4pd"]
+size = Vector3(12, 1, 24)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g76js"]
+size = Vector3(12, 4, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_psmwd"]
+size = Vector3(1, 6, 9.05915)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ltjyh"]
+animations = [{
+"frames": [ExtResource("4_tox2m"), ExtResource("5_jipmo")],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [ExtResource("6_ndwd0")],
+"loop": true,
+"name": &"idle_ball",
+"speed": 1.0
+}, {
+"frames": [ExtResource("7_ehq5f")],
+"loop": true,
+"name": &"idle_coal",
+"speed": 1.0
+}, {
+"frames": [ExtResource("8_scx2e")],
+"loop": true,
+"name": &"idle_powder",
+"speed": 1.0
+}, {
+"frames": [ExtResource("9_c8uyv"), ExtResource("10_eceo1")],
+"loop": true,
+"name": &"walking",
+"speed": 2.0
+}, {
+"frames": [ExtResource("6_ndwd0"), ExtResource("11_ryiak")],
+"loop": true,
+"name": &"walking_ball",
+"speed": 2.0
+}, {
+"frames": [ExtResource("7_ehq5f"), ExtResource("12_w8c3m")],
+"loop": true,
+"name": &"walking_coal",
+"speed": 2.0
+}, {
+"frames": [ExtResource("8_scx2e"), ExtResource("13_vxnkq")],
+"loop": true,
+"name": &"walking_powder",
+"speed": 2.0
+}]
+
+[node name="Train2" type="Node3D"]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
+script = ExtResource("1_hjs75")
+
+[node name="train" parent="." instance=ExtResource("2_jaa8m")]
+transform = Transform3D(1.96701e-07, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1.96701e-07, -3, 0, -9)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="train"]
+transform = Transform3D(-2.91409e-08, 0, -0.666667, 0, 0.666667, 0, 0.666667, 0, -2.91409e-08, 6, -0.137826, -1.33333)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 4.23516e-22)
+shape = SubResource("BoxShape3D_dijw3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2, 3.55271e-15)
+shape = SubResource("BoxShape3D_dijw3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3.55271e-15)
+shape = SubResource("BoxShape3D_ao4pd")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -12)
+shape = SubResource("BoxShape3D_g76js")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 12)
+shape = SubResource("BoxShape3D_g76js")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -1.52864)
+shape = SubResource("BoxShape3D_psmwd")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_mmqok")]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 2.84217e-14, 3, -8)
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, -2, 0)
+frames = SubResource("SpriteFrames_ltjyh")
+animation = &"walking_coal"
+speed_scale = 2.0
+playing = true
+
+[node name="MiniGameButton0" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, 6, 0)
+texture = ExtResource("14_xklxf")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton1" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 1.5, 6, 0)
+texture = ExtResource("14_xklxf")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton2" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, 6, 0)
+texture = ExtResource("14_xklxf")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="Bin" parent="." instance=ExtResource("15_q7blv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18577, 0.622175, 10.6544)
+
+[node name="Cannon" parent="." instance=ExtResource("16_bmbr8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.90697, 1.80346, 0.245877)
+
+[node name="Cannon2" parent="." instance=ExtResource("16_bmbr8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.90697, 1.80346, -5.83086)
+
+[node name="Storage" parent="." instance=ExtResource("17_rdygb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30738, 0.293261, -10.1586)
+
+[node name="Storage2" parent="." instance=ExtResource("17_rdygb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67656, 0.293261, -1.79235)
+currentType = 1
+
+[node name="Storage3" parent="." instance=ExtResource("17_rdygb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79878, 0.293261, 6.13508)
+currentType = 2
+audioClip = ExtResource("18_skoud")
+
+[node name="Engine" parent="." instance=ExtResource("19_ubtn3")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.86451, 1.17834, 10.1923)
