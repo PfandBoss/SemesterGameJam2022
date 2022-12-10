@@ -34,5 +34,6 @@ func _process(delta):
 	if not train.is_dead():
 		train.current_speed -= 0.1 * delta
 		print(train.current_speed)
+		
 	
 

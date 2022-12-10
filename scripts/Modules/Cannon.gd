@@ -22,19 +22,17 @@ func interact(player):
 		if player.getResource() == 0:
 			if currentStashValue < maxStashValue:
 				currentStashValue += 1
+				player.clearInventory()
 			return
 		return
 		if player.getResource() == 1:
 			if currentPowderStashValue < maxPowderStashValue:
 				currentPowderStashValue += 1
+				player.clearInventory()
 			return
 		return
 
 func shoot():
-	if not CAN_ENGAGE:
-		return false
-	CAN_ENGAGE = false
-	create_tween().tween_callback(func(): CAN_ENGAGE = true).set_delay(2)
 	if currentStashValue >= 1 and currentPowderStashValue >= 1 and currentState == STATE.INACTIVE:
 		currentState = STATE.SHOOTING
 		currentStashValue -= 1

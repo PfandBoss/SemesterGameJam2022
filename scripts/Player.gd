@@ -95,6 +95,7 @@ func getResource():
 	
 func clearInventory():
 	inventory = 0
+	print("cleared")
 	walking = "walking"
 	idle = "idle"
-	$AnimatedSprite3D.play(idle)
+	

@@ -34,9 +34,9 @@ func _set_currentStashValue(newValue):
 func _get_currentStashValue():
 	return currentStashValue
 func _set_maxStashValue(newValue):
-	currentStashValue = newValue
+	maxStashValue = newValue
 func _get_maxStashValue():
-	return currentStashValue
+	return maxStashValue
 func _set_level(newValue):
 	level = newValue
 func _get_level():
