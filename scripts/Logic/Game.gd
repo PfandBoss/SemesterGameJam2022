@@ -32,7 +32,7 @@ func _ready():
 	p2_node = StartNode
 	p2_train.get_node("CharacterBody3D").is_player1 = false
 	p2_train.is_P1 = false
-	p1_train.current_speed = 10
+	p1_train.current_speed = 8
 	p1_train.hit.connect(_on_hit_player)
 	p2_train.hit.connect(_on_hit_player)
 	
@@ -81,6 +81,7 @@ func _process(delta):
 			tween.tween_property($Control/VSlider2,"scale",Vector2(0,0),1)
 			p1_train.current_speed *= 0.5
 			p2_train.current_speed *= 0.5
+
 			
 			
 	elif(fight_state == FIGHTING):
@@ -105,5 +106,4 @@ func _process(delta):
 
 	$Control/VSlider.value = p1_train.distance_from_start
 	$Control/VSlider2.value = p2_train.distance_from_start
-	
 	
