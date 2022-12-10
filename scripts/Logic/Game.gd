@@ -15,6 +15,8 @@ var speed_p1 = 10
 var speed_p2 = 10
 
 func _ready():
+	p1.get_node("root").test.connect(func(): print("player1"))
+	p2.get_node("root").test.connect(func(): print("player2"))
 	start_tween()
 
 func start_tween():
