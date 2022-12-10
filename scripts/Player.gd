@@ -13,12 +13,23 @@ var is_alive = true
 #---------------Methods--------------#
 	
 func _physics_process(delta):
+	if(velocity.length() > 0):
+		$AnimatedSprite3D.play("walking")
+	else:
+		$AnimatedSprite3D.play("idle")
 	
 	movement = Vector3(0,0,0)
-	
 	check_interaction()
 	check_input()
 	velocity = movement * SPEED
+	if velocity.x < 0:
+		$AnimatedSprite3D.rotation.y = deg_to_rad(90)
+	if velocity.x > 0:
+		$AnimatedSprite3D.rotation.y = deg_to_rad(-90)
+	if velocity.z > 0:
+		$AnimatedSprite3D.rotation.y = deg_to_rad(-180)
+	if velocity.z < 0:
+		$AnimatedSprite3D.rotation.y = deg_to_rad(0)
 	move_and_slide()
 	
 func check_input():
