@@ -23,7 +23,6 @@ func interact():
 			currentState = STATE.RELOADING
 			currentStashValue += 1
 		return
-		
 	return
 
 func shoot():

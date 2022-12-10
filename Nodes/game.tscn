@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://n7w0ff7u25yc"]
+[gd_scene load_steps=9 format=3 uid="uid://cp2itfdd21cg2"]
 
 [ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_iox18"]
 [ext_resource type="PackedScene" uid="uid://bqe8ucbruto1j" path="res://Nodes/StartNode.tscn" id="2_61aog"]
@@ -48,7 +48,6 @@ transform = Transform3D(0.999998, 0, 0, 0, 1, 0, 0, 0, 0.999998, 12, 0, 0)
 script = ExtResource("2_xl0he")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 mesh = SubResource("BoxMesh_ognqx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Player2/MeshInstance3D"]

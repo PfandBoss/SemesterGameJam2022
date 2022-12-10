@@ -3,6 +3,10 @@ class_name TrainEngine
 
 
 enum STATE {RUNNING, DEAD}
+const maxSpeed = 6
+const refuelRate = 0.5
+
+@onready var train = get_parent() as Train
 
 #------------Methods-------------#
 func _ready():
@@ -13,13 +17,17 @@ func _ready():
 #TODO: FINISH
 func interact():
 	if currentState == STATE.RUNNING:
-		if currentStashValue < maxStashValue:
-			currentStashValue += 10 
-			if currentStashValue > maxStashValue:
-				currentStashValue = maxStashValue
+		if (train.current_speed + refuelRate) <= maxSpeed:
+			train.current_speed += refuelRate
+			if train.current_speed >= maxSpeed:
+				train.current_speed = maxSpeed
 		return
 	#TODO: Repair Train
 	currentState = STATE.RUNNING
-	
 
+#
+func _process(delta):
+	if not train.is_dead():
+		train.current_speed -= 0.1 * delta
+	
 
