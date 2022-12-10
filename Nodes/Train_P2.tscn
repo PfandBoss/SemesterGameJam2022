@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bikdn7ep2vpxw"]
+[gd_scene load_steps=24 format=3 uid="uid://bikdn7ep2vpxw"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_mcmgl"]
 [ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="2_xoa1a"]
@@ -13,6 +13,11 @@
 [ext_resource type="Texture2D" uid="uid://djsergj3l4t2c" path="res://o_walking_ball2.png" id="9_rt6ws"]
 [ext_resource type="Texture2D" uid="uid://ctssikrodjqvc" path="res://o_walking_powder2.png" id="11_eefgn"]
 [ext_resource type="Texture2D" uid="uid://nctqw3vt5q0y" path="res://o_walking_coal2.png" id="12_581v4"]
+[ext_resource type="PackedScene" uid="uid://bkpnrgcfr1jgl" path="res://Nodes/Bin.tscn" id="14_n2rwc"]
+[ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="15_sof53"]
+[ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="16_7dojn"]
+[ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="17_regf7"]
+[ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_xnc4h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dijw3"]
 size = Vector3(1, 3.77669, 24)
@@ -107,8 +112,32 @@ shape = SubResource("BoxShape3D_psmwd")
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 2.84217e-14, 3, -8)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D"]
-transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, -1, 0)
+transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, -2, 0)
 frames = SubResource("SpriteFrames_ltjyh")
 animation = &"walking_coal"
 speed_scale = 2.0
 playing = true
+
+[node name="Bin" parent="." instance=ExtResource("14_n2rwc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18577, 0.622175, 10.6544)
+
+[node name="Cannon" parent="." instance=ExtResource("15_sof53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.90697, 1.80346, 0.245877)
+
+[node name="Cannon2" parent="." instance=ExtResource("15_sof53")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.90697, 1.80346, -5.83086)
+
+[node name="Storage" parent="." instance=ExtResource("16_7dojn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30738, 0.293261, -10.1586)
+
+[node name="Storage2" parent="." instance=ExtResource("16_7dojn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.67656, 0.293261, -1.79235)
+currentType = 1
+
+[node name="Storage3" parent="." instance=ExtResource("16_7dojn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79878, 0.293261, 6.13508)
+currentType = 2
+audioClip = ExtResource("17_xnc4h")
+
+[node name="Engine" parent="." instance=ExtResource("17_regf7")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 2.86451, 1.17834, 10.1923)
