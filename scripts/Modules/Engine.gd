@@ -19,7 +19,7 @@ func interact():
 	if currentState == STATE.RUNNING:
 		if (train.current_speed + refuelRate) <= maxSpeed:
 			train.current_speed += refuelRate
-			if train.current_speed >= maxSpeed:
+		if train.current_speed >= maxSpeed:
 				train.current_speed = maxSpeed
 		return
 	#TODO: Repair Train
