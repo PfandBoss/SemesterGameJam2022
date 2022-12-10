@@ -16,18 +16,24 @@ func _ready():
 	currentState = STATE.RUNNING
 #TODO: FINISH
 func interact(player):
+	if player.getResource() != 2:
+		return
 	if currentState == STATE.RUNNING:
 		if (train.current_speed + refuelRate) <= maxSpeed:
 			train.current_speed += refuelRate
+			player.clearInventory()
 		if train.current_speed >= maxSpeed:
 				train.current_speed = maxSpeed
+				
 		return
-	#TODO: Repair Train
-	currentState = STATE.RUNNING
 
-#
+
+
+
 func _process(delta):
 	if not train.is_dead():
 		train.current_speed -= 0.1 * delta
+		print(train.current_speed)
+		
 	
 

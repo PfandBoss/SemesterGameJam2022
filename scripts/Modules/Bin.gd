@@ -6,4 +6,4 @@ class_name Bin
 
 #------------Methods-------------#
 func interact(player):
-	player.inventory = 0
+	player.clearInventory()

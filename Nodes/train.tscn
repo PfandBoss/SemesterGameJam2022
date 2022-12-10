@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c1mymb38wqdg6"]
+[gd_scene load_steps=11 format=3 uid="uid://c1mymb38wqdg6"]
 
 [ext_resource type="PackedScene" uid="uid://by5dkvik2ti0a" path="res://Assets/Model/Train/TrainFloorTile4x4.glb" id="1_ruoy4"]
 [ext_resource type="PackedScene" uid="uid://bbt38m8mno0d2" path="res://Assets/Model/Train/TrainWall.glb" id="2_ph0y0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://gihk416gd7tx" path="res://Assets/Model/Train/TrainPillarArcExtention.glb" id="7_87n8g"]
 [ext_resource type="PackedScene" uid="uid://dfljj7kor8v2j" path="res://Assets/Model/Train/TrainPillarWood.glb" id="7_hd70v"]
 [ext_resource type="PackedScene" uid="uid://08f17h0im640" path="res://Assets/Model/Train/TrainWallInterior.glb" id="9_yvbc7"]
+[ext_resource type="PackedScene" uid="uid://df1p6wn43228a" path="res://Assets/Model/Weapons/Canon.glb" id="10_54n3n"]
 
 [node name="train" type="Node3D"]
 
@@ -127,3 +128,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
 
 [node name="TrainWallInterior3" parent="." instance=ExtResource("9_yvbc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="Canon" parent="." instance=ExtResource("10_54n3n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.14337, 0, 1.47043)
+
+[node name="Canon2" parent="." instance=ExtResource("10_54n3n")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.07371, 0, 1.47043)

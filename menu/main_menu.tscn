@@ -34,27 +34,27 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Start" type="Button" parent="VBoxContainer"]
-offset_right = 72.0
+offset_right = 87.0
 offset_bottom = 31.0
 text = "Start
 "
 
 [node name="Tutorial" type="Button" parent="VBoxContainer"]
 offset_top = 35.0
-offset_right = 72.0
+offset_right = 87.0
 offset_bottom = 66.0
 text = "Tutorial
 "
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 offset_top = 70.0
-offset_right = 72.0
+offset_right = 87.0
 offset_bottom = 101.0
 text = "Volume:"
 
 [node name="VolSlider" type="HSlider" parent="VBoxContainer"]
 offset_top = 105.0
-offset_right = 72.0
+offset_right = 87.0
 offset_bottom = 121.0
 min_value = -30.0
 max_value = 0.0
@@ -62,11 +62,14 @@ script = ExtResource("2_h85ei")
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 offset_top = 125.0
-offset_right = 72.0
+offset_right = 87.0
 offset_bottom = 156.0
 text = "Quit"
 
 [node name="FullScreen" type="Button" parent="VBoxContainer"]
+offset_top = 160.0
+offset_right = 87.0
+offset_bottom = 191.0
 text = "Fullscreen"
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
