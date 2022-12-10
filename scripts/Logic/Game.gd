@@ -5,7 +5,6 @@ signal ammo_pickup
 signal shoot
 
 var t = 0.0
-var CAN_ENGAGE = true
 
 @onready var tween = create_tween() as Tween
 
@@ -33,10 +32,8 @@ func _process(delta):
 		speed_p1 = 5
 		start_tween()
 	
-	if round(p1.position.distance_to(p2.position)) == 9 && CAN_ENGAGE:
-		CAN_ENGAGE = false
+	if round(p1.position.distance_to(p2.position)) == 9:
 		emit_signal("shoot")
-		create_tween().tween_callback(func(): CAN_ENGAGE = true).set_delay(2)
 
 
 	
