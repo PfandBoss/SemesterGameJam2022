@@ -25,7 +25,7 @@ func interact():
 
 
 func _ready():
-	emit_signal("MODULE")
+	var root = get_tree().root.get_child(0)
 	
 
 #-----------Setter and Getter---------------#
