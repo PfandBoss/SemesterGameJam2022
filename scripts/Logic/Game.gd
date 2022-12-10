@@ -8,8 +8,8 @@ var t = 0.0
 
 @onready var tween = create_tween() as Tween
 
-@onready var p1 = $Player1Path/PathFollow3D
-@onready var p2 = $Player2Path/PathFollow3D
+@export var p1 : PathFollow3D
+@export var p2 : PathFollow3D
 
 var speed_p1 = 10
 var speed_p2 = 10
