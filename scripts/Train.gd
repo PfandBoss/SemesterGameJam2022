@@ -33,3 +33,15 @@ func is_dead():
 		game_over.emit()
 		return true
 	return false
+	
+func on_pickup(type, amount):
+	for s in STORAGES:
+		if s.currentType == type:
+			if s.currentStashValue + amount <= s.maxStashValue:
+				s.currentStashValue += amount
+			else:
+				s.currentStashValue = s.maxStashValue
+			
+			return
+	
+
