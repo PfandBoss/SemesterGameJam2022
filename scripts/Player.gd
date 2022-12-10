@@ -8,11 +8,9 @@ var inventory = 0 #1 - full, 0 - empty inventory
 var resource = 0 
 
 var is_alive = true
-@onready var is_player1 : bool
+@onready var is_player1 = true
 
 #---------------Methods--------------#
-func _init(player_id):
-	is_player1 = player_id
 	
 func _physics_process(delta):
 	
@@ -47,14 +45,15 @@ func check_input():
 func check_interaction():
 	var action
 	if is_player1:
-		action = "p1_interaction"
+		action = "p1_interact"
 	else:
-		action = "p2_interaction"
+		action = "p2_interact"
 		
 	if Input.is_action_just_pressed(action):
 		for body in $HitBox.get_overlapping_bodies():
-			if body.has_method("interact") and body.name == "Storage":
+			if body is Module:
 				#Storage interaction
-				if not inventory:
+				if not inventory && body is Storage:
 					body.interact()
-				
+				elif inventory && not body is Storage:
+					body.interact()
