@@ -30,7 +30,7 @@ func _ready():
 	p2_node = StartNode
 	p2_train.get_node("CharacterBody3D").is_player1 = false
 	p2_train.is_P1 = false
-	p1_train.current_speed = 5
+	p1_train.current_speed = 10
 	p1_train.hit.connect(_on_hit_player)
 	p2_train.hit.connect(_on_hit_player)
 	
@@ -90,7 +90,7 @@ func _process(delta):
 	if Input.is_action_pressed("test"):
 		emit_signal("shoot")
 
-	$Control/VSlider.value = p1_train.current_distance
-	$Control/VSlider2.value = p2_train.current_distance
+	$Control/VSlider.value = p1_train.distance_from_start
+	$Control/VSlider2.value = p2_train.distance_from_start
 	
 	
