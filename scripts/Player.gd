@@ -9,15 +9,21 @@ var resource = 0
 var is_alive = true
 @onready var is_player1 = true
 
+var walking
+var idle
+
 enum TYPE {AMMO, GUNPOWDER, FUEL}
 
 #---------------Methods--------------#
-	
+func _ready():
+	walking = "walking"
+	idle = "idle"
+
 func _physics_process(delta):
 	if(velocity.length() > 0):
-		$AnimatedSprite3D.play("walking")
+		$AnimatedSprite3D.play(walking)
 	else:
-		$AnimatedSprite3D.play("idle")
+		$AnimatedSprite3D.play(idle)
 	
 	movement = Vector3(0,0,0)
 	check_interaction()
@@ -74,4 +80,8 @@ func check_interaction():
 func fill_inventory(type):
 	self.inventory = 1
 	self.resource = type
-	print(self.resource)
+	match self.resource:
+		0:
+			walking = "walking_ball"
+			idle = "idle_ball"
+			
