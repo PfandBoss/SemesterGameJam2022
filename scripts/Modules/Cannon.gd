@@ -19,12 +19,12 @@ func _ready():
 #TODO: FINISH
 func interact(player):
 	if currentState == STATE.INACTIVE:
-		if player.getResource == 0:
+		if player.getResource() == 0:
 			if currentStashValue < maxStashValue:
 				currentStashValue += 1
 			return
 		return
-		if player.getResource == 1:
+		if player.getResource() == 1:
 			if currentPowderStashValue < maxPowderStashValue:
 				currentPowderStashValue += 1
 			return
