@@ -1,9 +1,15 @@
 extends Node
 class_name Game
 
+const CHILL = 0
+const FIGHTING = 1
+
+
 #Signals
 signal ammo_pickup
 signal shoot
+
+var fight_state = CHILL
 
 var t = 0.0
 
@@ -19,6 +25,7 @@ func _ready():
 	p2_node = StartNode
 	p2_train.get_node("CharacterBody3D").is_player1 = false
 	p2_train.is_P1 = false
+	p1_train.current_speed = 10
 	p1_train.hit.connect(_on_hit_player)
 	p2_train.hit.connect(_on_hit_player)
 	
@@ -43,6 +50,20 @@ func _process(delta):
 		p2_node = p2_node._on_train_exit(p2_train)
 		p2_train.current_distance = distance_delta
 
-	
+	if(p1_node == p2_node && p1_train.current_distance - p2_train.current_distance < 2):
+		if(fight_state == CHILL):
+			var tween = create_tween()
+			tween.tween_property($Camera3D, "position", Vector3(0,10,0), 1)
+			fight_state = FIGHTING
+	else:
+		fight_state = CHILL
+		var tween = create_tween()
+		tween.tween_property($Camera3D, "position", Vector3(0,20,0), 1)
+		
+		
 	if Input.is_action_pressed("test"):
 		emit_signal("shoot")
+
+	
+	
+	
