@@ -16,24 +16,24 @@ enum TYPE {AMMO, GUNPOWDER, FUEL}
 
 var P1inMiniGame = 0
 var P2inMiniGame = 0
-var MiniGame = [-1, -1, -1]
+var MiniGame = [0, 0, 0]
 var MiniGamePos = 0 
 var rng = RandomNumberGenerator.new()
 #---------------Methods--------------#
 func _ready():
 	walking = "walking"
 	idle = "idle"
-	$MiniGameButton0.hide()
-	$MiniGameButton1.hide()
-	$MiniGameButton2.hide()
+	get_parent().find_child("CharacterBody3D").find_child("MiniGameButton0").hide() 
+	get_parent().find_child("CharacterBody3D").find_child("MiniGameButton1").hide()
+	get_parent().find_child("CharacterBody3D").find_child("MiniGameButton2").hide()
 
 func miniGameColor(input: int, red: int):
 	if(input == 0):
-		$MiniGameButton0.modulate = Color(1,1,red)
+		get_parent().find_child("CharacterBody3D").find_child("MiniGameButton0").modulate = Color(1,1,red)
 	if(input == 1):
-		$MiniGameButton1.modulate = Color(1,1,red)
+		get_parent().find_child("CharacterBody3D").find_child("MiniGameButton1").modulate = Color(1,1,red)
 	if(input == 2):
-		$MiniGameButton2.modulate = Color(1,1,red)
+		get_parent().find_child("CharacterBody3D").find_child("MiniGameButton2").modulate = Color(1,1,red)
 
 func miniGameReset():
 	MiniGamePos = 0
@@ -49,11 +49,14 @@ func miniGameReset():
 
 func miniGameSetArrow(buttonNr: int):
 	if(buttonNr == 0):
-		$MiniGameButton0.frame = 26 + MiniGame[0]
+		get_parent().find_child("CharacterBody3D").find_child("MiniGameButton0").frame = 26 + MiniGame[0]
+		#$MiniGameButton0.frame = 26 + MiniGame[0]
 	if(buttonNr == 1):
-		$MiniGameButton1.frame = 26 + MiniGame[1]
+		get_parent().find_child("CharacterBody3D").find_child("MiniGameButton1").frame = 26 + MiniGame[1]
+		#$MiniGameButton1.frame = 26 + MiniGame[1]
 	if(buttonNr == 2):
-		$MiniGameButton2.frame = 26 + MiniGame[2]
+		get_parent().find_child("CharacterBody3D").find_child("MiniGameButton2").frame = 26 + MiniGame[2]
+		#$MiniGameButton2.frame = 26 + MiniGame[2]
 	
 func miniGameCheck(input : int):
 	if(input == MiniGame[MiniGamePos]):
@@ -63,19 +66,22 @@ func miniGameCheck(input : int):
 		miniGameReset()
 	
 	if(MiniGamePos >= 3):
-		$MiniGameButton0.hide()
-		$MiniGameButton1.hide()
-		$MiniGameButton2.hide()
-		P1inMiniGame = 0
+		get_parent().find_child("CharacterBody3D").find_child("MiniGameButton0").hide()
+		get_parent().find_child("CharacterBody3D").find_child("MiniGameButton1").hide()
+		get_parent().find_child("CharacterBody3D").find_child("MiniGameButton2").hide()
+		if(is_player1):
+			P1inMiniGame = 0
+		else:
+			P2inMiniGame = 0
 		miniGameReset()
 	
 func _process(delta):
 	if Input.is_action_just_pressed("p1_extra"):
 		if(P1inMiniGame == 0):
 			P1inMiniGame = 1
-			$MiniGameButton0.show()
-			$MiniGameButton1.show()
-			$MiniGameButton2.show()
+			get_parent().find_child("CharacterBody3D").find_child("MiniGameButton0").show()
+			get_parent().find_child("CharacterBody3D").find_child("MiniGameButton1").show()
+			get_parent().find_child("CharacterBody3D").find_child("MiniGameButton2").show()
 
 func _physics_process(delta):
 	if(velocity.length() > 0):
