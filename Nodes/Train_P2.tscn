@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://7qppu15lvd1j" path="res://Nodes/Keys.png" id="14_otf4l"]
 [ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="15_sof53"]
 [ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="16_7dojn"]
-[ext_resource type="PackedScene" path="res://Nodes/engine.tscn" id="17_regf7"]
-[ext_resource type="AudioStream" uid="uid://bsc5ku8mloa6j" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_xnc4h"]
+[ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="17_regf7"]
+[ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_xnc4h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dijw3"]
 size = Vector3(1, 3.77669, 24)
