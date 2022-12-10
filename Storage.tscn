@@ -5,7 +5,7 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_c1ipa"]
 height = 3.60519
-radius = 2.08877
+radius = 1.33696
 
 [node name="Storage" type="StaticBody3D"]
 script = ExtResource("1_guwoh")

@@ -1,8 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://lvlbpfnwlngv"]
+[gd_scene load_steps=8 format=3 uid="uid://lvlbpfnwlngv"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
 [ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="2_71mfj"]
 [ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="3_in6up"]
+[ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="4_unqt6"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_2q7m8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ognqx"]
 size = Vector3(13, 1, 25)
@@ -15,7 +18,12 @@ transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -12, 0, 
 script = ExtResource("1_0x664")
 
 [node name="Cannon" parent="." instance=ExtResource("2_71mfj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.52346, 1.58651, -1.96232e-14)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.00885, 1.58651, -2.74986)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Cannon"]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
+mesh = SubResource("CylinderMesh_2q7m8")
+skeleton = NodePath("../../CharacterBody3D")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_ognqx")
@@ -28,4 +36,5 @@ shape = SubResource("ConcavePolygonShape3D_p3d4e")
 [node name="CharacterBody3D" parent="." instance=ExtResource("3_in6up")]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 3, 0)
 
-[node name="Cannon2" parent="." instance=ExtResource("2_71mfj")]
+[node name="Storage" parent="." instance=ExtResource("4_unqt6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.3638, 0, 3.41344)

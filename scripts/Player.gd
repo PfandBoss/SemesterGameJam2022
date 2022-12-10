@@ -64,6 +64,7 @@ func check_interaction():
 	if Input.is_action_just_pressed(action):
 		for body in $HitBox.get_overlapping_bodies():
 			if body is Module:
+				
 				#Storage interaction
 				if not inventory && body is Storage:
 					body.interact(self)
@@ -73,3 +74,4 @@ func check_interaction():
 func fill_inventory(type):
 	self.inventory = 1
 	self.resource = type
+	print(self.resource)
