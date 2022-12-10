@@ -87,6 +87,6 @@ func fill_inventory(type):
 		1:
 			walking = "walking_powder"
 			idle = "idle_powder"
-		3:
+		2:
 			walking = "walking_coal"
 			idle = "idle_coal"

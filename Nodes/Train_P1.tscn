@@ -117,5 +117,9 @@ playing = true
 [node name="Storage" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, -5.2771)
 
+[node name="Storage2" parent="." instance=ExtResource("4_5jw5g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, 0.876562)
+currentType = 2
+
 [node name="Cannon" parent="." instance=ExtResource("5_vgxqe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.4817, 1.2303, 0.0486939)
