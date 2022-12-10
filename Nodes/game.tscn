@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://n7w0ff7u25yc"]
+[gd_scene load_steps=5 format=3 uid="uid://bl1yrgr7g06db"]
 
 [ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_iox18"]
 
@@ -32,6 +32,7 @@ offset_bottom = 40.0
 layout_mode = 2
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer"]
+handle_input_locally = false
 size = Vector2i(960, 1080)
 render_target_update_mode = 4
 
@@ -55,6 +56,7 @@ transform = Transform3D(1.00002, 4.37121e-08, 4.37128e-08, -4.37121e-08, -4.3712
 layout_mode = 2
 
 [node name="SubViewport" type="SubViewport" parent="HBoxContainer/SubViewportContainer2"]
+handle_input_locally = false
 size = Vector2i(960, 1080)
 render_target_update_mode = 4
 
