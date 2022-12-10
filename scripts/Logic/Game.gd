@@ -38,7 +38,8 @@ func _ready():
 	p2_train.is_P1 = false
 	p1_train.hit.connect(_on_hit_player)
 	p2_train.hit.connect(_on_hit_player)
-	p1_train.current_speed = 3
+	p1_train.current_speed = 6
+	p2_train.current_speed = 6
 
 func getMapSize(node, is_start):
 	if node == StartNode && not is_start:
@@ -101,6 +102,10 @@ func mapSimulation(delta):
 	
 func fightSimulation():
 	#FIGHT SIMULATION
+<<<<<<< HEAD
+=======
+	#print(p1_train.current_distance - p2_train.current_distance)
+>>>>>>> 001f29cb394b200e67b451ba675fe20c2d780623
 	if(p1_node == p2_node && abs(p1_train.current_distance - p2_train.current_distance) < 0.5):
 		if(fight_state == CHILL):
 			fight_state = FIGHTING

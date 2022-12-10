@@ -3,7 +3,7 @@ class_name TrainEngine
 
 
 enum STATE {RUNNING, DEAD}
-const maxSpeed = 6
+const maxSpeed = 10
 const refuelRate = 0.5
 
 @onready var train = get_parent() as Train
@@ -32,8 +32,8 @@ func interact(player):
 
 func _process(delta):
 	if not train.is_dead():
-		train.current_speed -= 0.1 * delta
-		print(train.current_speed)
+		train.current_speed -= 0.1 * delta * 0.25
+		print("Player ",train.is_P1,train.current_speed)
 		
 	
 
