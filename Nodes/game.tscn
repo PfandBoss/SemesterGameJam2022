@@ -29,5 +29,6 @@ transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 9.90113,
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.875944, -0.294781, 0.381872, -0.0210188, 0.767515, 0.640687, -0.481955, -0.569232, 0.666104, 0, 8.25958, 0)
+visible = false
 
 [node name="Control" parent="." instance=ExtResource("4_kxuy0")]

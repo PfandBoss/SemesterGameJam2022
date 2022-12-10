@@ -97,8 +97,8 @@ func mapSimulation(delta):
 		var distance_delta = p2_train.current_distance - p2_node.LENGTH
 		p2_node = p2_node._on_train_exit(p2_train)
 		p2_train.current_distance = distance_delta
-	$Control/VSlider.value = p2_train.distance_from_startgit 
-	$Control/VSlider2.value = p1_train.distance_from_start
+	$Control/VSlider.value = p1_train.distance_from_start
+	$Control/VSlider2.value = p2_train.distance_from_start
 	
 func fightSimulation():
 	#FIGHT SIMULATION
