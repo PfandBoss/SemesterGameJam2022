@@ -2,9 +2,12 @@ extends Module
 
 class_name Storage
 
-enum TYPE {AMMO, GUNPOWDER, FUEL}
+enum TYPE {CANNONBALL, GUNPOWDER, COAL}
+
 
 @export var currentType: TYPE
+
+
 
 #------------Methods-------------#
 func _ready():
