@@ -3,7 +3,8 @@ extends Module
 class_name Cannon
 
 enum STATE {INACTIVE, RELOADING, SHOOTING}
-
+enum AMMO {NORMAL, HEAVY, LIGHT}
+var currentAmmo: AMMO
 var CAN_ENGAGE = true
 var DAMAGE = 5
 @onready var train = get_parent() as Train
@@ -15,13 +16,13 @@ func _ready():
 	currentState = STATE.INACTIVE
 #TODO: FINISH
 func interact():
+	
 	if currentState == STATE.INACTIVE:
 		#TODO: RELOADING
 		if currentStashValue < maxStashValue:
 			currentState = STATE.RELOADING
 			currentStashValue += 1
 		return
-		
 	return
 
 func shoot():
