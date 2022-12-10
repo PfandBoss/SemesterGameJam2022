@@ -83,6 +83,7 @@ func _process(delta):
 	if Input.is_action_pressed("test"):
 		emit_signal("shoot")
 
-	
+	$Control/VSlider.value = p1_train.current_distance
+	$Control/VSlider2.value = p2_train.current_distance
 	
 	
