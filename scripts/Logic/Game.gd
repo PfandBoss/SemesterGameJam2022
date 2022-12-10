@@ -102,10 +102,6 @@ func mapSimulation(delta):
 	
 func fightSimulation():
 	#FIGHT SIMULATION
-<<<<<<< HEAD
-=======
-	#print(p1_train.current_distance - p2_train.current_distance)
->>>>>>> 001f29cb394b200e67b451ba675fe20c2d780623
 	if(p1_node == p2_node && abs(p1_train.current_distance - p2_train.current_distance) < 0.5):
 		if(fight_state == CHILL):
 			fight_state = FIGHTING
