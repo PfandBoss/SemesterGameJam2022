@@ -172,4 +172,4 @@ func fight():
 	emit_signal("shoot")
 	tween.tween_callback(func(): fight_state = FOUGHT).set_delay(0.7)
 	
-	
+	#Hallo
