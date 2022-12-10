@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=3 uid="uid://md2ofbviios3"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
-[ext_resource type="PackedScene" uid="uid://chrtbakf4df4t" path="res://Nodes/engine.tscn" id="3_1ix85"]
+[ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="3_1ix85"]
 [ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="3_in6up"]
 [ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="3_jmv6b"]
 [ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="4_5jw5g"]
@@ -110,7 +110,7 @@ shape = SubResource("BoxShape3D_sm5ue")
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 3.19744e-14, 3, -9)
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D"]
-transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, -1, 0)
+transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, -2, 0)
 frames = SubResource("SpriteFrames_6p0y6")
 animation = &"walking_coal"
 speed_scale = 2.0

@@ -38,6 +38,6 @@ func shoot():
 		currentStashValue -= 1
 		currentPowderStashValue = 0
 		currentState = STATE.INACTIVE
-		print("pew")
+		$AudioStreamPlayer3D.play(0)
 		return true
 	return false
