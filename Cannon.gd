@@ -7,7 +7,7 @@ enum STATE {INACTIVE, RELOADING, SHOOTING}
 #------------Methods-------------#
 func _ready():
 	var root = get_tree().root.get_child(0)
-	root.timeout.connect("shooting",self,"_on_signal_shooting")
+	root.shooting.connect(_on_signal_shooting)
 	maxStashValue = 1
 	currentStashValue = 0
 	currentState = STATE.INACTIVE
