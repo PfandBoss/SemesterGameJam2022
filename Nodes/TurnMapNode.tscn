@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c3ynfb5ky5p8g"]
-
-[ext_resource type="Script" path="res://scripts/Logic/TurnMapNode.gd" id="1_wbnsc"]
-
-[node name="TurnMapNode" type="Node"]
-script = ExtResource("1_wbnsc")
