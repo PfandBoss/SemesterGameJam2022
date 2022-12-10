@@ -13,8 +13,8 @@ var fight_state = CHILL
 
 var t = 0.0
 
-@onready var p1_train = $Player1 as Train
-@onready var p2_train = $Player2 as Train
+@onready var p1_train = $Train1 as Train
+@onready var p2_train = $Train2 as Train
 
 @onready var StartNode = $StartNode
 var p1_node : MapNode
@@ -22,8 +22,10 @@ var p2_node : MapNode
 
 var initial_pos_p1 : Vector3
 var initial_pos_p2 : Vector3
+var initial_camera_pos: Vector3
 
 func _ready():
+	initial_camera_pos = $Camera3D.position
 	initial_pos_p1 = p1_train.position
 	initial_pos_p2 = p2_train.position
 	p1_node = StartNode
@@ -68,9 +70,9 @@ func _process(delta):
 			var tween = create_tween()
 			tween.set_trans(Tween.TRANS_EXPO)
 			tween.set_ease(Tween.EASE_OUT)
-			var new_pos_p1 = p1_train.position + Vector3(-15,0,0)
-			var new_pos_p2 = p2_train.position + Vector3(15,0,0)
-			tween.tween_property($Camera3D, "position", Vector3(0,40,0), 1.4)
+			var new_pos_p1 = p1_train.position + Vector3(-30,0,-15)
+			var new_pos_p2 = p2_train.position + Vector3(30,0,-15)
+			tween.tween_property($Camera3D, "position", initial_camera_pos + Vector3(0,80,20), 1.4)
 			tween.set_parallel()
 			tween.tween_property(p1_train, "position",new_pos_p1, 1)
 			tween.tween_property(p2_train, "position",new_pos_p2, 1)
@@ -86,7 +88,7 @@ func _process(delta):
 		var tween = create_tween()
 		tween.set_trans(Tween.TRANS_EXPO)
 		tween.set_ease(Tween.EASE_OUT)
-		tween.tween_property($Camera3D, "position", Vector3(0,20,0), 1.4)
+		tween.tween_property($Camera3D, "position", initial_camera_pos, 1.4)
 		tween.set_parallel()
 		tween.tween_property(p1_train, "position",initial_pos_p1, 1)
 		tween.tween_property(p2_train, "position", initial_pos_p2, 1)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://tsku7fooj4g3"]
+[gd_scene load_steps=10 format=3 uid="uid://c1mymb38wqdg6"]
 
 [ext_resource type="PackedScene" uid="uid://by5dkvik2ti0a" path="res://Assets/Model/Train/TrainFloorTile4x4.glb" id="1_ruoy4"]
 [ext_resource type="PackedScene" uid="uid://bbt38m8mno0d2" path="res://Assets/Model/Train/TrainWall.glb" id="2_ph0y0"]
@@ -88,10 +88,6 @@ transform = Transform3D(-4.56956e-08, 0, 1, 0, 1, 0, -1, 0, -4.56956e-08, 4, 0, 
 
 [node name="TrainPillarArcExtention6" parent="." instance=ExtResource("7_87n8g")]
 transform = Transform3D(-4.17272e-08, 0, -1, 0, 1, 0, 1, 0, -4.17272e-08, 4, 0, -2)
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.704748, -0.182867, -0.685485, 0.471599, 0.842588, 0.260075, 0.530022, -0.506562, 0.680053, 0, 9.83907, 0)
-shadow_enabled = true
 
 [node name="TrainPillarWood" parent="." instance=ExtResource("7_hd70v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)

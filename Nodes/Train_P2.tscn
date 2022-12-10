@@ -1,0 +1,54 @@
+[gd_scene load_steps=8 format=3 uid="uid://ckkn7rha3voqv"]
+
+[ext_resource type="Script" path="res://scripts/Train.gd" id="1_mcmgl"]
+[ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="2_xoa1a"]
+[ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="3_x8j45"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dijw3"]
+size = Vector3(1, 3.77669, 24)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ao4pd"]
+size = Vector3(12, 1, 24)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g76js"]
+size = Vector3(12, 4, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_psmwd"]
+size = Vector3(1, 6, 9.05915)
+
+[node name="Train2" type="Node3D"]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
+script = ExtResource("1_mcmgl")
+
+[node name="train" parent="." instance=ExtResource("2_xoa1a")]
+transform = Transform3D(1.96701e-07, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1.96701e-07, -3, 0, -9)
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="train"]
+transform = Transform3D(-2.91409e-08, 0, -0.666667, 0, 0.666667, 0, 0.666667, 0, -2.91409e-08, 6, -0.137826, -1.33333)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 4.23516e-22)
+shape = SubResource("BoxShape3D_dijw3")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2, 3.55271e-15)
+shape = SubResource("BoxShape3D_dijw3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -3.55271e-15)
+shape = SubResource("BoxShape3D_ao4pd")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, -12)
+shape = SubResource("BoxShape3D_g76js")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 2, 12)
+shape = SubResource("BoxShape3D_g76js")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 3, -1.52864)
+shape = SubResource("BoxShape3D_psmwd")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("3_x8j45")]
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 2.84217e-14, 3, -8)
