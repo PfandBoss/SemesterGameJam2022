@@ -13,6 +13,7 @@ var t = 0.0
 
 
 func _ready():
+	p2_train.get_node("CharacterBody3D").is_player1 = false
 	p2_train.is_P1 = false
 	p1_train.hit.connect(_on_hit_player)
 	
