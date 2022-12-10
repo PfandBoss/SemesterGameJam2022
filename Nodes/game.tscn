@@ -25,13 +25,12 @@ script = ExtResource("1_iox18")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 20, 0)
 
 [node name="Player1" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -8, 0, 8)
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -12, 0, 0)
 script = ExtResource("2_xl0he")
 
 [node name="Cannon" parent="Player1" instance=ExtResource("2_vrf6k")]
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Player1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -8)
 mesh = SubResource("BoxMesh_ognqx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Player1/MeshInstance3D2"]
@@ -40,19 +39,19 @@ mesh = SubResource("BoxMesh_ognqx")
 shape = SubResource("ConcavePolygonShape3D_p3d4e")
 
 [node name="CharacterBody3D" parent="Player1" instance=ExtResource("4_1ipcp")]
-transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -1.18815, 1, -11.064)
+transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 
 [node name="Cannon2" parent="Player1" instance=ExtResource("2_vrf6k")]
 
 [node name="Backgroundspawner" parent="Player1" instance=ExtResource("6_eu07k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -43.4414)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Player2" type="Node3D" parent="."]
-transform = Transform3D(-0.0154456, -6.75145e-10, -0.999879, -5.21344e-12, 1, -6.75146e-10, 0.999879, -5.2134e-12, -0.0154456, -8, 0, -32)
+transform = Transform3D(-0.0154456, -6.75145e-10, -0.999879, -5.21344e-12, 1, -6.75146e-10, 0.999879, -5.2134e-12, -0.0154456, 12, 0, 0)
 script = ExtResource("2_xl0he")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player2"]
-transform = Transform3D(-0.0154456, -5.21524e-12, 0.999881, -6.75146e-10, 1, -5.21521e-12, -0.999881, -6.75146e-10, -0.0154456, 31.7182, -1.23195e-08, -18.4921)
+transform = Transform3D(-0.0154456, -5.21524e-12, 0.999881, -6.75146e-10, 1, -5.21521e-12, -0.999881, -6.75146e-10, -0.0154456, 0, 0, 0)
 mesh = SubResource("BoxMesh_ognqx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Player2/MeshInstance3D"]
@@ -62,9 +61,10 @@ transform = Transform3D(1, 8.23952e-25, 0, -1.6479e-25, 1, 0, 0, -1.65436e-24, 1
 shape = SubResource("ConcavePolygonShape3D_l76gd")
 
 [node name="CharacterBody3D" parent="Player2" instance=ExtResource("4_1ipcp")]
-transform = Transform3D(-0.0154457, -5.21527e-12, 0.999882, -6.75147e-10, 1, -5.21524e-12, -0.999882, -6.75146e-10, -0.0154457, 31.3762, 1.5, -17.7157)
+transform = Transform3D(-0.0154457, -5.21527e-12, 0.999882, -6.75147e-10, 1, -5.21524e-12, -0.999882, -6.75146e-10, -0.0154457, 0, 0, 0)
 
 [node name="Backgroundspawner" parent="Player2" instance=ExtResource("6_eu07k")]
+transform = Transform3D(1, 0, -9.31323e-10, 0, 1, 5.90213e-18, 9.31323e-10, -2.23142e-17, 1, 0, 0, 0)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 0, 0)
