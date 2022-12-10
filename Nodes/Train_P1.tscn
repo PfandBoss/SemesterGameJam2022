@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://md2ofbviios3"]
+[gd_scene load_steps=23 format=3 uid="uid://md2ofbviios3"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
 [ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="3_1ix85"]
@@ -16,8 +16,11 @@
 [ext_resource type="Texture2D" uid="uid://ckdlv6b7okseq" path="res://walking_powder2.png" id="10_a137a"]
 [ext_resource type="Texture2D" uid="uid://b5ioch3ad8y6r" path="res://walking_coal2.png" id="11_1jgcf"]
 [ext_resource type="Texture2D" uid="uid://7qppu15lvd1j" path="res://Nodes/Keys.png" id="13_d8wle"]
+[ext_resource type="Texture2D" uid="uid://bhmyyu0uhx541" path="res://Assets/Textures/Opera_senza_titolo (2).png" id="14_503dh"]
+[ext_resource type="Texture2D" uid="uid://biyvvql2ufkdf" path="res://Assets/Textures/Opera_senza_titolo (1).png" id="15_dew1j"]
 [ext_resource type="PackedScene" uid="uid://bkpnrgcfr1jgl" path="res://Nodes/Bin.tscn" id="16_q3kvk"]
 [ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_ajifv"]
+[ext_resource type="Texture2D" uid="uid://cet5o7wla1x7t" path="res://Assets/Textures/Opera_senza_titolo.png" id="19_5df2b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6p0y6"]
 animations = [{
@@ -99,10 +102,12 @@ frame = 26
 
 [node name="Storage" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, -5.2771)
+icon = ExtResource("14_503dh")
 
 [node name="Storage2" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, 0.876562)
 currentType = 2
+icon = ExtResource("15_dew1j")
 
 [node name="Cannon" parent="." instance=ExtResource("5_vgxqe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32927, 1.2303, 0.0486939)
@@ -119,6 +124,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.7029
 [node name="Storage3" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63306, -0.501894, -11.5457)
 currentType = 1
+icon = ExtResource("19_5df2b")
 audioClip = ExtResource("17_ajifv")
 
 [node name="train" parent="." instance=ExtResource("3_jmv6b")]

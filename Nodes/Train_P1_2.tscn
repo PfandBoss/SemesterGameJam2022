@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://c3p3k8ytvc32e"]
+[gd_scene load_steps=23 format=3 uid="uid://c3p3k8ytvc32e"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_hg4dh"]
 [ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="2_0fjcv"]
@@ -14,10 +14,13 @@
 [ext_resource type="Texture2D" uid="uid://7qppu15lvd1j" path="res://Nodes/Keys.png" id="12_287nh"]
 [ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="13_3fxhr"]
 [ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="14_3pfub"]
+[ext_resource type="Texture2D" uid="uid://bhmyyu0uhx541" path="res://Assets/Textures/Opera_senza_titolo (2).png" id="14_kjtep"]
+[ext_resource type="Texture2D" uid="uid://biyvvql2ufkdf" path="res://Assets/Textures/Opera_senza_titolo (1).png" id="15_3bc4m"]
 [ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="15_4kp3s"]
 [ext_resource type="PackedScene" uid="uid://bkpnrgcfr1jgl" path="res://Nodes/Bin.tscn" id="16_ep4dv"]
 [ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_06sqf"]
 [ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="18_6adfq"]
+[ext_resource type="Texture2D" uid="uid://cet5o7wla1x7t" path="res://Assets/Textures/Opera_senza_titolo.png" id="19_8lg1q"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6p0y6"]
 animations = [{
@@ -99,10 +102,12 @@ frame = 26
 
 [node name="Storage" parent="." instance=ExtResource("13_3fxhr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, -5.2771)
+icon = ExtResource("14_kjtep")
 
 [node name="Storage2" parent="." instance=ExtResource("13_3fxhr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, 0.876562)
 currentType = 2
+icon = ExtResource("15_3bc4m")
 
 [node name="Cannon" parent="." instance=ExtResource("14_3pfub")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32927, 1.2303, 0.0486939)
@@ -119,6 +124,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.7029
 [node name="Storage3" parent="." instance=ExtResource("13_3fxhr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63306, -0.501894, -11.5457)
 currentType = 1
+icon = ExtResource("19_8lg1q")
 audioClip = ExtResource("17_06sqf")
 
 [node name="train" parent="." instance=ExtResource("18_6adfq")]
