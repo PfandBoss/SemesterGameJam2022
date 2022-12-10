@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://cys06pnxfjl2m"]
+[gd_scene load_steps=5 format=3 uid="uid://cys06pnxfjl2m"]
 
 [ext_resource type="Texture2D" uid="uid://b8rsm7uapp583" path="res://undefined - Imgur (1).png" id="1_cb7ct"]
 [ext_resource type="Texture2D" uid="uid://44lfs83sax35" path="res://undefined - Imgur.png" id="2_udann"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fir3c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oa1ad"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -33,6 +37,8 @@ grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(32, 0)
 theme_override_icons/grabber_disabled = ExtResource("1_cb7ct")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_fir3c")
+max_value = 150.0
 editable = false
 scrollable = false
 
@@ -46,5 +52,8 @@ offset_right = -20.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_icons/grabber_disabled = ExtResource("2_udann")
+theme_override_styles/grabber_area = SubResource("StyleBoxTexture_oa1ad")
+max_value = 150.0
+value = 50.0
 editable = false
 scrollable = false

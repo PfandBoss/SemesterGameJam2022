@@ -45,11 +45,11 @@ func _process(delta):
 	p1_train.current_distance += p1_train.current_speed * delta
 	p2_train.current_distance += p2_train.current_speed * delta
 	p1_train.distance_from_start += p1_train.current_speed * delta
-	p2_train.distance_from_start += p1_train.current_speed * delta
+	p2_train.distance_from_start += p2_train.current_speed * delta
 	
-	if(p1_node == StartNode && p1_train.distance_from_start > 5):
+	if(p1_node == StartNode && p1_train.distance_from_start > 15):
 		p1_train.distance_from_start = 0
-	if(p2_node == StartNode && p2_train.distance_from_start > 5):
+	if(p2_node == StartNode && p2_train.distance_from_start > 15):
 		p2_train.distance_from_start = 0
 		
 	if(p1_train.current_distance >= p1_node.LENGTH):
@@ -75,6 +75,11 @@ func _process(delta):
 			tween.tween_property(p1_train, "position",new_pos_p1, 1)
 			tween.tween_property(p2_train, "position",new_pos_p2, 1)
 			tween.tween_property($Control/Panel, "custom_minimum_size", Vector2(0,0), 1)
+			tween.tween_property($Control/VSlider,"scale",Vector2(0,0),1)
+			tween.tween_property($Control/VSlider2,"scale",Vector2(0,0),1)
+			p1_train.current_speed *= 0.5
+			p2_train.current_speed *= 0.5
+			
 			
 	elif(fight_state == FIGHTING):
 		fight_state = CHILL
@@ -86,9 +91,15 @@ func _process(delta):
 		tween.tween_property(p1_train, "position",initial_pos_p1, 1)
 		tween.tween_property(p2_train, "position", initial_pos_p2, 1)
 		tween.tween_property($Control/Panel, "custom_minimum_size", Vector2(15,0), 1)
+		tween.tween_property($Control/VSlider,"scale",Vector2(1,1),1)
+		tween.tween_property($Control/VSlider2,"scale",Vector2(1,1),1)
+		p1_train.current_speed *= 2
+		p2_train.current_speed *= 2
+		
 		
 	if Input.is_action_pressed("test"):
 		emit_signal("shoot")
+	
 
 	$Control/VSlider.value = p1_train.distance_from_start
 	$Control/VSlider2.value = p2_train.distance_from_start
