@@ -11,6 +11,8 @@ var currentState = null : set = _set_state, get = _get_state
 var level = 0 : set = _set_level, get = _get_level
 
 
+
+
 enum MODULE_TYPE {CANNON, STEERING, ENGINE, STORAGE}
 
 
@@ -22,7 +24,9 @@ func interact():
 	pass
 
 
-
+func _ready():
+	emit_signal("MODULE")
+	
 
 #-----------Setter and Getter---------------#
 func _set_currentStashValue(newValue):
