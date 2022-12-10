@@ -3,12 +3,13 @@ extends CharacterBody3D
 #-----------Parameters--------------#
 var SPEED = 10
 var movement = Vector3(0,0,0)
-var collisionLayer = 3
 var inventory = 0 #1 - full, 0 - empty inventory
 var resource = 0 
 
 var is_alive = true
 @onready var is_player1 = true
+
+enum TYPE {AMMO, GUNPOWDER, FUEL}
 
 #---------------Methods--------------#
 	
@@ -65,6 +66,10 @@ func check_interaction():
 			if body is Module:
 				#Storage interaction
 				if not inventory && body is Storage:
-					body.interact()
+					body.interact(self)
 				elif inventory && not body is Storage:
-					body.interact()
+					body.interact(self)
+	
+func fill_inventory(type):
+	self.inventory = 1
+	self.resource = type

@@ -20,7 +20,7 @@ enum MODULE_TYPE {CANNON, STEERING, ENGINE, STORAGE}
 #------------Methods-------------#
 
 
-func interact():
+func interact(player):
 	pass
 
 

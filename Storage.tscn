@@ -5,13 +5,14 @@
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_c1ipa"]
 height = 3.60519
-radius = 1.29067
+radius = 2.08877
 
 [node name="Storage" type="StaticBody3D"]
 script = ExtResource("1_guwoh")
 currentType = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.10389, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_c1ipa")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]

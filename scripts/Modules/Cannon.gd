@@ -15,7 +15,7 @@ func _ready():
 	currentStashValue = 1
 	currentState = STATE.INACTIVE
 #TODO: FINISH
-func interact():
+func interact(player):
 	
 	if currentState == STATE.INACTIVE:
 		#TODO: RELOADING

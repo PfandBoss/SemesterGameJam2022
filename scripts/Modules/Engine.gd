@@ -15,7 +15,7 @@ func _ready():
 	currentStashValue = 100
 	currentState = STATE.RUNNING
 #TODO: FINISH
-func interact():
+func interact(player):
 	if currentState == STATE.RUNNING:
 		if (train.current_speed + refuelRate) <= maxSpeed:
 			train.current_speed += refuelRate
