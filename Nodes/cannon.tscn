@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://byo1m0n20yl45"]
+[gd_scene load_steps=3 format=3 uid="uid://byo1m0n20yl45"]
 
 [ext_resource type="Script" path="res://scripts/Modules/Cannon.gd" id="1_vdn0s"]
 
-[node name="Cannon" type="Node"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_2geka"]
+
+[node name="Cannon" type="StaticBody3D"]
 script = ExtResource("1_vdn0s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CylinderShape3D_2geka")
