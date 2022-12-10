@@ -4,7 +4,7 @@ extends CharacterBody3D
 var SPEED = 10
 var movement = Vector3(0,0,0)
 var inventory = 0 #1 - full, 0 - empty inventory
-var resource = 0 : set = setResource, get = getResource
+var resource = 0 : get = getResource
 
 var is_alive = true
 @onready var is_player1 = true
@@ -92,6 +92,6 @@ func fill_inventory(type):
 
 func getResource():
 	return self.resource
-
-func setResource(resource : int):
-	self.resource = resource
+	
+func clearInventory():
+	inventory = 0
