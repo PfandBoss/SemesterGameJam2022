@@ -4,7 +4,7 @@ extends CharacterBody3D
 var SPEED = 10
 var movement = Vector3(0,0,0)
 var inventory = 0 #1 - full, 0 - empty inventory
-var resource = 0 
+var resource = 0 : set = setResource, get = getResource
 
 var is_alive = true
 @onready var is_player1 = true
@@ -24,7 +24,6 @@ func _physics_process(delta):
 		$AnimatedSprite3D.play(walking)
 	else:
 		$AnimatedSprite3D.play(idle)
-	
 	movement = Vector3(0,0,0)
 	check_interaction()
 	check_input()
@@ -40,7 +39,6 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func check_input():
-	
 	if is_player1:
 		if Input.is_action_pressed("p1_left"):
 			movement.x -= 1
@@ -90,3 +88,10 @@ func fill_inventory(type):
 		2:
 			walking = "walking_coal"
 			idle = "idle_coal"
+
+
+func getResource():
+	return self.resource
+
+func setResource(resource : int):
+	self.resource = resource
