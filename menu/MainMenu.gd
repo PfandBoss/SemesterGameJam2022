@@ -13,11 +13,12 @@ func _ready():
 
 
 func _on_start_pressed():
-	get_tree().change_scene("res://pathTo/Level.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://Nodes/game.tscn")
+# Replace with function body.
 
 
 func _on_tutorial_pressed():
-	get_tree().change_scene("res://pathTo/Level.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("res://Nodes/game.tscn") # Replace with function body.
 
 
 func _on_quit_pressed():
