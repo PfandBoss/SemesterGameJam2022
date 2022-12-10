@@ -1,0 +1,133 @@
+[gd_scene load_steps=10 format=3 uid="uid://tsku7fooj4g3"]
+
+[ext_resource type="PackedScene" uid="uid://by5dkvik2ti0a" path="res://Assets/Model/Train/TrainFloorTile4x4.glb" id="1_ruoy4"]
+[ext_resource type="PackedScene" uid="uid://bbt38m8mno0d2" path="res://Assets/Model/Train/TrainWall.glb" id="2_ph0y0"]
+[ext_resource type="PackedScene" uid="uid://de8860yknve3i" path="res://Assets/Model/Train/TrainPillarFloorAdapter.glb" id="4_ub5ul"]
+[ext_resource type="PackedScene" uid="uid://dmraqtehsfo45" path="res://Assets/Model/Train/TrainWallArc.glb" id="5_lb36h"]
+[ext_resource type="PackedScene" uid="uid://cugtbjho4lj44" path="res://Assets/Model/Train/TrainFrameTopBottom.glb" id="6_0bbr0"]
+[ext_resource type="PackedScene" uid="uid://db7atd4d3px2c" path="res://Assets/Model/Train/TrainFrameTop.glb" id="7_2ua2q"]
+[ext_resource type="PackedScene" uid="uid://gihk416gd7tx" path="res://Assets/Model/Train/TrainPillarArcExtention.glb" id="7_87n8g"]
+[ext_resource type="PackedScene" uid="uid://dfljj7kor8v2j" path="res://Assets/Model/Train/TrainPillarWood.glb" id="7_hd70v"]
+[ext_resource type="PackedScene" uid="uid://08f17h0im640" path="res://Assets/Model/Train/TrainWallInterior.glb" id="9_yvbc7"]
+
+[node name="train" type="Node3D"]
+
+[node name="TrainFloorTile4x4" parent="." instance=ExtResource("1_ruoy4")]
+
+[node name="TrainFloorTile4x5" parent="." instance=ExtResource("1_ruoy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="TrainFloorTile4x6" parent="." instance=ExtResource("1_ruoy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="TrainFloorTile4x7" parent="." instance=ExtResource("1_ruoy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+
+[node name="TrainFloorTile4x8" parent="." instance=ExtResource("1_ruoy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4)
+
+[node name="TrainFloorTile4x9" parent="." instance=ExtResource("1_ruoy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -4)
+
+[node name="TrainFloorTile4x10" parent="." instance=ExtResource("1_ruoy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -4)
+
+[node name="TrainFloorTile4x11" parent="." instance=ExtResource("1_ruoy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -4)
+
+[node name="TrainWall" parent="." instance=ExtResource("2_ph0y0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="TrainWall3" parent="." instance=ExtResource("2_ph0y0")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
+
+[node name="TrainWall4" parent="." instance=ExtResource("2_ph0y0")]
+transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 2)
+
+[node name="TrainPillarFloorAdapter" parent="." instance=ExtResource("4_ub5ul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="TrainPillarFloorAdapter2" parent="." instance=ExtResource("4_ub5ul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="TrainPillarFloorAdapter4" parent="." instance=ExtResource("4_ub5ul")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 4, 4, -2)
+
+[node name="TrainPillarFloorAdapter5" parent="." instance=ExtResource("4_ub5ul")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 4, 4, -2)
+
+[node name="TrainWallArc" parent="." instance=ExtResource("5_lb36h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+
+[node name="TrainFrameTopBottom" parent="." instance=ExtResource("6_0bbr0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="TrainPillarFloorAdapter3" parent="." instance=ExtResource("4_ub5ul")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8, -4.76837e-07, 2)
+
+[node name="TrainWallArc2" parent="." instance=ExtResource("5_lb36h")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8, 0, 2)
+
+[node name="TrainFrameTopBottom2" parent="." instance=ExtResource("6_0bbr0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6, 0, 2)
+
+[node name="TrainPillarArcExtention" parent="." instance=ExtResource("7_87n8g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="TrainFrameTop2" parent="TrainPillarArcExtention" instance=ExtResource("7_2ua2q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, 0)
+
+[node name="TrainFrameTop3" parent="TrainPillarArcExtention" instance=ExtResource("7_2ua2q")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -2)
+
+[node name="TrainPillarArcExtention2" parent="." instance=ExtResource("7_87n8g")]
+transform = Transform3D(-1, 0, -8.9407e-08, 0, 1, 0, 8.9407e-08, 0, -1, 4, 0, 2)
+
+[node name="TrainPillarArcExtention3" parent="." instance=ExtResource("7_87n8g")]
+transform = Transform3D(-4.56956e-08, 0, 1, 0, 1, 0, -1, 0, -4.56956e-08, 4, 0, 2)
+
+[node name="TrainPillarArcExtention6" parent="." instance=ExtResource("7_87n8g")]
+transform = Transform3D(-4.17272e-08, 0, -1, 0, 1, 0, 1, 0, -4.17272e-08, 4, 0, -2)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.704748, -0.182867, -0.685485, 0.471599, 0.842588, 0.260075, 0.530022, -0.506562, 0.680053, 0, 9.83907, 0)
+shadow_enabled = true
+
+[node name="TrainPillarWood" parent="." instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
+
+[node name="TrainPillarWood" parent="TrainPillarWood" instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="TrainPillarWood2" parent="TrainPillarWood" instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="TrainPillarFloorAdapter5" parent="TrainPillarWood" instance=ExtResource("4_ub5ul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+
+[node name="TrainPillarWood4" parent="TrainPillarWood" instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -4)
+
+[node name="TrainPillarFloorAdapter6" parent="TrainPillarWood" instance=ExtResource("4_ub5ul")]
+transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, 10, 4, -4)
+
+[node name="TrainPillarFloorAdapter7" parent="TrainPillarWood" instance=ExtResource("4_ub5ul")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -4)
+
+[node name="TrainPillarWood5" parent="TrainPillarWood" instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -4)
+
+[node name="TrainPillarWood3" parent="TrainPillarWood" instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 0)
+
+[node name="TrainPillarWood2" parent="." instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="TrainWallInterior" parent="." instance=ExtResource("9_yvbc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -2)
+
+[node name="TrainWallInterior2" parent="." instance=ExtResource("9_yvbc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="TrainWallInterior3" parent="." instance=ExtResource("9_yvbc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)

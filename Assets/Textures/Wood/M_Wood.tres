@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://dw23bglg7veyq"]
+
+[ext_resource type="Texture2D" uid="uid://bj37drumxmajp" path="res://Assets/Textures/Wood/GameJam_Wood_base.png" id="1_ph3ss"]
+[ext_resource type="Texture2D" uid="uid://dum3k25rycyu8" path="res://Assets/Textures/Wood/GameJam_Wood_Ao.png" id="2_fx3j1"]
+[ext_resource type="Texture2D" uid="uid://c7slnwc258yg8" path="res://Assets/Textures/Wood/GameJam_Wood_Metallic.png" id="3_ambts"]
+[ext_resource type="Texture2D" uid="uid://cph7jha7y6spo" path="res://Assets/Textures/Wood/GameJam_Wood_Normal.png" id="4_3qy8a"]
+[ext_resource type="Texture2D" uid="uid://cl7mb2ul45p6a" path="res://Assets/Textures/Wood/GameJam_Wood_Roughness.png" id="5_pnine"]
+
+[resource]
+albedo_texture = ExtResource("1_ph3ss")
+metallic = 1.0
+metallic_texture = ExtResource("3_ambts")
+roughness_texture = ExtResource("5_pnine")
+normal_enabled = true
+normal_texture = ExtResource("4_3qy8a")
+ao_enabled = true
+ao_light_affect = 0.3
+ao_texture = ExtResource("2_fx3j1")
