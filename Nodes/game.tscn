@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://db0pxwq1hvs45"]
+[gd_scene load_steps=9 format=3 uid="uid://db0pxwq1hvs45"]
 
 [ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_iox18"]
 [ext_resource type="PackedScene" uid="uid://bqe8ucbruto1j" path="res://Nodes/StartNode.tscn" id="2_61aog"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cys06pnxfjl2m" path="res://Nodes/UI.tscn" id="4_kxuy0"]
 [ext_resource type="PackedScene" uid="uid://bikdn7ep2vpxw" path="res://Nodes/Train_P2.tscn" id="4_lmu0s"]
 [ext_resource type="AudioStream" uid="uid://c5jhukuk8r3mf" path="res://Assets/Sounds/_MUSIC_/GameJamGameLoop.wav" id="7_0yxka"]
+[ext_resource type="AudioStream" uid="uid://n4ynf7hg2pcl" path="res://Assets/Sounds/_SOUNDFX_/GleiseLoop.wav" id="8_4y7wx"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_iox18")
@@ -37,4 +38,9 @@ visible = false
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_0yxka")
 volume_db = -27.238
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_4y7wx")
+volume_db = -10.0
 autoplay = true
