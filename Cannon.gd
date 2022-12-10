@@ -9,7 +9,7 @@ func _ready():
 	root.timeout.connect("shooting",self,"_on_signal_shooting")
 	maxStashValue = 1
 	currentStashValue = 0
-	currentState = STATE.INAKTIVE
+	currentState = STATE.INACTIVE
 #TODO: FINISH
 func interact():
 	if currentState == STATE.INACTIVE:
@@ -21,4 +21,8 @@ func interact():
 	return
 
 func _on_signal_shooting():
+	if currentStashValue == 1:
+		currentState = STATE.SHOOTING
+	#TODO shooting
+	currentState = STATE.INACTIVE
 	pass
