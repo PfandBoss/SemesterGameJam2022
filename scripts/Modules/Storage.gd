@@ -13,8 +13,8 @@ enum TYPE {AMMO, GUNPOWDER, COAL}
 func _ready():
 	var root = get_tree().root.get_child(0)
 	#root.ammo_pickup.connect(_on_signal_storing)
-	maxStashValue = 5
-	currentStashValue = 5
+	maxStashValue = 10
+	currentStashValue = 10
 	
 func interact(player):
 	if currentStashValue >= 1:

@@ -38,5 +38,6 @@ func shoot():
 		currentStashValue -= 1
 		currentPowderStashValue = 0
 		currentState = STATE.INACTIVE
+		print("pew")
 		return true
 	return false

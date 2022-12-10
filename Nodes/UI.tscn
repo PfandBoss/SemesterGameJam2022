@@ -21,7 +21,6 @@ size_flags_horizontal = 4
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(15, 0)
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -30,7 +29,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VSlider" type="VSlider" parent="."]
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -48,7 +46,6 @@ editable = false
 scrollable = false
 
 [node name="VSlider2" type="VSlider" parent="."]
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
