@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjcjlxjnw8h3c"]
+
+[ext_resource type="Script" path="res://Nodes/Backgroundspawner.gd" id="1_01tg0"]
+
+[node name="Backgroundspawner" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24)
+script = ExtResource("1_01tg0")
