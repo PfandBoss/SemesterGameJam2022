@@ -91,7 +91,7 @@ func fill_inventory(type):
 
 
 func getResource():
-	return self.resource
+	return resource
 	
 func clearInventory():
 	inventory = 0
