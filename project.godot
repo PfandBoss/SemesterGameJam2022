@@ -69,7 +69,10 @@ _global_script_class_icons={
 [application]
 
 config/name="Semester Game Jam 2022"
+<<<<<<< HEAD
 run/main_scene="res://menu/main_menu.tscn"
+=======
+>>>>>>> parent of 742e4e2... Auto stash before merge of "main" and "origin/main"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
