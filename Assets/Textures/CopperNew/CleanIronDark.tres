@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dwlxmetf7l5gf" path="res://Assets/Textures/CopperNew/copper_Rougness.png" id="3_hc3no"]
 
 [resource]
-albedo_color = Color(0.52549, 0.509804, 0.54902, 1)
+albedo_color = Color(0.427451, 0.419608, 0.45098, 1)
 metallic = 1.0
 metallic_texture = ExtResource("1_x5t0h")
 roughness_texture = ExtResource("3_hc3no")

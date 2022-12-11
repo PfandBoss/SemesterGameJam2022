@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=4 format=3 uid="uid://lj3v582wxlr2"]
+
+[ext_resource type="Texture2D" uid="uid://dbjxy01lkuvle" path="res://Assets/Textures/CopperNew/copper_Metallic.png" id="1_dscyf"]
+[ext_resource type="Texture2D" uid="uid://bh776vcqbunoi" path="res://Assets/Textures/CopperNew/copper_Normal.png" id="2_phum1"]
+[ext_resource type="Texture2D" uid="uid://dwlxmetf7l5gf" path="res://Assets/Textures/CopperNew/copper_Rougness.png" id="3_te4es"]
+
+[resource]
+albedo_color = Color(0.109804, 0.105882, 0.117647, 1)
+metallic = 1.0
+metallic_texture = ExtResource("1_dscyf")
+roughness_texture = ExtResource("3_te4es")
+normal_enabled = true
+normal_texture = ExtResource("2_phum1")
