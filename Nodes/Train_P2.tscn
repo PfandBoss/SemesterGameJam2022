@@ -17,8 +17,8 @@
 [ext_resource type="Texture2D" uid="uid://7qppu15lvd1j" path="res://Nodes/Keys.png" id="14_otf4l"]
 [ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="15_sof53"]
 [ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="16_7dojn"]
-[ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="17_regf7"]
-[ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_xnc4h"]
+[ext_resource type="PackedScene" path="res://Nodes/engine.tscn" id="17_regf7"]
+[ext_resource type="AudioStream" uid="uid://bsc5ku8mloa6j" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_xnc4h"]
 [ext_resource type="Texture2D" uid="uid://bhmyyu0uhx541" path="res://Assets/Textures/Opera_senza_titolo (2).png" id="18_flxwh"]
 [ext_resource type="Texture2D" uid="uid://cet5o7wla1x7t" path="res://Assets/Textures/Opera_senza_titolo.png" id="19_msksj"]
 [ext_resource type="Texture2D" uid="uid://biyvvql2ufkdf" path="res://Assets/Textures/Opera_senza_titolo (1).png" id="20_yp8lr"]
@@ -122,22 +122,43 @@ animation = &"walking_coal"
 speed_scale = 2.0
 playing = true
 
-[node name="MiniGameButton0" type="Sprite3D" parent="CharacterBody3D"]
+[node name="MiniGameButton3" type="Sprite3D" parent="CharacterBody3D"]
 transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, 6, 0)
 texture = ExtResource("14_otf4l")
 hframes = 5
 vframes = 8
 frame = 26
 
-[node name="MiniGameButton1" type="Sprite3D" parent="CharacterBody3D"]
+[node name="MiniGameButton4" type="Sprite3D" parent="CharacterBody3D"]
 transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 1.5, 6, 0)
 texture = ExtResource("14_otf4l")
 hframes = 5
 vframes = 8
 frame = 26
 
-[node name="MiniGameButton2" type="Sprite3D" parent="CharacterBody3D"]
+[node name="MiniGameButton5" type="Sprite3D" parent="CharacterBody3D"]
 transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, 6, 0)
+texture = ExtResource("14_otf4l")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton0" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, -50, 0)
+texture = ExtResource("14_otf4l")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton1" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, -50, 0)
+texture = ExtResource("14_otf4l")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton2" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, -50, 0)
 texture = ExtResource("14_otf4l")
 hframes = 5
 vframes = 8

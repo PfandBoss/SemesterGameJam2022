@@ -24,6 +24,12 @@ var rng = RandomNumberGenerator.new()
 func _ready():
 	walking = "walking"
 	idle = "idle"
+	$MiniGameButton0.hide()
+	$MiniGameButton1.hide()
+	$MiniGameButton2.hide()
+	$MiniGameButton3.hide()
+	$MiniGameButton4.hide()
+	$MiniGameButton5.hide()
 	
 	#get_parent().find_child("CharacterBody3D").find_child("MiniGameButton0").hide() 
 	#get_parent().find_child("CharacterBody3D").find_child("MiniGameButton1").hide()

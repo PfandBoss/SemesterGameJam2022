@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=3 uid="uid://md2ofbviios3"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
-[ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="3_1ix85"]
+[ext_resource type="PackedScene" path="res://Nodes/engine.tscn" id="3_1ix85"]
 [ext_resource type="PackedScene" uid="uid://vwjd5od63jgh" path="res://Nodes/Player.tscn" id="3_in6up"]
 [ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="3_jmv6b"]
 [ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="4_5jw5g"]
@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://bhmyyu0uhx541" path="res://Assets/Textures/Opera_senza_titolo (2).png" id="14_503dh"]
 [ext_resource type="Texture2D" uid="uid://biyvvql2ufkdf" path="res://Assets/Textures/Opera_senza_titolo (1).png" id="15_dew1j"]
 [ext_resource type="PackedScene" uid="uid://bkpnrgcfr1jgl" path="res://Nodes/Bin.tscn" id="16_q3kvk"]
-[ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_ajifv"]
+[ext_resource type="AudioStream" uid="uid://bsc5ku8mloa6j" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_ajifv"]
 [ext_resource type="Texture2D" uid="uid://cet5o7wla1x7t" path="res://Assets/Textures/Opera_senza_titolo.png" id="19_5df2b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6p0y6"]
@@ -107,6 +107,27 @@ frame = 26
 
 [node name="MiniGameButton2" type="Sprite3D" parent="CharacterBody3D"]
 transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, 6, 0)
+texture = ExtResource("13_d8wle")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton3" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, -50, 0)
+texture = ExtResource("13_d8wle")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton4" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, -50, 0)
+texture = ExtResource("13_d8wle")
+hframes = 5
+vframes = 8
+frame = 26
+
+[node name="MiniGameButton5" type="Sprite3D" parent="CharacterBody3D"]
+transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, -50, 0)
 texture = ExtResource("13_d8wle")
 hframes = 5
 vframes = 8
