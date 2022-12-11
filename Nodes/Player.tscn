@@ -19,7 +19,7 @@ transform = Transform3D(1.57581, 0, 0, 0, 2.16936, 0, 0, 0, 1.5749, 0, 0, 0)
 shape = SubResource("CylinderShape3D_h8ivv")
 
 [node name="HitBox" type="Area3D" parent="."]
-collision_mask = 3
+collision_layer = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="HitBox"]
 transform = Transform3D(2.74062, 0, 0, 0, 2.24144, 0, 0, 0, 2.70992, 0, 0, 0)

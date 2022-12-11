@@ -7,6 +7,7 @@
 size = Vector3(2.05561, 2.90146, 1.40367)
 
 [node name="Engine" type="StaticBody3D"]
+collision_mask = 2
 script = ExtResource("1_8ew0t")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
