@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://c4njs3xp5s582"]
+[gd_scene load_steps=23 format=3 uid="uid://c4njs3xp5s582"]
 
 [ext_resource type="PackedScene" uid="uid://bn42ap8pnv34r" path="res://Assets/Model/MainMenuObjects/tischplatte.glb" id="1_x1eq8"]
 [ext_resource type="PackedScene" uid="uid://fpl3qyhc3e6m" path="res://Assets/Model/MainMenuObjects/blueprint untergrund.glb" id="2_l7bb1"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dy85j2wm08enl" path="res://Assets/Textures/Font/credits.png" id="11_07r0e"]
 [ext_resource type="PackedScene" uid="uid://crg01h82ww1m6" path="res://Assets/Model/MainMenuObjects/zahnrad_mittel.glb" id="11_lokvi"]
 [ext_resource type="PackedScene" uid="uid://d2k8qu46g6ono" path="res://Assets/Model/MainMenuObjects/blueprint deko.glb" id="12_67wtp"]
+[ext_resource type="Texture2D" uid="uid://1c3bux01fswp" path="res://Assets/Textures/Font/Credit_Pop_Up.png" id="12_te2so"]
 [ext_resource type="PackedScene" uid="uid://nxapkgcq2c70" path="res://Nodes/light_setup.tscn" id="13_smxpv"]
 [ext_resource type="PackedScene" uid="uid://dhe41jox6id7r" path="res://Assets/Model/MainMenuObjects/bild_deko.glb" id="14_gbsgf"]
 [ext_resource type="Script" path="res://scripts/3DUI/zahnraeder.gd" id="14_o12ah"]
@@ -70,6 +71,10 @@ polygon = PackedVector2Array(-2.45033, 2.48997, 0.151118, 3.31404, 1.73134, -2.9
 transform = Transform3D(-0.4, 6.03983e-08, 2.64009e-15, 0, -1.74846e-08, 0.4, 6.03983e-08, 0.4, 1.74846e-08, 0, 0, 3.93247)
 texture = ExtResource("11_07r0e")
 
+[node name="credits" type="Sprite3D" parent="papierrolle_flach"]
+transform = Transform3D(-0.2, 3.01992e-08, 1.32005e-15, 0, -8.74228e-09, 0.2, 3.01992e-08, 0.2, 8.74228e-09, 0, 1.1, 4)
+texture = ExtResource("12_te2so")
+
 [node name="papierrolle_knick" parent="." instance=ExtResource("8_dcfhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37086, 0.984295, -5.84062)
 
@@ -106,6 +111,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90855, 0.23831, -0.686673)
 [node name="settings" type="Sprite3D" parent="zahnraeder"]
 transform = Transform3D(-0.5, 7.54979e-08, 3.30012e-15, 0, -2.18557e-08, 0.5, 7.54979e-08, 0.5, 2.18557e-08, 5.89407, 0, -0.414213)
 texture = ExtResource("19_go7mp")
+
+[node name="volume" type="Sprite3D" parent="zahnraeder"]
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(-1, 1.50996e-07, 6.60024e-15, 0, -4.37114e-08, 1, 1.50996e-07, 1, 4.37114e-08, 2.2, 0.44, 4.107)
