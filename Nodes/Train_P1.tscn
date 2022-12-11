@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=3 uid="uid://md2ofbviios3"]
+[gd_scene load_steps=45 format=3 uid="uid://md2ofbviios3"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
 [ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="3_1ix85"]
@@ -28,8 +28,10 @@
 [ext_resource type="Texture2D" uid="uid://cpb1ashccd2ki" path="res://Assets/Textures/Opera_senza_titolo (4).png" id="19_crlxr"]
 [ext_resource type="PackedScene" uid="uid://dhev2lm3feo0q" path="res://Assets/Model/Objects/AmmoPile.glb" id="27_s7kr6"]
 [ext_resource type="PackedScene" uid="uid://c06gvrsynr7p7" path="res://Assets/Model/Objects/GunpowerBarrel.glb" id="27_vnaiu"]
-[ext_resource type="PackedScene" uid="uid://rpsw0254tsue" path="res://Assets/Model/Modules/Coal.glb" id="28_4ee2i"]
+[ext_resource type="PackedScene" uid="uid://cbvbqqwwnkut5" path="res://Assets/Model/Modules/Coal.glb" id="28_4ee2i"]
 [ext_resource type="PackedScene" uid="uid://dtur8jn3vpeuv" path="res://Assets/Model/Objects/Trashcan.glb" id="30_1bsq2"]
+[ext_resource type="Shader" path="res://Nodes/game.gdshader" id="31_tn7tf"]
+[ext_resource type="Texture2D" uid="uid://cy6x8d3xe8lux" path="res://icon.svg" id="32_yykqx"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6p0y6"]
 animations = [{
@@ -120,6 +122,17 @@ size = Vector3(1.83216, 2.38974, 1.62541)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_enmqk"]
 size = Vector3(1.6991, 2.76277, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0sh6y"]
+render_priority = 0
+shader = ExtResource("31_tn7tf")
+shader_parameter/albedo = ExtResource("32_yykqx")
+shader_parameter/direction_and_speed = Vector2(0, -1)
+shader_parameter/flip = null
+shader_parameter/scale = Vector2(3, 5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1njd7"]
+material = SubResource("ShaderMaterial_0sh6y")
 
 [node name="Train1" type="Node3D"]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
@@ -241,3 +254,7 @@ shape = SubResource("BoxShape3D_cedqu")
 [node name="CollisionShape3D11" type="CollisionShape3D" parent="train/StaticBody3D2"]
 transform = Transform3D(0.712443, 0, -0.70173, 0, 1, 0, 0.70173, 0, 0.712443, 3.79233, 1.464, -10.9914)
 shape = SubResource("BoxShape3D_enmqk")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 512, 0, -4.40884, 0)
+mesh = SubResource("BoxMesh_1njd7")
