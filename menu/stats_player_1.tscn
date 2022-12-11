@@ -1,9 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8als41yc56ep"]
+[gd_scene load_steps=7 format=3 uid="uid://dgr3cta6n1tg3"]
 
-[ext_resource type="PackedScene" uid="uid://cunv4n2t33057" path="res://menu/Speedometer_player1.tscn" id="1_8v7ps"]
+[ext_resource type="Script" path="res://menu/stats_player_1.gd" id="1_7a1hg"]
+[ext_resource type="PackedScene" uid="uid://bxlhdan6h6qwi" path="res://menu/Speedometer_player1.tscn" id="1_8v7ps"]
 [ext_resource type="Texture2D" uid="uid://c62xglrjom4sn" path="res://Assets/Textures/GUI/frame_player1.png" id="2_1uihe"]
+[ext_resource type="Texture2D" uid="uid://dfqal4ri4ftrf" path="res://Assets/Textures/Kohle.png" id="3_tjc2l"]
+[ext_resource type="Texture2D" uid="uid://clemmheiw1kq" path="res://Assets/Textures/Gunpowder.png" id="4_jn38u"]
+[ext_resource type="Texture2D" uid="uid://bhmyyu0uhx541" path="res://Assets/Textures/Opera_senza_titolo (2).png" id="5_b5gk5"]
 
 [node name="Stats_Player1" type="CanvasLayer"]
+script = ExtResource("1_7a1hg")
 
 [node name="Speedometer_player1" parent="." instance=ExtResource("1_8v7ps")]
 scale = Vector2(0.4, 0.4)
@@ -18,28 +23,60 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_1uihe")
 
 [node name="Ressourcen" type="CanvasLayer" parent="Rahmen"]
+offset = Vector2(0, 220)
+scale = Vector2(0.02, 0.02)
+transform = Transform2D(0.02, 0, 0, 0.02, 0, 220)
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Rahmen/Ressourcen"]
+[node name="RessourcenBox" type="HBoxContainer" parent="Rahmen/Ressourcen"]
+custom_minimum_size = Vector2(100, 20)
 offset_left = 40.0
 offset_top = 226.0
 offset_right = 123.0
 offset_bottom = 256.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Rahmen/Ressourcen/HBoxContainer"]
-offset_right = 10.0
-offset_bottom = 30.0
+[node name="Kohle" type="VBoxContainer" parent="Rahmen/Ressourcen/RessourcenBox"]
+offset_right = 945.0
+offset_bottom = 977.0
 
-[node name="TextureRect" type="TextureRect" parent="Rahmen/Ressourcen/HBoxContainer/VBoxContainer"]
-offset_right = 10.0
+[node name="TextureRect" type="TextureRect" parent="Rahmen/Ressourcen/RessourcenBox/Kohle"]
+offset_right = 945.0
+offset_bottom = 931.0
+texture = ExtResource("3_tjc2l")
 
-[node name="Label" type="Label" parent="Rahmen/Ressourcen/HBoxContainer/VBoxContainer"]
-offset_top = 4.0
-offset_right = 10.0
-offset_bottom = 30.0
+[node name="Label" type="Label" parent="Rahmen/Ressourcen/RessourcenBox/Kohle"]
+offset_top = 935.0
+offset_right = 945.0
+offset_bottom = 961.0
 text = "5
 "
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Rahmen/Ressourcen/HBoxContainer"]
-offset_left = 14.0
-offset_right = 14.0
-offset_bottom = 30.0
+[node name="GunPowder" type="VBoxContainer" parent="Rahmen/Ressourcen/RessourcenBox"]
+offset_left = 949.0
+offset_right = 1894.0
+offset_bottom = 977.0
+
+[node name="TextureRect" type="TextureRect" parent="Rahmen/Ressourcen/RessourcenBox/GunPowder"]
+offset_right = 945.0
+offset_bottom = 931.0
+texture = ExtResource("4_jn38u")
+
+[node name="Label" type="Label" parent="Rahmen/Ressourcen/RessourcenBox/GunPowder"]
+offset_top = 935.0
+offset_right = 945.0
+offset_bottom = 958.0
+
+[node name="Munition" type="VBoxContainer" parent="Rahmen/Ressourcen/RessourcenBox"]
+offset_left = 1898.0
+offset_right = 2843.0
+offset_bottom = 977.0
+
+[node name="MunitionSprite" type="TextureRect" parent="Rahmen/Ressourcen/RessourcenBox/Munition"]
+offset_right = 945.0
+offset_bottom = 931.0
+texture = ExtResource("5_b5gk5")
+
+[node name="Label" type="Label" parent="Rahmen/Ressourcen/RessourcenBox/Munition"]
+offset_top = 935.0
+offset_right = 945.0
+offset_bottom = 977.0
+theme_override_font_sizes/font_size = 30

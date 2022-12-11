@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://cys06pnxfjl2m"]
+[gd_scene load_steps=7 format=3 uid="uid://cys06pnxfjl2m"]
 
 [ext_resource type="Texture2D" uid="uid://b8rsm7uapp583" path="res://undefined - Imgur (1).png" id="1_cb7ct"]
 [ext_resource type="Texture2D" uid="uid://44lfs83sax35" path="res://undefined - Imgur.png" id="2_udann"]
+[ext_resource type="PackedScene" uid="uid://dgr3cta6n1tg3" path="res://menu/stats_player_1.tscn" id="3_yhsvf"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fir3c"]
 
@@ -61,3 +62,5 @@ max_value = 150.0
 value = 50.0
 editable = false
 scrollable = false
+
+[node name="Stats_Player1" parent="." instance=ExtResource("3_yhsvf")]

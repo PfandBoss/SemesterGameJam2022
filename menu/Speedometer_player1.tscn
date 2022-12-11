@@ -1,12 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cunv4n2t33057"]
+[gd_scene load_steps=5 format=3 uid="uid://bxlhdan6h6qwi"]
 
 [ext_resource type="Texture2D" uid="uid://cj5tvg0uksgif" path="res://Assets/Textures/GUI/Speedometer_background.png" id="1_8h3os"]
-[ext_resource type="Script" path="res://menu/Scripts/Speedometer.gd" id="1_qr0vh"]
+[ext_resource type="Script" path="res://menu/Speedometer_player1.gd" id="1_8r0bw"]
 [ext_resource type="Texture2D" uid="uid://hy1r4mahhob2" path="res://Assets/Textures/GUI/Speedometer_pointer.png" id="2_vm8nm"]
 [ext_resource type="Texture2D" uid="uid://c8087dusjhilc" path="res://Assets/Textures/GUI/Speedometer_foreground.png" id="3_7tp67"]
 
 [node name="Speedometer" type="CanvasLayer"]
-script = ExtResource("1_qr0vh")
+script = ExtResource("1_8r0bw")
 
 [node name="Background" type="TextureRect" parent="."]
 offset_right = 472.0
