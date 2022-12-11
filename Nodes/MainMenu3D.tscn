@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c4njs3xp5s582"]
+[gd_scene load_steps=15 format=3 uid="uid://c4njs3xp5s582"]
 
 [ext_resource type="PackedScene" uid="uid://bn42ap8pnv34r" path="res://Assets/Model/MainMenuObjects/tischplatte.glb" id="1_x1eq8"]
 [ext_resource type="PackedScene" uid="uid://fpl3qyhc3e6m" path="res://Assets/Model/MainMenuObjects/blueprint untergrund.glb" id="2_l7bb1"]
@@ -12,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dsj0fslwga5xl" path="res://Assets/Model/MainMenuObjects/zahnrad_klein.glb" id="10_4uhdl"]
 [ext_resource type="PackedScene" uid="uid://crg01h82ww1m6" path="res://Assets/Model/MainMenuObjects/zahnrad_mittel.glb" id="11_lokvi"]
 [ext_resource type="PackedScene" uid="uid://d2k8qu46g6ono" path="res://Assets/Model/MainMenuObjects/blueprint deko.glb" id="12_67wtp"]
+[ext_resource type="PackedScene" uid="uid://nxapkgcq2c70" path="res://Nodes/light_setup.tscn" id="13_smxpv"]
+[ext_resource type="PackedScene" uid="uid://dhe41jox6id7r" path="res://Assets/Model/MainMenuObjects/bild_deko.glb" id="14_gbsgf"]
 
 [node name="MainMenu3D" type="Node3D"]
 
@@ -56,3 +58,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, 8, 0)
+
+[node name="LightSetup" parent="." instance=ExtResource("13_smxpv")]
+
+[node name="bild_deko" parent="." instance=ExtResource("14_gbsgf")]
+transform = Transform3D(-0.841511, 0, -0.54024, 0, 1, 0, 0.54024, 0, -0.841511, 8.97174, 0.509649, -0.545207)
