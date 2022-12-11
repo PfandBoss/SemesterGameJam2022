@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnncg1dfmmv65"]
+
+[ext_resource type="PackedScene" uid="uid://bodqnls3mymf5" path="res://Assets/Model/Objects/rail_tracks.glb" id="1_legec"]
+[ext_resource type="Script" path="res://Nodes/move_down.gd" id="2_xb4pi"]
+
+[node name="rail_tracks" instance=ExtResource("1_legec")]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 2, 0, -2, 0, -8.74228e-08, 0, 0, 0)
+script = ExtResource("2_xb4pi")
