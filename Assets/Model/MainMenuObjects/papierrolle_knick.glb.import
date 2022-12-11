@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://q8evwxqmmlry"
-path="res://.godot/imported/papierrolle knick.glb-e48c0ce10d817869e0c7adc92d0cf360.scn"
+uid="uid://b6ftkalbyl77o"
+path="res://.godot/imported/papierrolle_knick.glb-4dc8bf27e3609370c87b94657cc7bf18.scn"
 
 [deps]
 
-source_file="res://Assets/Model/MainMenuObjects/papierrolle knick.glb"
-dest_files=["res://.godot/imported/papierrolle knick.glb-e48c0ce10d817869e0c7adc92d0cf360.scn"]
+source_file="res://Assets/Model/MainMenuObjects/papierrolle_knick.glb"
+dest_files=["res://.godot/imported/papierrolle_knick.glb-4dc8bf27e3609370c87b94657cc7bf18.scn"]
 
 [params]
 

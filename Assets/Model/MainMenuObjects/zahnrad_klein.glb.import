@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dj6e887lur0mb"
-path="res://.godot/imported/papierrolle flach.glb-1b5a54b498af32986eb33862518a95bb.scn"
+uid="uid://dsj0fslwga5xl"
+path="res://.godot/imported/zahnrad_klein.glb-bb427a376c78487e4530545f0de837d7.scn"
 
 [deps]
 
-source_file="res://Assets/Model/MainMenuObjects/papierrolle flach.glb"
-dest_files=["res://.godot/imported/papierrolle flach.glb-1b5a54b498af32986eb33862518a95bb.scn"]
+source_file="res://Assets/Model/MainMenuObjects/zahnrad_klein.glb"
+dest_files=["res://.godot/imported/zahnrad_klein.glb-bb427a376c78487e4530545f0de837d7.scn"]
 
 [params]
 

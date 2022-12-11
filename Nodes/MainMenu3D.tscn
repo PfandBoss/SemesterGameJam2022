@@ -1,0 +1,58 @@
+[gd_scene load_steps=13 format=3 uid="uid://c4njs3xp5s582"]
+
+[ext_resource type="PackedScene" uid="uid://bn42ap8pnv34r" path="res://Assets/Model/MainMenuObjects/tischplatte.glb" id="1_x1eq8"]
+[ext_resource type="PackedScene" uid="uid://fpl3qyhc3e6m" path="res://Assets/Model/MainMenuObjects/blueprint untergrund.glb" id="2_l7bb1"]
+[ext_resource type="PackedScene" uid="uid://c1xtm0rjm034k" path="res://Assets/Model/MainMenuObjects/hammer.glb" id="3_hh122"]
+[ext_resource type="PackedScene" uid="uid://1gblistqsgi0" path="res://Assets/Model/MainMenuObjects/naegel.glb" id="4_ntrhn"]
+[ext_resource type="PackedScene" uid="uid://b1ubp6objx25w" path="res://Assets/Model/MainMenuObjects/stift.glb" id="5_thrx4"]
+[ext_resource type="PackedScene" uid="uid://dg82ywjh8sc0k" path="res://Assets/Model/MainMenuObjects/dreieck.glb" id="6_nj0l7"]
+[ext_resource type="PackedScene" uid="uid://cfs0mfmyps1si" path="res://Assets/Model/MainMenuObjects/papierrolle_flach.glb" id="7_32tfv"]
+[ext_resource type="PackedScene" uid="uid://b6ftkalbyl77o" path="res://Assets/Model/MainMenuObjects/papierrolle_knick.glb" id="8_dcfhc"]
+[ext_resource type="PackedScene" uid="uid://dl5er7ybhbjx4" path="res://Assets/Model/MainMenuObjects/zahnrad_gross.glb" id="9_040k3"]
+[ext_resource type="PackedScene" uid="uid://dsj0fslwga5xl" path="res://Assets/Model/MainMenuObjects/zahnrad_klein.glb" id="10_4uhdl"]
+[ext_resource type="PackedScene" uid="uid://crg01h82ww1m6" path="res://Assets/Model/MainMenuObjects/zahnrad_mittel.glb" id="11_lokvi"]
+[ext_resource type="PackedScene" uid="uid://d2k8qu46g6ono" path="res://Assets/Model/MainMenuObjects/blueprint deko.glb" id="12_67wtp"]
+
+[node name="MainMenu3D" type="Node3D"]
+
+[node name="tischplatte" parent="." instance=ExtResource("1_x1eq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="blueprint untergrund" parent="." instance=ExtResource("2_l7bb1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="hammer" parent="." instance=ExtResource("3_hh122")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="naegel" parent="." instance=ExtResource("4_ntrhn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="stift" parent="." instance=ExtResource("5_thrx4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="tischplatte2" parent="." instance=ExtResource("1_x1eq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="dreieck" parent="." instance=ExtResource("6_nj0l7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.09993, 0.453593, 1.26143)
+
+[node name="papierrolle_flach" parent="." instance=ExtResource("7_32tfv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.597003, 0.758382, -5.10524)
+
+[node name="papierrolle_knick" parent="." instance=ExtResource("8_dcfhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.597003, 0.758382, -5.10524)
+
+[node name="zahnrad_gross" parent="." instance=ExtResource("9_040k3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05736, 0.693096, 2.90686)
+
+[node name="zahnrad_klein" parent="." instance=ExtResource("10_4uhdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.50923, 0.693096, -0.103418)
+
+[node name="zahnrad_mittel" parent="." instance=ExtResource("11_lokvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02981, 0.829658, 2.1212)
+
+[node name="blueprint deko" parent="." instance=ExtResource("12_67wtp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.74228e-08, 1, 4.37114e-08, 0, 8, 0)

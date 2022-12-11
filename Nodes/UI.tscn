@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b8rsm7uapp583" path="res://undefined - Imgur (1).png" id="1_cb7ct"]
 [ext_resource type="Texture2D" uid="uid://44lfs83sax35" path="res://undefined - Imgur.png" id="2_udann"]
-[ext_resource type="PackedScene" uid="uid://dgr3cta6n1tg3" path="res://menu/stats_player_1.tscn" id="3_yhsvf"]
+[ext_resource type="PackedScene" path="res://menu/stats_player_1.tscn" id="3_yhsvf"]
 [ext_resource type="PackedScene" path="res://menu/stats_player_2.tscn" id="4_c4m18"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fir3c"]

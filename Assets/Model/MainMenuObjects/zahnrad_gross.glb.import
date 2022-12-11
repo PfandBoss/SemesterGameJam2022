@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bb2s75f7j1r01"
-path="res://.godot/imported/zahnrad gross.glb-8bdd5dd2300c9854d8b395847f5483a8.scn"
+uid="uid://dl5er7ybhbjx4"
+path="res://.godot/imported/zahnrad_gross.glb-b642dd9342f8b34114f917bdcc6c8e3b.scn"
 
 [deps]
 
-source_file="res://Assets/Model/MainMenuObjects/zahnrad gross.glb"
-dest_files=["res://.godot/imported/zahnrad gross.glb-8bdd5dd2300c9854d8b395847f5483a8.scn"]
+source_file="res://Assets/Model/MainMenuObjects/zahnrad_gross.glb"
+dest_files=["res://.godot/imported/zahnrad_gross.glb-b642dd9342f8b34114f917bdcc6c8e3b.scn"]
 
 [params]
 

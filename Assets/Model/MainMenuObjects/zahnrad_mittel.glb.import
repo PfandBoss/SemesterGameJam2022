@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://byt7ioadks813"
-path="res://.godot/imported/geodreieck.glb-e684d1d1e32583a976e36ba7a2f7eaf7.scn"
+uid="uid://crg01h82ww1m6"
+path="res://.godot/imported/zahnrad_mittel.glb-1e9f6bf8e3c051ba7a90756256766a74.scn"
 
 [deps]
 
-source_file="res://Assets/Model/MainMenuObjects/geodreieck.glb"
-dest_files=["res://.godot/imported/geodreieck.glb-e684d1d1e32583a976e36ba7a2f7eaf7.scn"]
+source_file="res://Assets/Model/MainMenuObjects/zahnrad_mittel.glb"
+dest_files=["res://.godot/imported/zahnrad_mittel.glb-1e9f6bf8e3c051ba7a90756256766a74.scn"]
 
 [params]
 
