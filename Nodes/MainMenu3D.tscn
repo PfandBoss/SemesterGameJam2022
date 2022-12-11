@@ -19,8 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://nxapkgcq2c70" path="res://Nodes/light_setup.tscn" id="13_smxpv"]
 [ext_resource type="PackedScene" uid="uid://dhe41jox6id7r" path="res://Assets/Model/MainMenuObjects/bild_deko.glb" id="14_gbsgf"]
 [ext_resource type="Script" path="res://scripts/3DUI/zahnraeder.gd" id="14_o12ah"]
-[ext_resource type="Texture2D" uid="uid://bb32ohgxsjd4h" path="res://Assets/Textures/Font/Opera_senza_titolo.png" id="18_fvvjm"]
 [ext_resource type="Texture2D" uid="uid://60i5abp5yobu" path="res://Assets/Textures/Font/settings.png" id="19_go7mp"]
+[ext_resource type="Texture2D" uid="uid://1gpuhu61xah1" path="res://Assets/Textures/Font/titolo.png" id="21_qybk8"]
 
 [node name="MainMenu3D" type="Node3D"]
 
@@ -108,8 +108,8 @@ transform = Transform3D(-0.5, 7.54979e-08, 3.30012e-15, 0, -2.18557e-08, 0.5, 7.
 texture = ExtResource("19_go7mp")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-0.7, 1.05697e-07, 4.62017e-15, 0, -3.0598e-08, 0.7, 1.05697e-07, 0.7, 3.0598e-08, 2.19996, 1, 4.10689)
-texture = ExtResource("18_fvvjm")
+transform = Transform3D(-1, 1.50996e-07, 6.60024e-15, 0, -4.37114e-08, 1, 1.50996e-07, 1, 4.37114e-08, 2.2, 0.44, 4.107)
+texture = ExtResource("21_qybk8")
 
 [connection signal="input_event" from="dreieck/Area3D" to="dreieck" method="_on_area_3d_input_event"]
 [connection signal="mouse_exited" from="dreieck/Area3D" to="dreieck" method="_on_area_3d_mouse_exited"]
