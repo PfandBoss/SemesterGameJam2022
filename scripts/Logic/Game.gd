@@ -55,11 +55,13 @@ func getMapSize(node, is_start):
 		active_map_nodes += 1
 
 func _on_player_game_over():
-	$Control/GameOver.visible = true
 	p1_train.current_speed = 0
 	p2_train.current_speed = 0
 	p1_train.visible = false
 	p2_train.visible = false
+	for child in $Control.get_children():
+		child.hide()
+	$Control/GameOver.visible = true
 
 func _on_turn_event():
 	#
