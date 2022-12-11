@@ -3,8 +3,8 @@ class_name TrainEngine
 
 
 enum STATE {RUNNING, DEAD}
-const maxSpeed = 40
-const refuelRate = 1.0
+const maxSpeed = 60
+const refuelRate = 1.25
 
 @onready var train = get_parent() as Train
 

@@ -13,8 +13,8 @@ enum TYPE {AMMO, GUNPOWDER, COAL, LARGE, GIANT}
 func _ready():
 	#var root = get_tree().root.get_child(0)
 	#root.ammo_pickup.connect(_on_signal_storing)
-	maxStashValue = 10
-	currentStashValue = 10
+	maxStashValue = 100
+	currentStashValue = 100
 	$Sprite3D2.texture = icon
 	$AudioStreamPlayer.stream = audioClip
 	$Sprite3D2.visible = false

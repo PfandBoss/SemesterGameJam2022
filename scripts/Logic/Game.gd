@@ -39,8 +39,8 @@ func _ready():
 	p2_train.hit.connect(_on_hit_player)
 	p1_train.game_over.connect(_on_player_game_over)
 	p2_train.game_over.connect(_on_player_game_over)
-	p1_train.current_speed = 12
-	p2_train.current_speed = 16
+	p1_train.current_speed = 34
+	p2_train.current_speed = 36
 
 func getMapSize(node, is_start):
 	if node == StartNode && not is_start:
