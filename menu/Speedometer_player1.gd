@@ -14,7 +14,7 @@ func _ready():
 	while not root is Game:
 		root = root.get_parent()
 		
-func _process(delta):
+func _process(_delta):
 	
 	currentSpeed = root.p1_train.current_speed
 	deg = currentSpeed * (70.0/maxSpeed) - 35.0

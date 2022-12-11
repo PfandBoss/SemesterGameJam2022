@@ -20,13 +20,13 @@ enum MODULE_TYPE {CANNON, STEERING, ENGINE, STORAGE}
 #------------Methods-------------#
 
 
-func interact(player):
+func interact(_player):
 	pass
 
 
 func _ready():
-	var root = get_tree().root.get_child(0)
-	
+	#var root = get_tree().root.get_child(0)
+	pass
 
 #-----------Setter and Getter---------------#
 func _set_currentStashValue(newValue):

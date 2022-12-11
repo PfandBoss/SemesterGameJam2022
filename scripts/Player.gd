@@ -26,7 +26,7 @@ func _ready():
 	idle = "idle"
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if(velocity.length() > 0):
 		$AnimatedSprite3D.play(walking)
 	else:

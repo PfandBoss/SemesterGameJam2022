@@ -11,7 +11,7 @@ enum TYPE {AMMO, GUNPOWDER, COAL, LARGE, GIANT}
 @export var audioClip : AudioStreamWAV
 #------------Methods-------------#
 func _ready():
-	var root = get_tree().root.get_child(0)
+	#var root = get_tree().root.get_child(0)
 	#root.ammo_pickup.connect(_on_signal_storing)
 	maxStashValue = 10
 	currentStashValue = 10
