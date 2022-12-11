@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvcfn3l2wj8gb"]
+
+[ext_resource type="PackedScene" uid="uid://dsj0fslwga5xl" path="res://Assets/Model/MainMenuObjects/zahnrad_klein.glb" id="1_rs3ag"]
+[ext_resource type="Script" path="res://Assets/Model/MainMenuObjects/zahnrad_klein.gd" id="2_ade0m"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="zahnrad_klein" parent="." instance=ExtResource("1_rs3ag")]
+script = ExtResource("2_ade0m")
