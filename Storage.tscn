@@ -7,10 +7,10 @@
 size = Vector3(0.276038, 1, 0.598144)
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_orr2n"]
-radius = 3.22778
+radius = 1.56986
 
 [node name="Storage" type="StaticBody3D"]
-collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_guwoh")
 currentType = 0
 
@@ -23,13 +23,14 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 
 visible = false
 texture = ExtResource("2_a5kei")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = 2.0
-
 [node name="Area3D" type="Area3D" parent="."]
+collision_mask = 2
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 shape = SubResource("CylinderShape3D_orr2n")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 2.0
 
 [node name="Sprite3D2" type="Sprite3D" parent="."]
 transform = Transform3D(0.15, 0, 0, 0, -6.55671e-09, 0.15, 0, -0.15, -6.55671e-09, 0, 3.10039, 0)

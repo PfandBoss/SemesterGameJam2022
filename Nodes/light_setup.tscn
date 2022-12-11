@@ -24,7 +24,6 @@ ssil_enabled = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.722372, -0.152892, 0.674391, -0.260844, 0.842959, 0.470511, -0.640421, -0.515795, 0.569048, 0, 8.25958, 0)
-shadow_enabled = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_t4j8q")

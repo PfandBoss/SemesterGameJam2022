@@ -40,8 +40,7 @@ mesh = SubResource("PlaneMesh_prxf6")
 transform = Transform3D(-0.00622939, 0.00716891, 0.116917, 0.00147208, 0.998129, -0.0611231, -0.250499, -0.0004462, -0.0133193, 0.767332, -3.17453, -0.645867)
 light_color = Color(0.968627, 0.466667, 0.380392, 1)
 light_energy = 40.0
-shadow_enabled = true
-spot_range = 7.84232
+spot_range = 7.0
 
 [node name="Floor" type="Node3D" parent="."]
 

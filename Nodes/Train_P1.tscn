@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://md2ofbviios3"]
+[gd_scene load_steps=41 format=3 uid="uid://md2ofbviios3"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
 [ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="3_1ix85"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://dhev2lm3feo0q" path="res://Assets/Model/Objects/AmmoPile.glb" id="27_s7kr6"]
 [ext_resource type="PackedScene" uid="uid://c06gvrsynr7p7" path="res://Assets/Model/Objects/GunpowerBarrel.glb" id="27_vnaiu"]
 [ext_resource type="PackedScene" uid="uid://rpsw0254tsue" path="res://Assets/Model/Modules/Coal.glb" id="28_4ee2i"]
+[ext_resource type="PackedScene" uid="uid://dtur8jn3vpeuv" path="res://Assets/Model/Objects/Trashcan.glb" id="30_1bsq2"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6p0y6"]
 animations = [{
@@ -114,6 +115,12 @@ size = Vector3(1.39165, 1, 4.34092)
 [sub_resource type="BoxShape3D" id="BoxShape3D_bmsh4"]
 size = Vector3(2, 1, 2)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_cedqu"]
+size = Vector3(1.83216, 2.38974, 1.62541)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_enmqk"]
+size = Vector3(1.6991, 2.76277, 1)
+
 [node name="Train1" type="Node3D"]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 0, 0, 0)
 script = ExtResource("1_0x664")
@@ -129,16 +136,16 @@ speed_scale = 2.0
 playing = true
 
 [node name="Storage" parent="." instance=ExtResource("4_5jw5g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.73547, -0.00526038, -4.92544)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.39134, -0.00526038, -5.05116)
 icon = ExtResource("14_503dh")
 
 [node name="Storage4" parent="." instance=ExtResource("4_5jw5g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.77068, 0.0193441, -2.5302)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18833, 0.0193441, -2.5302)
 currentType = 3
 icon = ExtResource("18_xnvtr")
 
 [node name="Storage5" parent="." instance=ExtResource("4_5jw5g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9219, 0.0193443, 2.49114)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.66853, 0.0193443, 2.28094)
 currentType = 4
 icon = ExtResource("19_crlxr")
 
@@ -157,7 +164,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.02311, 1.2303, 5.94791)
 transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, -3.92586, 1.1688, -9.70376)
 
 [node name="Bin" parent="." instance=ExtResource("16_q3kvk")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.66916, -0.287106, 10.1948)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.887, -0.0309173, 10.6156)
 
 [node name="Storage3" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(0.707107, 0, 0.707107, 0, 1, 0, -0.707107, 0, 0.707107, 4.16754, -0.348943, -10.4205)
@@ -172,20 +179,24 @@ transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 
 transform = Transform3D(-6.55671e-08, 0, -1.5, 0, 1.5, 0, 1.5, 0, -6.55671e-08, 13.3432, 0.00133824, 1.23896)
 
 [node name="AmmoPile" parent="train" instance=ExtResource("27_s7kr6")]
-transform = Transform3D(1.19468, 0, 0.112826, 0, 1.2, 0, -0.112826, 0, 1.19468, 4.37438, -0.197263, -2.57364)
+transform = Transform3D(-0.697233, 0, -0.976656, 0, 1.2, 0, 0.976656, 0, -0.697233, 4.37438, -0.197263, -5.41223)
 
 [node name="AmmoPile2" parent="train" instance=ExtResource("27_s7kr6")]
-transform = Transform3D(0.753286, 0, 0.492504, 0, 0.9, 0, -0.492504, 0, 0.753286, 7.73652, -0.112241, -2.61592)
+transform = Transform3D(0.899661, 0, 0.0247048, 0, 0.9, 0, -0.0247048, 0, 0.899661, 7.73652, -0.112241, -5.46297)
 
 [node name="AmmoPile3" parent="train" instance=ExtResource("27_s7kr6")]
-transform = Transform3D(0.753286, 0, 0.492504, 0, 0.9, 0, -0.492504, 0, 0.753286, 9.36594, -0.112241, -2.61592)
+transform = Transform3D(0.599573, 0, -0.0226459, 0, 0.6, 0, 0.0226459, 0, 0.599573, 9.36594, -0.112241, -5.44506)
 
 [node name="Coal" parent="train" instance=ExtResource("28_4ee2i")]
 transform = Transform3D(1.05948, 0, 1.69632, 0, 2, 0, -1.69632, 0, 1.05948, -0.739029, -0.113741, -4.45696)
 
+[node name="Trashcan" parent="train" instance=ExtResource("30_1bsq2")]
+transform = Transform3D(-2.91409e-08, 0, -0.666667, 0, 0.666667, 0, 0.666667, 0, -2.91409e-08, -1.0159, 0.0225529, 0.914305)
+
 [node name="StaticBody3D2" type="StaticBody3D" parent="train"]
 transform = Transform3D(-2.91409e-08, 0, -0.666667, 0, 0.666667, 0, 0.666667, 0, -2.91409e-08, 6, -0.137826, -1.33333)
-collision_layer = 2
+collision_layer = 4
+collision_mask = 2
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="train/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 4.23516e-22)
@@ -216,9 +227,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.87326, 0.400702, 10.5268)
 shape = SubResource("BoxShape3D_1oq2b")
 
 [node name="CollisionShape3D8" type="CollisionShape3D" parent="train/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.11988, 0.994293, -3.46126)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.12602, 0.994293, -3.46126)
 shape = SubResource("BoxShape3D_uhn7c")
 
 [node name="CollisionShape3D9" type="CollisionShape3D" parent="train/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1865, 0.82649, 2.40009)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.89027, 0.82649, 2.22244)
 shape = SubResource("BoxShape3D_bmsh4")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.53467, 1.22896, 10.6981)
+shape = SubResource("BoxShape3D_cedqu")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="train/StaticBody3D2"]
+transform = Transform3D(0.712443, 0, -0.70173, 0, 1, 0, 0.70173, 0, 0.712443, 3.79233, 1.464, -10.9914)
+shape = SubResource("BoxShape3D_enmqk")
