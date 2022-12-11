@@ -16,18 +16,20 @@ grow_vertical = 2
 script = ExtResource("1_7a1hg")
 
 [node name="Speedometer_player1" parent="." instance=ExtResource("1_8v7ps")]
+layout_mode = 1
 offset_right = 516.0
 offset_bottom = 494.0
 scale = Vector2(0.5, 0.5)
 
-[node name="Rahmen2" type="TextureRect" parent="."]
+[node name="Rahmen" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 463.0
 offset_bottom = 562.0
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("3_v32w1")
 
 [node name="RessourcenBox" type="HBoxContainer" parent="."]
-visible = false
+layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
@@ -40,52 +42,42 @@ scale = Vector2(0.05, 0.05)
 theme_override_constants/separation = 330
 
 [node name="Kohle" type="VBoxContainer" parent="RessourcenBox"]
-offset_right = 945.0
-offset_bottom = 977.0
+layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="TextureRect" type="TextureRect" parent="RessourcenBox/Kohle"]
-offset_right = 945.0
-offset_bottom = 931.0
+layout_mode = 2
 texture = ExtResource("3_tjc2l")
 
-[node name="Label" type="Label" parent="RessourcenBox/Kohle"]
-offset_top = 941.0
-offset_right = 945.0
-offset_bottom = 967.0
-text = "5
-"
+[node name="Kohle" type="Label" parent="RessourcenBox/Kohle"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "hallo"
+horizontal_alignment = 1
 
 [node name="GunPowder" type="VBoxContainer" parent="RessourcenBox"]
-offset_left = 1275.0
-offset_right = 2220.0
-offset_bottom = 977.0
+layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="RessourcenBox/GunPowder"]
-offset_right = 945.0
-offset_bottom = 931.0
+layout_mode = 2
 texture = ExtResource("4_jn38u")
 
-[node name="Label" type="Label" parent="RessourcenBox/GunPowder"]
-offset_top = 935.0
-offset_right = 945.0
-offset_bottom = 958.0
+[node name="Schießpulver" type="Label" parent="RessourcenBox/GunPowder"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "hallo"
+horizontal_alignment = 1
 
 [node name="Munition" type="VBoxContainer" parent="RessourcenBox"]
-offset_left = 2550.0
-offset_right = 3495.0
-offset_bottom = 977.0
+layout_mode = 2
 size_flags_stretch_ratio = 0.39
 
 [node name="MunitionSprite" type="TextureRect" parent="RessourcenBox/Munition"]
-offset_right = 945.0
-offset_bottom = 931.0
+layout_mode = 2
 texture = ExtResource("5_b5gk5")
 
-[node name="Label" type="Label" parent="RessourcenBox/Munition"]
-offset_top = 935.0
-offset_right = 945.0
-offset_bottom = 977.0
-theme_override_font_sizes/font_size = 30
-
-[connection signal="resized" from="." to="Speedometer_player1" method="_on_stats_player_1_resized"]
+[node name="Munition" type="Label" parent="RessourcenBox/Munition"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 150
+text = "hallo"
+horizontal_alignment = 1

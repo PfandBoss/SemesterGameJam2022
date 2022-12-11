@@ -19,6 +19,8 @@ func _ready():
 	$AudioStreamPlayer.stream = audioClip
 	$Sprite3D2.visible = false
 	
+	
+	
 func interact(player):
 	if currentStashValue >= 1:
 		currentStashValue -= 1
