@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c4njs3xp5s582"]
+[gd_scene load_steps=16 format=3 uid="uid://c4njs3xp5s582"]
 
 [ext_resource type="PackedScene" uid="uid://bn42ap8pnv34r" path="res://Assets/Model/MainMenuObjects/tischplatte.glb" id="1_x1eq8"]
 [ext_resource type="PackedScene" uid="uid://fpl3qyhc3e6m" path="res://Assets/Model/MainMenuObjects/blueprint untergrund.glb" id="2_l7bb1"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b1ubp6objx25w" path="res://Assets/Model/MainMenuObjects/stift.glb" id="5_thrx4"]
 [ext_resource type="PackedScene" uid="uid://dg82ywjh8sc0k" path="res://Assets/Model/MainMenuObjects/dreieck.glb" id="6_nj0l7"]
 [ext_resource type="PackedScene" uid="uid://cfs0mfmyps1si" path="res://Assets/Model/MainMenuObjects/papierrolle_flach.glb" id="7_32tfv"]
+[ext_resource type="Script" path="res://scripts/3DUI/dreieck.gd" id="7_jf0cx"]
 [ext_resource type="PackedScene" uid="uid://b6ftkalbyl77o" path="res://Assets/Model/MainMenuObjects/papierrolle_knick.glb" id="8_dcfhc"]
 [ext_resource type="PackedScene" uid="uid://dl5er7ybhbjx4" path="res://Assets/Model/MainMenuObjects/zahnrad_gross.glb" id="9_040k3"]
 [ext_resource type="PackedScene" uid="uid://dsj0fslwga5xl" path="res://Assets/Model/MainMenuObjects/zahnrad_klein.glb" id="10_4uhdl"]
@@ -37,6 +38,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
 
 [node name="dreieck" parent="." instance=ExtResource("6_nj0l7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.09993, 0.453593, 1.26143)
+script = ExtResource("7_jf0cx")
+
+[node name="Area3D" type="Area3D" parent="dreieck"]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="dreieck/Area3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+polygon = PackedVector2Array(0.351274, -1.7499, -1.21959, 0.121159, 0.67798, 1.71333)
 
 [node name="papierrolle_flach" parent="." instance=ExtResource("7_32tfv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.597003, 0.758382, -5.10524)
@@ -62,4 +70,6 @@ transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.7422
 [node name="LightSetup" parent="." instance=ExtResource("13_smxpv")]
 
 [node name="bild_deko" parent="." instance=ExtResource("14_gbsgf")]
-transform = Transform3D(-0.841511, 0, -0.54024, 0, 1, 0, 0.54024, 0, -0.841511, 8.97174, 0.509649, -0.545207)
+transform = Transform3D(-0.841511, 0, -0.54024, 0, 1, 0, 0.54024, 0, -0.841511, 8.97174, 0.481874, -0.545207)
+
+[connection signal="input_event" from="dreieck/Area3D" to="dreieck" method="_on_area_3d_input_event"]
