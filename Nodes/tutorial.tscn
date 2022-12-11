@@ -1,0 +1,46 @@
+[gd_scene load_steps=10 format=3 uid="uid://bgwci5mt6p7tl"]
+
+[ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_3rjlq"]
+[ext_resource type="PackedScene" uid="uid://nxapkgcq2c70" path="res://Nodes/light_setup.tscn" id="2_dqvju"]
+[ext_resource type="PackedScene" uid="uid://bqe8ucbruto1j" path="res://Nodes/StartNode.tscn" id="3_exgxq"]
+[ext_resource type="PackedScene" uid="uid://md2ofbviios3" path="res://Nodes/Train_P1.tscn" id="4_vwrhp"]
+[ext_resource type="PackedScene" uid="uid://bikdn7ep2vpxw" path="res://Nodes/Train_P2.tscn" id="5_sqrdv"]
+[ext_resource type="PackedScene" uid="uid://cys06pnxfjl2m" path="res://Nodes/UI.tscn" id="6_pa4ds"]
+[ext_resource type="AudioStream" uid="uid://c5jhukuk8r3mf" path="res://Assets/Sounds/_MUSIC_/GameJamGameLoop.wav" id="7_5xnbn"]
+[ext_resource type="AudioStream" uid="uid://n4ynf7hg2pcl" path="res://Assets/Sounds/_SOUNDFX_/GleiseLoop.wav" id="8_r1pyb"]
+[ext_resource type="AudioStream" uid="uid://dovvnflvxtqpi" path="res://Assets/Sounds/_SOUNDFX_/WindLoop.wav" id="9_k3f0t"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_3rjlq")
+
+[node name="LightSetup" parent="." instance=ExtResource("2_dqvju")]
+
+[node name="StartNode" parent="." instance=ExtResource("3_exgxq")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.5, 0.866025, 0, -0.866025, 0.5, 0, 44, 25.0132)
+current = true
+fov = 30.0
+size = 32.0
+near = 0.041
+
+[node name="Train1" parent="." instance=ExtResource("4_vwrhp")]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -11, 0, 0)
+
+[node name="Train2" parent="." instance=ExtResource("5_sqrdv")]
+transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 10.9011, -0.0549407, -0.085681)
+
+[node name="Control" parent="." instance=ExtResource("6_pa4ds")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_5xnbn")
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_r1pyb")
+autoplay = true
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_k3f0t")
+volume_db = -2.476
+autoplay = true
