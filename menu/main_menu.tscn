@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsmsdlf5jiukx"]
+[gd_scene load_steps=4 format=3 uid="uid://bsmsdlf5jiukx"]
 
 [ext_resource type="Script" path="res://menu/MainMenu.gd" id="1_hyw8p"]
 [ext_resource type="Script" path="res://menu/VolSlider.gd" id="2_h85ei"]
+[ext_resource type="AudioStream" uid="uid://bmawra1dgi812" path="res://Assets/Sounds/_MUSIC_/MenuGameJamLoop.wav" id="3_ktf88"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -71,6 +72,10 @@ offset_top = 160.0
 offset_right = 87.0
 offset_bottom = 191.0
 text = "Fullscreen"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ktf88")
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Tutorial" to="." method="_on_tutorial_pressed"]
