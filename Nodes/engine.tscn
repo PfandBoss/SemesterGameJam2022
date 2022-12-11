@@ -1,11 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://bhivunrkj87cy"]
+[gd_scene load_steps=4 format=3 uid="uid://bhivunrkj87cy"]
 
 [ext_resource type="Script" path="res://scripts/Modules/Engine.gd" id="1_8ew0t"]
 [ext_resource type="AudioStream" uid="uid://di3yqwqsn5v5s" path="res://Assets/Sounds/_SOUNDFX_/Kohle.wav" id="2_3jidn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qba77"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_wu8t1"]
+size = Vector3(2.05561, 2.90146, 1.40367)
 
 [node name="Engine" type="StaticBody3D"]
 script = ExtResource("1_8ew0t")
@@ -13,9 +12,6 @@ script = ExtResource("1_8ew0t")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
 shape = SubResource("BoxShape3D_qba77")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_wu8t1")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_3jidn")

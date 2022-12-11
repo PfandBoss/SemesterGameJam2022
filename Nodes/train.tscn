@@ -1,11 +1,11 @@
 [gd_scene load_steps=22 format=3 uid="uid://c1mymb38wqdg6"]
 
-[ext_resource type="PackedScene" uid="uid://by5dkvik2ti0a" path="res://Assets/Model/Train/TrainFloorTile4x4.glb" id="1_ruoy4"]
+[ext_resource type="PackedScene" uid="uid://vpvpxwfpiao4" path="res://Assets/Model/Train/TrainFloorTile4x4.glb" id="1_ruoy4"]
 [ext_resource type="PackedScene" uid="uid://bbt38m8mno0d2" path="res://Assets/Model/Train/TrainWall.glb" id="2_ph0y0"]
 [ext_resource type="PackedScene" uid="uid://de8860yknve3i" path="res://Assets/Model/Train/TrainPillarFloorAdapter.glb" id="4_ub5ul"]
 [ext_resource type="PackedScene" uid="uid://dmraqtehsfo45" path="res://Assets/Model/Train/TrainWallArc.glb" id="5_lb36h"]
-[ext_resource type="PackedScene" uid="uid://cugtbjho4lj44" path="res://Assets/Model/Train/TrainFrameTopBottom.glb" id="6_0bbr0"]
-[ext_resource type="PackedScene" uid="uid://db7atd4d3px2c" path="res://Assets/Model/Train/TrainFrameTop.glb" id="7_2ua2q"]
+[ext_resource type="PackedScene" uid="uid://b7lntc0mh3g7q" path="res://Assets/Model/Train/TrainFrameTopBottom.glb" id="6_0bbr0"]
+[ext_resource type="PackedScene" uid="uid://50qugnp8dmhk" path="res://Assets/Model/Train/TrainFrameTop.glb" id="7_2ua2q"]
 [ext_resource type="PackedScene" uid="uid://gihk416gd7tx" path="res://Assets/Model/Train/TrainPillarArcExtention.glb" id="7_87n8g"]
 [ext_resource type="PackedScene" uid="uid://dfljj7kor8v2j" path="res://Assets/Model/Train/TrainPillarWood.glb" id="7_hd70v"]
 [ext_resource type="PackedScene" uid="uid://p7dpfo0na253" path="res://Assets/Model/Train/TrainWallInterior.glb" id="9_yvbc7"]
@@ -26,10 +26,10 @@
 [node name="train" type="Node3D"]
 
 [node name="Canon" parent="." instance=ExtResource("10_54n3n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.14337, 0, 1.47043)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.14337, 0, 2.47043)
 
 [node name="Canon2" parent="." instance=ExtResource("10_54n3n")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.07371, 0, 1.47043)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.07371, 0, 2.47043)
 
 [node name="RoofShadowOccluder" type="MeshInstance3D" parent="."]
 transform = Transform3D(8.525, 0, 0, 0, 1, 0, 0, 0, 3.9864, 6, 4.07265, -2)
