@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=3 uid="uid://cys06pnxfjl2m"]
+[gd_scene load_steps=12 format=3 uid="uid://cys06pnxfjl2m"]
 
 [ext_resource type="Texture2D" uid="uid://b8rsm7uapp583" path="res://undefined - Imgur (1).png" id="1_cb7ct"]
+[ext_resource type="Script" path="res://Nodes/UI.gd" id="1_dxr24"]
 [ext_resource type="Texture2D" uid="uid://44lfs83sax35" path="res://undefined - Imgur.png" id="2_udann"]
+[ext_resource type="Texture2D" uid="uid://cxfybbp5idjwg" path="res://o_idle1.png" id="3_segqn"]
 [ext_resource type="PackedScene" uid="uid://dgr3cta6n1tg3" path="res://menu/stats_player_1.tscn" id="3_yhsvf"]
-[ext_resource type="PackedScene" path="res://menu/stats_player_2.tscn" id="4_c4m18"]
+[ext_resource type="PackedScene" uid="uid://d3cmkdvgaiypf" path="res://menu/stats_player_2.tscn" id="4_c4m18"]
+[ext_resource type="Texture2D" uid="uid://dsphpbpt27t1i" path="res://a3TCqhg.png" id="4_uiyin"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fir3c"]
 
@@ -11,15 +14,20 @@
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_oa1ad"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_ot0gm"]
+font_size = 30
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.858824)
+
 [node name="Control" type="Control"]
 layout_mode = 3
-anchors_preset = 13
-anchor_left = 0.5
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+script = ExtResource("1_dxr24")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(15, 0)
@@ -64,19 +72,109 @@ value = 50.0
 editable = false
 scrollable = false
 
+[node name="GameOver" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="GameOver"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -184.0
+offset_right = 46.0
+offset_bottom = -158.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_ot0gm")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameOver"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.5
+offset_top = 194.0
+offset_right = 87.5
+offset_bottom = 260.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="GameOver/VBoxContainer"]
+offset_right = 175.0
+offset_bottom = 31.0
+text = "RESTART"
+
+[node name="Button2" type="Button" parent="GameOver/VBoxContainer"]
+offset_top = 35.0
+offset_right = 175.0
+offset_bottom = 66.0
+text = "BACK TO MAIN MENU"
+
+[node name="BoxContainer" type="BoxContainer" parent="GameOver"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -502.0
+offset_top = -250.0
+offset_right = 502.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameOver/BoxContainer"]
+custom_minimum_size = Vector2(900, 500)
+offset_right = 1004.0
+offset_bottom = 500.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="GameOver/BoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+offset_right = 500.0
+offset_bottom = 500.0
+texture = ExtResource("3_segqn")
+ignore_texture_size = true
+
+[node name="TextureRect2" type="TextureRect" parent="GameOver/BoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(500, 0)
+offset_left = 504.0
+offset_right = 1004.0
+offset_bottom = 500.0
+texture = ExtResource("4_uiyin")
+ignore_texture_size = true
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_left = -579.0
-offset_right = 575.0
-offset_bottom = 649.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Stats_Player1" parent="Control" instance=ExtResource("3_yhsvf")]
-offset_right = 345.0
-offset_bottom = -288.0
+anchors_preset = 0
+anchor_bottom = 0.0
+offset_right = 0.0
+grow_vertical = 1
 scale = Vector2(0.6, 0.6)
 
 [node name="Stats_Player2" parent="Control" instance=ExtResource("4_c4m18")]
-offset_left = -187.0
-offset_right = 125.0
 scale = Vector2(0.6, 0.6)
+
+[connection signal="pressed" from="GameOver/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GameOver/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
