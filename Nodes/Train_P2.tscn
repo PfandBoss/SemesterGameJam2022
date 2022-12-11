@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://bikdn7ep2vpxw"]
+[gd_scene load_steps=31 format=3 uid="uid://cr2qnrachvh01"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_mcmgl"]
 [ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="2_xoa1a"]
@@ -9,13 +9,17 @@
 [ext_resource type="Texture2D" uid="uid://bjrhp4dqckoxf" path="res://o_walking1.png" id="7_4lb8v"]
 [ext_resource type="Texture2D" uid="uid://ci4yd4vjr17o1" path="res://o_walking_coal1.png" id="7_jsqie"]
 [ext_resource type="Texture2D" uid="uid://os0kogn0mkus" path="res://o_walking_powder1.png" id="7_lwj85"]
+[ext_resource type="Texture2D" uid="uid://86mwqq8jadtj" path="res://o_walking_giant1.png" id="8_536nm"]
 [ext_resource type="Texture2D" uid="uid://j7jwtqmvg0m8" path="res://o_walking2.png" id="8_isr5o"]
+[ext_resource type="Texture2D" uid="uid://ifauy3vee10v" path="res://o_walking_large1.png" id="9_pwqf0"]
 [ext_resource type="Texture2D" uid="uid://djsergj3l4t2c" path="res://o_walking_ball2.png" id="9_rt6ws"]
 [ext_resource type="Texture2D" uid="uid://ctssikrodjqvc" path="res://o_walking_powder2.png" id="11_eefgn"]
 [ext_resource type="Texture2D" uid="uid://nctqw3vt5q0y" path="res://o_walking_coal2.png" id="12_581v4"]
 [ext_resource type="PackedScene" uid="uid://bkpnrgcfr1jgl" path="res://Nodes/Bin.tscn" id="14_n2rwc"]
+[ext_resource type="Texture2D" uid="uid://ce5imf2m4w5y2" path="res://o_walking_giant2.png" id="15_iu8ul"]
 [ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="15_sof53"]
 [ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="16_7dojn"]
+[ext_resource type="Texture2D" uid="uid://b3pb0trgav15s" path="res://o_walking_large2.png" id="16_87m18"]
 [ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="17_regf7"]
 [ext_resource type="AudioStream" uid="uid://b52sd64x20ulv" path="res://Assets/Sounds/_SOUNDFX_/Gunpowder.wav" id="17_xnc4h"]
 [ext_resource type="Texture2D" uid="uid://bhmyyu0uhx541" path="res://Assets/Textures/Opera_senza_titolo (2).png" id="18_flxwh"]
@@ -51,6 +55,16 @@ animations = [{
 "name": &"idle_coal",
 "speed": 1.0
 }, {
+"frames": [ExtResource("8_536nm")],
+"loop": true,
+"name": &"idle_giant",
+"speed": 1.0
+}, {
+"frames": [ExtResource("9_pwqf0")],
+"loop": true,
+"name": &"idle_large",
+"speed": 1.0
+}, {
 "frames": [ExtResource("7_lwj85")],
 "loop": true,
 "name": &"idle_powder",
@@ -69,6 +83,16 @@ animations = [{
 "frames": [ExtResource("7_jsqie"), ExtResource("12_581v4")],
 "loop": true,
 "name": &"walking_coal",
+"speed": 2.0
+}, {
+"frames": [ExtResource("8_536nm"), ExtResource("15_iu8ul")],
+"loop": true,
+"name": &"walking_giant",
+"speed": 2.0
+}, {
+"frames": [ExtResource("9_pwqf0"), ExtResource("16_87m18")],
+"loop": true,
+"name": &"walking_large",
 "speed": 2.0
 }, {
 "frames": [ExtResource("7_lwj85"), ExtResource("11_eefgn")],
@@ -118,7 +142,7 @@ transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 2.84217e
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="CharacterBody3D"]
 transform = Transform3D(0.3, 0, 0, 0, -1.31134e-08, 0.3, 0, -0.3, -1.31134e-08, 0, -2, 0)
 frames = SubResource("SpriteFrames_ltjyh")
-animation = &"walking_coal"
+animation = &"walking_giant"
 speed_scale = 2.0
 playing = true
 
