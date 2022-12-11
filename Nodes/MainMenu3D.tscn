@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://c4njs3xp5s582"]
+[gd_scene load_steps=22 format=3 uid="uid://c4njs3xp5s582"]
 
 [ext_resource type="PackedScene" uid="uid://bn42ap8pnv34r" path="res://Assets/Model/MainMenuObjects/tischplatte.glb" id="1_x1eq8"]
 [ext_resource type="PackedScene" uid="uid://fpl3qyhc3e6m" path="res://Assets/Model/MainMenuObjects/blueprint untergrund.glb" id="2_l7bb1"]
@@ -9,14 +9,18 @@
 [ext_resource type="PackedScene" uid="uid://cfs0mfmyps1si" path="res://Assets/Model/MainMenuObjects/papierrolle_flach.glb" id="7_32tfv"]
 [ext_resource type="Script" path="res://scripts/3DUI/dreieck.gd" id="7_jf0cx"]
 [ext_resource type="PackedScene" uid="uid://b6ftkalbyl77o" path="res://Assets/Model/MainMenuObjects/papierrolle_knick.glb" id="8_dcfhc"]
+[ext_resource type="Texture2D" uid="uid://bvs2d1ed47gpg" path="res://Assets/Textures/Font/Opera_senza_titolo-3.png" id="8_scw7v"]
 [ext_resource type="PackedScene" uid="uid://dl5er7ybhbjx4" path="res://Assets/Model/MainMenuObjects/zahnrad_gross.glb" id="9_040k3"]
 [ext_resource type="Script" path="res://scripts/3DUI/papierrolle_flach.gd" id="9_p50rx"]
 [ext_resource type="PackedScene" uid="uid://dsj0fslwga5xl" path="res://Assets/Model/MainMenuObjects/zahnrad_klein.glb" id="10_4uhdl"]
+[ext_resource type="Texture2D" uid="uid://dy85j2wm08enl" path="res://Assets/Textures/Font/credits.png" id="11_07r0e"]
 [ext_resource type="PackedScene" uid="uid://crg01h82ww1m6" path="res://Assets/Model/MainMenuObjects/zahnrad_mittel.glb" id="11_lokvi"]
 [ext_resource type="PackedScene" uid="uid://d2k8qu46g6ono" path="res://Assets/Model/MainMenuObjects/blueprint deko.glb" id="12_67wtp"]
 [ext_resource type="PackedScene" uid="uid://nxapkgcq2c70" path="res://Nodes/light_setup.tscn" id="13_smxpv"]
 [ext_resource type="PackedScene" uid="uid://dhe41jox6id7r" path="res://Assets/Model/MainMenuObjects/bild_deko.glb" id="14_gbsgf"]
 [ext_resource type="Script" path="res://scripts/3DUI/zahnraeder.gd" id="14_o12ah"]
+[ext_resource type="Texture2D" uid="uid://60i5abp5yobu" path="res://Assets/Textures/Font/settings.png" id="19_go7mp"]
+[ext_resource type="Texture2D" uid="uid://1gpuhu61xah1" path="res://Assets/Textures/Font/titolo.png" id="21_qybk8"]
 
 [node name="MainMenu3D" type="Node3D"]
 
@@ -48,6 +52,10 @@ script = ExtResource("7_jf0cx")
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 polygon = PackedVector2Array(0.351274, -1.7499, -1.21959, 0.121159, 0.67798, 1.71333)
 
+[node name="play" type="Sprite3D" parent="dreieck"]
+transform = Transform3D(-0.5, 7.54979e-08, 3.30012e-15, 0, -2.18557e-08, 0.5, 7.54979e-08, 0.5, 2.18557e-08, -3.14193, 0, 0)
+texture = ExtResource("8_scw7v")
+
 [node name="papierrolle_flach" parent="." instance=ExtResource("7_32tfv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.597003, 0.758382, -5.10524)
 script = ExtResource("9_p50rx")
@@ -57,6 +65,10 @@ script = ExtResource("9_p50rx")
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="papierrolle_flach/Area3D"]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
 polygon = PackedVector2Array(-2.45033, 2.48997, 0.151118, 3.31404, 1.73134, -2.91213, -0.868115, -3.33871)
+
+[node name="tutorial" type="Sprite3D" parent="papierrolle_flach"]
+transform = Transform3D(-0.4, 6.03983e-08, 2.64009e-15, 0, -1.74846e-08, 0.4, 6.03983e-08, 0.4, 1.74846e-08, 0, 0, 3.93247)
+texture = ExtResource("11_07r0e")
 
 [node name="papierrolle_knick" parent="." instance=ExtResource("8_dcfhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37086, 0.984295, -5.84062)
@@ -90,6 +102,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438931, 0, -2.77826)
 
 [node name="zahnrad_mittel" parent="zahnraeder" instance=ExtResource("11_lokvi")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90855, 0.23831, -0.686673)
+
+[node name="settings" type="Sprite3D" parent="zahnraeder"]
+transform = Transform3D(-0.5, 7.54979e-08, 3.30012e-15, 0, -2.18557e-08, 0.5, 7.54979e-08, 0.5, 2.18557e-08, 5.89407, 0, -0.414213)
+texture = ExtResource("19_go7mp")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1, 1.50996e-07, 6.60024e-15, 0, -4.37114e-08, 1, 1.50996e-07, 1, 4.37114e-08, 2.2, 0.44, 4.107)
+texture = ExtResource("21_qybk8")
 
 [connection signal="input_event" from="dreieck/Area3D" to="dreieck" method="_on_area_3d_input_event"]
 [connection signal="mouse_exited" from="dreieck/Area3D" to="dreieck" method="_on_area_3d_mouse_exited"]

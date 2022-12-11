@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Nodes/UI.gd" id="1_dxr24"]
 [ext_resource type="Texture2D" uid="uid://44lfs83sax35" path="res://undefined - Imgur.png" id="2_udann"]
 [ext_resource type="Texture2D" uid="uid://cxfybbp5idjwg" path="res://o_idle1.png" id="3_segqn"]
-[ext_resource type="PackedScene" uid="uid://dgr3cta6n1tg3" path="res://menu/stats_player_1.tscn" id="3_yhsvf"]
+[ext_resource type="PackedScene" path="res://menu/stats_player_1.tscn" id="3_yhsvf"]
 [ext_resource type="PackedScene" path="res://menu/stats_player_2.tscn" id="4_c4m18"]
 [ext_resource type="Texture2D" uid="uid://dsphpbpt27t1i" path="res://a3TCqhg.png" id="4_uiyin"]
 
@@ -31,7 +31,6 @@ script = ExtResource("1_dxr24")
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(15, 0)
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -40,7 +39,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VSlider" type="VSlider" parent="."]
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -58,7 +56,6 @@ editable = false
 scrollable = false
 
 [node name="VSlider2" type="VSlider" parent="."]
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -77,7 +74,7 @@ scrollable = false
 
 [node name="GameOver" type="Control" parent="."]
 visible = false
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -85,7 +82,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Label" type="Label" parent="GameOver"]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -102,7 +98,6 @@ label_settings = SubResource("LabelSettings_ot0gm")
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameOver"]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -118,15 +113,12 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="Button" type="Button" parent="GameOver/VBoxContainer"]
-layout_mode = 2
 text = "RESTART"
 
 [node name="Button2" type="Button" parent="GameOver/VBoxContainer"]
-layout_mode = 2
 text = "BACK TO MAIN MENU"
 
 [node name="BoxContainer" type="BoxContainer" parent="GameOver"]
-layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -141,24 +133,21 @@ grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GameOver/BoxContainer"]
 custom_minimum_size = Vector2(900, 500)
-layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
 [node name="TextureRect" type="TextureRect" parent="GameOver/BoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
-layout_mode = 2
 texture = ExtResource("3_segqn")
 ignore_texture_size = true
 
 [node name="TextureRect2" type="TextureRect" parent="GameOver/BoxContainer/HBoxContainer"]
 custom_minimum_size = Vector2(500, 0)
-layout_mode = 2
 texture = ExtResource("4_uiyin")
 ignore_texture_size = true
 
 [node name="Control" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -166,7 +155,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Stats_Player1" parent="Control" instance=ExtResource("3_yhsvf")]
-layout_mode = 1
 anchors_preset = 0
 anchor_bottom = 0.0
 offset_right = 0.0
@@ -174,7 +162,6 @@ grow_vertical = 1
 scale = Vector2(0.6, 0.6)
 
 [node name="Stats_Player2" parent="Control" instance=ExtResource("4_c4m18")]
-layout_mode = 1
 scale = Vector2(0.6, 0.6)
 
 [connection signal="pressed" from="GameOver/VBoxContainer/Button" to="." method="_on_button_pressed"]
