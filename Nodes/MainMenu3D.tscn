@@ -13,10 +13,10 @@
 [ext_resource type="Script" path="res://scripts/3DUI/papierrolle_flach.gd" id="9_p50rx"]
 [ext_resource type="PackedScene" uid="uid://dsj0fslwga5xl" path="res://Assets/Model/MainMenuObjects/zahnrad_klein.glb" id="10_4uhdl"]
 [ext_resource type="PackedScene" uid="uid://crg01h82ww1m6" path="res://Assets/Model/MainMenuObjects/zahnrad_mittel.glb" id="11_lokvi"]
-[ext_resource type="Script" path="res://scripts/3DUI/zahnrad_gross.gd" id="12_4r7f2"]
 [ext_resource type="PackedScene" uid="uid://d2k8qu46g6ono" path="res://Assets/Model/MainMenuObjects/blueprint deko.glb" id="12_67wtp"]
 [ext_resource type="PackedScene" uid="uid://nxapkgcq2c70" path="res://Nodes/light_setup.tscn" id="13_smxpv"]
 [ext_resource type="PackedScene" uid="uid://dhe41jox6id7r" path="res://Assets/Model/MainMenuObjects/bild_deko.glb" id="14_gbsgf"]
+[ext_resource type="Script" path="res://scripts/3DUI/zahnraeder.gd" id="14_o12ah"]
 
 [node name="MainMenu3D" type="Node3D"]
 
@@ -27,7 +27,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
 
 [node name="hammer" parent="." instance=ExtResource("3_hh122")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.07498, 0, -16.1185)
 
 [node name="naegel" parent="." instance=ExtResource("4_ntrhn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
@@ -59,23 +59,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 
 polygon = PackedVector2Array(-2.45033, 2.48997, 0.151118, 3.31404, 1.73134, -2.91213, -0.868115, -3.33871)
 
 [node name="papierrolle_knick" parent="." instance=ExtResource("8_dcfhc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.597003, 0.758382, -5.10524)
-
-[node name="zahnrad_gross" parent="." instance=ExtResource("9_040k3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.05736, 0.693096, 2.90686)
-script = ExtResource("12_4r7f2")
-
-[node name="Area3D" type="Area3D" parent="zahnrad_gross"]
-
-[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zahnrad_gross/Area3D"]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 1, 0)
-polygon = PackedVector2Array(-2.08972, -0.0469587, -1.73058, 0.0074904, -1.61429, 0.645974, -1.94789, 0.907681, -1.53382, 1.44804, -1.25564, 1.2367, -0.685201, 1.5693, -0.763029, 1.96162, -0.126001, 2.07284, -0.046989, 1.72112, 0.542226, 1.59, 0.795306, 1.90754, 1.32931, 1.55868, 1.14761, 1.18218, 1.4431, 0.734762, 1.96323, 0.743827, 2.05819, 0.383583, 2.08658, 0.244645, 2.34483, 0.188311, 2.47015, 0.306479, 2.76657, 0.167788, 2.67084, -0.0487282, 2.78537, -0.29579, 3.05219, -0.33612, 3.07458, -0.67794, 2.86192, -0.728558, 2.80197, -1.10857, 2.93608, -1.24247, 2.74082, -1.52916, 2.54035, -1.44206, 2.25035, -1.63663, 2.29233, -1.86529, 1.92476, -1.93575, 1.90737, -1.69968, 1.59995, -1.65818, 1.44884, -1.82434, 1.17078, -1.61312, 1.24312, -1.36342, 1.072, -1.10657, 0.671417, -1.46851, 0.684042, -1.86693, 0.0619359, -2.02743, -0.119753, -2.40391, 0.0759897, -2.65333, 0.0984111, -2.99516, -0.147246, -3.33727, -0.492687, -3.48152, -0.878954, -3.35652, -1.13512, -2.95099, -1.042, -2.54753, -0.569996, -2.24451, -0.289488, -2.37457, -0.0158706, -1.63521, -0.64685, -1.54361, -0.891336, -1.84516, -1.40084, -1.48902, -1.24612, -1.20108, -1.56272, -0.639316, -1.94525, -0.660589)
-
-[node name="zahnrad_klein" parent="." instance=ExtResource("10_4uhdl")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.50923, 0.693096, -0.103418)
-
-[node name="zahnrad_mittel" parent="." instance=ExtResource("11_lokvi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.02981, 0.829658, 2.1212)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37086, 0.984295, -5.84062)
 
 [node name="blueprint deko" parent="." instance=ExtResource("12_67wtp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -15)
@@ -88,6 +72,28 @@ transform = Transform3D(-1, 8.74228e-08, 3.82137e-15, 0, -4.37114e-08, 1, 8.7422
 [node name="bild_deko" parent="." instance=ExtResource("14_gbsgf")]
 transform = Transform3D(-0.841511, 0, -0.54024, 0, 1, 0, 0.54024, 0, -0.841511, 8.97174, 0.481874, -0.545207)
 
+[node name="zahnraeder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.24195, 0.616542, 2.28768)
+script = ExtResource("14_o12ah")
+
+[node name="Area3D" type="Area3D" parent="zahnraeder"]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="zahnraeder/Area3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+polygon = PackedVector2Array(-2.08972, -0.0469587, -1.73058, 0.0074904, -1.61429, 0.645974, -1.94789, 0.907681, -1.53382, 1.44804, -1.25564, 1.2367, -0.685201, 1.5693, -0.763029, 1.96162, -0.126001, 2.07284, -0.046989, 1.72112, 0.542226, 1.59, 0.795306, 1.90754, 1.32931, 1.55868, 1.14761, 1.18218, 1.4431, 0.734762, 1.96323, 0.743827, 2.05819, 0.383583, 2.08658, 0.244645, 2.34483, 0.188311, 2.47015, 0.306479, 2.76657, 0.167788, 2.67084, -0.0487282, 2.78537, -0.29579, 3.05219, -0.33612, 3.07458, -0.67794, 2.86192, -0.728558, 2.80197, -1.10857, 2.93608, -1.24247, 2.74082, -1.52916, 2.54035, -1.44206, 2.25035, -1.63663, 2.29233, -1.86529, 1.92476, -1.93575, 1.90737, -1.69968, 1.59995, -1.65818, 1.44884, -1.82434, 1.17078, -1.61312, 1.24312, -1.36342, 1.072, -1.10657, 0.671417, -1.46851, 0.684042, -1.86693, 0.0619359, -2.02743, -0.119753, -2.40391, 0.0759897, -2.65333, 0.0984111, -2.99516, -0.147246, -3.33727, -0.492687, -3.48152, -0.878954, -3.35652, -1.13512, -2.95099, -1.042, -2.54753, -0.569996, -2.24451, -0.289488, -2.37457, -0.0158706, -1.63521, -0.64685, -1.54361, -0.891336, -1.84516, -1.40084, -1.48902, -1.24612, -1.20108, -1.56272, -0.639316, -1.94525, -0.660589)
+
+[node name="zahnrad_gross" parent="zahnraeder" instance=ExtResource("9_040k3")]
+transform = Transform3D(1.01476, 0, 0, 0, 1.01476, 0, 0, 0, 1.01476, -0.0934882, 0, 0.0993819)
+
+[node name="zahnrad_klein" parent="zahnraeder" instance=ExtResource("10_4uhdl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.438931, 0, -2.77826)
+
+[node name="zahnrad_mittel" parent="zahnraeder" instance=ExtResource("11_lokvi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.90855, 0.23831, -0.686673)
+
 [connection signal="input_event" from="dreieck/Area3D" to="dreieck" method="_on_area_3d_input_event"]
+[connection signal="mouse_exited" from="dreieck/Area3D" to="dreieck" method="_on_area_3d_mouse_exited"]
 [connection signal="input_event" from="papierrolle_flach/Area3D" to="papierrolle_flach" method="_on_area_3d_input_event"]
-[connection signal="input_event" from="zahnrad_gross/Area3D" to="zahnrad_gross" method="_on_area_3d_input_event"]
+[connection signal="mouse_exited" from="papierrolle_flach/Area3D" to="papierrolle_flach" method="_on_area_3d_mouse_exited"]
+[connection signal="input_event" from="zahnraeder/Area3D" to="zahnraeder" method="_on_area_3d_input_event"]
+[connection signal="mouse_exited" from="zahnraeder/Area3D" to="zahnraeder" method="_on_area_3d_mouse_exited"]
