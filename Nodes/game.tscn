@@ -16,9 +16,9 @@
 render_priority = 0
 shader = ExtResource("10_s0qsw")
 shader_parameter/albedo = ExtResource("11_1bton")
-shader_parameter/direction_and_speed = null
-shader_parameter/flip = null
-shader_parameter/scale = null
+shader_parameter/direction_and_speed = Vector2(0, 0)
+shader_parameter/flip = false
+shader_parameter/scale = Vector2(7, 7)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ygh83"]
 material = SubResource("ShaderMaterial_l0twu")
@@ -61,5 +61,5 @@ autoplay = true
 [node name="Node3D" type="Node3D" parent="."]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(-3.93402e-06, 0, 90, 0, 1.168, 0, -90, 0, -3.93402e-06, 0, -1.88459, 0)
+transform = Transform3D(-1.21955e-05, 0, 243, 0, 1.168, 0, -279, 0, -1.06219e-05, 0, -1.88844, 0)
 mesh = SubResource("BoxMesh_ygh83")
