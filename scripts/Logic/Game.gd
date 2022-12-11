@@ -39,8 +39,8 @@ func _ready():
 	p2_train.hit.connect(_on_hit_player)
 	p1_train.game_over.connect(_on_player_game_over)
 	p2_train.game_over.connect(_on_player_game_over)
-	p1_train.current_speed = 1
-	p2_train.current_speed = 6
+	p1_train.current_speed = 12
+	p2_train.current_speed = 16
 
 func getMapSize(node, is_start):
 	if node == StartNode && not is_start:
@@ -55,6 +55,13 @@ func getMapSize(node, is_start):
 		active_map_nodes += 1
 
 func _on_player_game_over():
+	var tween = create_tween()
+	tween.tween_callback(set_Gameover).set_delay(0.75)
+
+func _on_turn_event():
+	#
+	pass
+func set_Gameover():
 	p1_train.current_speed = 0
 	p2_train.current_speed = 0
 	p1_train.visible = false
@@ -62,11 +69,6 @@ func _on_player_game_over():
 	for child in $Control.get_children():
 		child.hide()
 	$Control/GameOver.visible = true
-
-func _on_turn_event():
-	#
-	pass
-	
 func _set_starting_Positions():
 	p1_node = StartNode
 	
