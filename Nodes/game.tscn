@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://b8u4bo4mklj55"]
+[gd_scene load_steps=10 format=3 uid="uid://b8u4bo4mklj55"]
 
 [ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_dubwq"]
-[ext_resource type="PackedScene" path="res://Nodes/light_setup.tscn" id="2_1lh4t"]
+[ext_resource type="PackedScene" uid="uid://nxapkgcq2c70" path="res://Nodes/light_setup.tscn" id="2_1lh4t"]
 [ext_resource type="PackedScene" uid="uid://bqe8ucbruto1j" path="res://Nodes/StartNode.tscn" id="3_xcgy2"]
 [ext_resource type="PackedScene" uid="uid://md2ofbviios3" path="res://Nodes/Train_P1.tscn" id="4_gg4ea"]
-[ext_resource type="PackedScene" path="res://Nodes/InfiniteScroller.tscn" id="5_3jhcw"]
 [ext_resource type="PackedScene" uid="uid://bikdn7ep2vpxw" path="res://Nodes/Train_P2.tscn" id="5_wi6pu"]
 [ext_resource type="PackedScene" uid="uid://cys06pnxfjl2m" path="res://Nodes/UI.tscn" id="6_eicse"]
 [ext_resource type="AudioStream" uid="uid://c5jhukuk8r3mf" path="res://Assets/Sounds/_MUSIC_/GameJamGameLoop.wav" id="7_wagg2"]
@@ -28,14 +27,8 @@ near = 0.041
 [node name="Train1" parent="." instance=ExtResource("4_gg4ea")]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, -10, 0, 0)
 
-[node name="InfiniteScroller" parent="Train1" instance=ExtResource("5_3jhcw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, -104)
-
 [node name="Train2" parent="." instance=ExtResource("5_wi6pu")]
 transform = Transform3D(1, 0, 3.55271e-15, 0, 1, 0, -3.55271e-15, 0, 1, 9.90113, -0.0549407, -0.085681)
-
-[node name="InfiniteScroller" parent="Train2" instance=ExtResource("5_3jhcw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, -99)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.875944, -0.294781, 0.381872, -0.106805, 0.65344, 0.749406, -0.470441, -0.697224, 0.540892, 0, 8.25958, 0)

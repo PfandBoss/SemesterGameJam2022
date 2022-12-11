@@ -87,7 +87,6 @@ transform = Transform3D(1.96701e-07, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1.96701e-07, -3
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="train"]
 transform = Transform3D(-2.91409e-08, 0, -0.666667, 0, 0.666667, 0, 0.666667, 0, -2.91409e-08, 6, -0.137826, -1.33333)
-collision_layer = 2
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="train/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 4.23516e-22)
