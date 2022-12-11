@@ -1,5 +1,10 @@
-extends CanvasLayer
+extends Control
 
 func _ready():
-	var hbox = self.get_node("Rahmen/Ressourcen/RessourcenBox")
-	hbox.add_spacer(true)
+	pass
+	
+	
+func _process(delta):
+	
+	
+	

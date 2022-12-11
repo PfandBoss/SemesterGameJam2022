@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 var currentSpeed
 var maxSpeed = float(TrainEngine.maxSpeed)
@@ -13,15 +13,14 @@ func _ready():
 	#get Game Node reference
 	while not root is Game:
 		root = root.get_parent()
-	
-	print("maxSpeed =", maxSpeed)
 		
 func _process(delta):
 	
 	currentSpeed = root.p1_train.current_speed
-	print("currentSpeed", currentSpeed)
 	deg = currentSpeed * (70.0/maxSpeed) - 35.0
-	print(deg)
 	rad = (deg * 3.14) / 180
 	self.get_node("Pfeil").rotation = rad
 
+func _on_stats_player_1_resized():
+	print("resized")
+	pass # Replace with function body.

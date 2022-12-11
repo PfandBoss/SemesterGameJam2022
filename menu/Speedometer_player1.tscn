@@ -5,7 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://hy1r4mahhob2" path="res://Assets/Textures/GUI/Speedometer_pointer.png" id="2_vm8nm"]
 [ext_resource type="Texture2D" uid="uid://c8087dusjhilc" path="res://Assets/Textures/GUI/Speedometer_foreground.png" id="3_7tp67"]
 
-[node name="Speedometer" type="CanvasLayer"]
+[node name="Speedometer" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 483.0
+offset_bottom = 505.0
 script = ExtResource("1_8r0bw")
 
 [node name="Background" type="TextureRect" parent="."]

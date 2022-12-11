@@ -1,47 +1,62 @@
-[gd_scene load_steps=7 format=3 uid="uid://dgr3cta6n1tg3"]
+[gd_scene load_steps=7 format=3 uid="uid://bpvxwo2otee3b"]
 
-[ext_resource type="Script" path="res://menu/stats_player_1.gd" id="1_7a1hg"]
 [ext_resource type="PackedScene" uid="uid://bxlhdan6h6qwi" path="res://menu/Speedometer_player1.tscn" id="1_8v7ps"]
+[ext_resource type="Script" path="res://menu/stats_player_2.gd" id="1_buc37"]
+[ext_resource type="Texture2D" uid="uid://qud0m3iwlyed" path="res://Assets/Textures/GUI/frame_player2.png" id="3_mx7a4"]
 [ext_resource type="Texture2D" uid="uid://dfqal4ri4ftrf" path="res://Assets/Textures/Kohle.png" id="3_tjc2l"]
-[ext_resource type="Texture2D" uid="uid://cj3ipy1gilaxu" path="res://Assets/Textures/GUI/upscaledSign.png" id="3_v32w1"]
 [ext_resource type="Texture2D" uid="uid://clemmheiw1kq" path="res://Assets/Textures/Gunpowder.png" id="4_jn38u"]
 [ext_resource type="Texture2D" uid="uid://bhmyyu0uhx541" path="res://Assets/Textures/Opera_senza_titolo (2).png" id="5_b5gk5"]
 
-[node name="Stats_Player1" type="Control"]
+[node name="Stats_Player2" type="Control"]
 layout_mode = 3
-anchors_preset = 9
-anchor_bottom = 1.0
-offset_right = 370.0
-grow_vertical = 2
-script = ExtResource("1_7a1hg")
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -312.0
+offset_bottom = 409.0
+grow_horizontal = 0
+script = ExtResource("1_buc37")
 
 [node name="Speedometer_player1" parent="." instance=ExtResource("1_8v7ps")]
-offset_right = 516.0
-offset_bottom = 494.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -249.0
+offset_right = 249.0
+offset_bottom = 490.0
+grow_horizontal = 0
 scale = Vector2(0.5, 0.5)
 
 [node name="Rahmen2" type="TextureRect" parent="."]
-offset_right = 463.0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -324.0
+offset_right = 139.0
 offset_bottom = 562.0
+grow_horizontal = 0
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("3_v32w1")
+texture = ExtResource("3_mx7a4")
 
 [node name="RessourcenBox" type="HBoxContainer" parent="."]
 visible = false
-anchors_preset = 2
+anchors_preset = 3
+anchor_left = 1.0
 anchor_top = 1.0
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 67.0
-offset_top = -316.0
-offset_right = 3562.0
-offset_bottom = 661.0
+offset_left = -228.0
+offset_top = -78.0
+offset_right = 3267.0
+offset_bottom = 982.0
+grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.05, 0.05)
 theme_override_constants/separation = 330
 
 [node name="Kohle" type="VBoxContainer" parent="RessourcenBox"]
 offset_right = 945.0
-offset_bottom = 977.0
+offset_bottom = 1060.0
 theme_override_constants/separation = 10
 
 [node name="TextureRect" type="TextureRect" parent="RessourcenBox/Kohle"]
@@ -59,7 +74,7 @@ text = "5
 [node name="GunPowder" type="VBoxContainer" parent="RessourcenBox"]
 offset_left = 1275.0
 offset_right = 2220.0
-offset_bottom = 977.0
+offset_bottom = 1060.0
 
 [node name="TextureRect" type="TextureRect" parent="RessourcenBox/GunPowder"]
 offset_right = 945.0
@@ -74,7 +89,7 @@ offset_bottom = 958.0
 [node name="Munition" type="VBoxContainer" parent="RessourcenBox"]
 offset_left = 2550.0
 offset_right = 3495.0
-offset_bottom = 977.0
+offset_bottom = 1060.0
 size_flags_stretch_ratio = 0.39
 
 [node name="MunitionSprite" type="TextureRect" parent="RessourcenBox/Munition"]
@@ -87,5 +102,3 @@ offset_top = 935.0
 offset_right = 945.0
 offset_bottom = 977.0
 theme_override_font_sizes/font_size = 30
-
-[connection signal="resized" from="." to="Speedometer_player1" method="_on_stats_player_1_resized"]
