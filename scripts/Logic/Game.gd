@@ -37,7 +37,7 @@ func _ready():
 	p2_train.is_P1 = false
 	p1_train.hit.connect(_on_hit_player)
 	p2_train.hit.connect(_on_hit_player)
-	p1_train.current_speed = 20
+	p1_train.current_speed = 9
 	p2_train.current_speed = 6
 
 func getMapSize(node, is_start):

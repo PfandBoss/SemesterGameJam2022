@@ -1,10 +1,8 @@
 extends Control
 
-func _ready():
-	pass
-	
-	
-func _process(delta):
+var player_id = 1
+
+
 	
 	
 	
