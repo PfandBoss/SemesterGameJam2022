@@ -121,7 +121,7 @@ icon = ExtResource("14_503dh")
 [node name="Storage2" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, 0.876562)
 currentType = 2
-icon = ExtResource("15_dew1j")
+icon = ExtResource("19_5df2b")
 
 [node name="Cannon" parent="." instance=ExtResource("5_vgxqe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.32927, 1.2303, 0.0486939)
@@ -138,7 +138,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.7029
 [node name="Storage3" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63306, -0.159192, -10.7834)
 currentType = 1
-icon = ExtResource("19_5df2b")
+icon = ExtResource("15_dew1j")
 audioClip = ExtResource("17_ajifv")
 
 [node name="train" parent="." instance=ExtResource("3_jmv6b")]
