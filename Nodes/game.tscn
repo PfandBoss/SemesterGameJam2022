@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://c2ptxav0ud0kg" path="res://Assets/Textures/Sand/Sand_Diffuse.png" id="10_g8pl7"]
 [ext_resource type="Shader" path="res://Nodes/game.gdshader" id="10_ugxfo"]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_nox6d"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3nh57"]
 render_priority = 0
 shader = ExtResource("10_ugxfo")
 shader_parameter/albedo = ExtResource("10_g8pl7")
@@ -21,7 +21,7 @@ shader_parameter/flip = null
 shader_parameter/scale = Vector2(5, 5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_seoe7"]
-material = SubResource("ShaderMaterial_nox6d")
+material = SubResource("ShaderMaterial_3nh57")
 
 [node name="Game" type="Node"]
 script = ExtResource("1_dubwq")
