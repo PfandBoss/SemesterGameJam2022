@@ -22,6 +22,7 @@ func interact(player):
 			if currentStashValue < maxStashValue:
 				currentStashValue += 1
 				ammoType = 0
+				DAMAGE = 5
 				player.clearInventory()
 				$AudioStreamPlayer2.play()
 			return
@@ -37,6 +38,7 @@ func interact(player):
 			if currentStashValue < maxStashValue:
 				currentStashValue += 1
 				ammoType = 1
+				DAMAGE = 8
 				player.clearInventory()
 				$AudioStreamPlayer2.play()
 			return
@@ -45,6 +47,7 @@ func interact(player):
 			if currentStashValue < maxStashValue:
 				currentStashValue += 1
 				ammoType = 2
+				DAMAGE = 12
 				player.clearInventory()
 				$AudioStreamPlayer2.play()
 			return

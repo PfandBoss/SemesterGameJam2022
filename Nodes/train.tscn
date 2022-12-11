@@ -1,19 +1,25 @@
-[gd_scene load_steps=16 format=3 uid="uid://c1mymb38wqdg6"]
+[gd_scene load_steps=22 format=3 uid="uid://c1mymb38wqdg6"]
 
-[ext_resource type="PackedScene" uid="uid://vpvpxwfpiao4" path="res://Assets/Model/Train/TrainFloorTile4x4.glb" id="1_ruoy4"]
+[ext_resource type="PackedScene" uid="uid://by5dkvik2ti0a" path="res://Assets/Model/Train/TrainFloorTile4x4.glb" id="1_ruoy4"]
 [ext_resource type="PackedScene" uid="uid://bbt38m8mno0d2" path="res://Assets/Model/Train/TrainWall.glb" id="2_ph0y0"]
 [ext_resource type="PackedScene" uid="uid://de8860yknve3i" path="res://Assets/Model/Train/TrainPillarFloorAdapter.glb" id="4_ub5ul"]
 [ext_resource type="PackedScene" uid="uid://dmraqtehsfo45" path="res://Assets/Model/Train/TrainWallArc.glb" id="5_lb36h"]
-[ext_resource type="PackedScene" uid="uid://b7lntc0mh3g7q" path="res://Assets/Model/Train/TrainFrameTopBottom.glb" id="6_0bbr0"]
-[ext_resource type="PackedScene" uid="uid://50qugnp8dmhk" path="res://Assets/Model/Train/TrainFrameTop.glb" id="7_2ua2q"]
+[ext_resource type="PackedScene" uid="uid://cugtbjho4lj44" path="res://Assets/Model/Train/TrainFrameTopBottom.glb" id="6_0bbr0"]
+[ext_resource type="PackedScene" uid="uid://db7atd4d3px2c" path="res://Assets/Model/Train/TrainFrameTop.glb" id="7_2ua2q"]
 [ext_resource type="PackedScene" uid="uid://gihk416gd7tx" path="res://Assets/Model/Train/TrainPillarArcExtention.glb" id="7_87n8g"]
 [ext_resource type="PackedScene" uid="uid://dfljj7kor8v2j" path="res://Assets/Model/Train/TrainPillarWood.glb" id="7_hd70v"]
-[ext_resource type="PackedScene" uid="uid://08f17h0im640" path="res://Assets/Model/Train/TrainWallInterior.glb" id="9_yvbc7"]
+[ext_resource type="PackedScene" uid="uid://p7dpfo0na253" path="res://Assets/Model/Train/TrainWallInterior.glb" id="9_yvbc7"]
 [ext_resource type="PackedScene" uid="uid://df1p6wn43228a" path="res://Assets/Model/Weapons/Canon.glb" id="10_54n3n"]
 [ext_resource type="PackedScene" uid="uid://b50i4le1br8sf" path="res://Assets/Model/Objects/Lamp.glb" id="11_rhd60"]
 [ext_resource type="PackedScene" uid="uid://hc684kkimahs" path="res://Assets/Model/Pipes/Pipe.glb" id="12_34qvo"]
 [ext_resource type="PackedScene" uid="uid://c8lfaa7u7l3dy" path="res://Assets/Model/Pipes/PipeConnector.glb" id="13_m7b0g"]
 [ext_resource type="PackedScene" uid="uid://r6wpgp3plg3j" path="res://Assets/Model/Pipes/PipeEdge.glb" id="14_vhywa"]
+[ext_resource type="PackedScene" uid="uid://17xxcaf81ri8" path="res://Assets/Model/TrainExterior/TrainFront.glb" id="15_vrw80"]
+[ext_resource type="PackedScene" uid="uid://bs85ji27qx1p3" path="res://Assets/Model/TrainExterior/TrainLowerCover.glb" id="16_xvkvb"]
+[ext_resource type="PackedScene" uid="uid://c7hnriu67n0rh" path="res://Assets/Model/TrainExterior/TrainLargeWheel.glb" id="17_r3wtv"]
+[ext_resource type="PackedScene" uid="uid://cnu4jnpyb3a5v" path="res://Assets/Model/TrainExterior/TrainLowerWheelCover.glb" id="18_i68yi"]
+[ext_resource type="PackedScene" uid="uid://2lvluxmfprmv" path="res://Assets/Model/Objects/Furnace.glb" id="19_xfwum"]
+[ext_resource type="PackedScene" uid="uid://cpjwodk8lb7ed" path="res://Assets/Model/Pipes/PipeDark.glb" id="20_h620b"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_prxf6"]
 
@@ -29,6 +35,13 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.0737
 transform = Transform3D(8.525, 0, 0, 0, 1, 0, 0, 0, 3.9864, 6, 4.07265, -2)
 cast_shadow = 3
 mesh = SubResource("PlaneMesh_prxf6")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="RoofShadowOccluder"]
+transform = Transform3D(-0.00622939, 0.00716891, 0.116917, 0.00147208, 0.998129, -0.0611231, -0.250499, -0.0004462, -0.0133193, 0.767332, -3.17453, -0.645867)
+light_color = Color(0.968627, 0.466667, 0.380392, 1)
+light_energy = 40.0
+shadow_enabled = true
+spot_range = 7.84232
 
 [node name="Floor" type="Node3D" parent="."]
 
@@ -60,6 +73,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -4)
 [node name="Pipe" parent="Pipes" instance=ExtResource("12_34qvo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3741, 0, -2)
 
+[node name="PipeEdge" parent="Pipes/Pipe" instance=ExtResource("14_vhywa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.0193, 0, -1.21751)
+
+[node name="PipeConnector" parent="Pipes/Pipe/PipeEdge" instance=ExtResource("13_m7b0g")]
+
+[node name="PipeEdge2" parent="Pipes/Pipe" instance=ExtResource("14_vhywa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.70862, 0, -1.21751)
+
+[node name="PipeConnector" parent="Pipes/Pipe/PipeEdge2" instance=ExtResource("13_m7b0g")]
+
+[node name="PipeEdge3" parent="Pipes/Pipe" instance=ExtResource("14_vhywa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 9.37739, 0, -1.21751)
+
+[node name="PipeConnector" parent="Pipes/Pipe/PipeEdge3" instance=ExtResource("13_m7b0g")]
+
 [node name="Pipe2" parent="Pipes" instance=ExtResource("12_34qvo")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3741, 1, -2)
 
@@ -76,7 +104,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3741, 0, -2)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.3741, 4, -2)
 
 [node name="Pipe5" parent="Pipes" instance=ExtResource("12_34qvo")]
-transform = Transform3D(-4.37114e-08, -10, 0, 1, -4.37114e-07, 0, 0, 0, 1, 13.832, 3.61748, -1.596)
+transform = Transform3D(-4.37114e-08, -11.819, 0, 1, -5.16625e-07, 0, 0, 0, 1, 15.6365, 3.61748, -1.596)
 
 [node name="PipeEdge" parent="Pipes" instance=ExtResource("14_vhywa")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 2.83199, 3.61748, -2.596)
@@ -142,7 +170,7 @@ transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 8, 3.6
 transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 5, -0.372508, -1.77042)
 
 [node name="Pipe8" parent="Pipes" instance=ExtResource("12_34qvo")]
-transform = Transform3D(-4.37114e-08, 8, 0, -1, -3.49691e-07, 0, 0, 0, 1, 6, 3.62749, -1.77042)
+transform = Transform3D(-4.37114e-08, 9.707, 0, -1, -4.24306e-07, 0, 0, 0, 1, 6, 3.62749, -1.77042)
 
 [node name="PipeEdge2" parent="Pipes" instance=ExtResource("14_vhywa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 2.62749, -1.77042)
@@ -173,6 +201,12 @@ transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -6)
 [node name="TrainWall7" parent="Walls" instance=ExtResource("2_ph0y0")]
 transform = Transform3D(1, 0, 0, 0, 1, -8.74228e-08, 0, 8.74228e-08, 1, 10, 0, -6)
 
+[node name="TrainWall15" parent="Walls" instance=ExtResource("2_ph0y0")]
+transform = Transform3D(-4.37114e-08, -8.74228e-08, -1, 0, 1, -8.74228e-08, 1, -3.82137e-15, -4.37114e-08, 14, 0, -6)
+
+[node name="TrainWall16" parent="Walls" instance=ExtResource("2_ph0y0")]
+transform = Transform3D(4.37114e-08, 0, -1, 0, 1, 0, -1, 0, -4.37114e-08, 14, 0, 2)
+
 [node name="TrainWall8" parent="Walls" instance=ExtResource("2_ph0y0")]
 transform = Transform3D(4.37114e-08, 1, 0, 1, -4.37114e-08, 0, 0, 0, 1, 6, 0, -6)
 
@@ -199,6 +233,18 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
 
 [node name="TrainWallInterior3" parent="Walls" instance=ExtResource("9_yvbc7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="TrainWallInterior4" parent="Walls" instance=ExtResource("9_yvbc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -2)
+
+[node name="TrainWallInterior5" parent="Walls" instance=ExtResource("9_yvbc7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -2)
+
+[node name="TrainWallInterior4" parent="Walls/TrainWallInterior5" instance=ExtResource("9_yvbc7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 0, -2)
+
+[node name="TrainWallInterior5" parent="Walls/TrainWallInterior5" instance=ExtResource("9_yvbc7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6, 0, 0)
 
 [node name="TrainPillarFloorAdapter" parent="Walls" instance=ExtResource("4_ub5ul")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
@@ -284,8 +330,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -6)
 [node name="TrainPillarWood12" parent="Walls" instance=ExtResource("7_hd70v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -6)
 
+[node name="TrainPillarFloorAdapter15" parent="Walls" instance=ExtResource("4_ub5ul")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14, -4.76837e-07, 2)
+
 [node name="TrainPillarWood13" parent="Walls" instance=ExtResource("7_hd70v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 2)
+
+[node name="TrainPillarFloorAdapter16" parent="Walls" instance=ExtResource("4_ub5ul")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14, -4.76837e-07, -2)
+
+[node name="TrainPillarWood14" parent="Walls" instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -2)
+
+[node name="TrainPillarWood15" parent="Walls" instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 14, 4.06763, -2)
+
+[node name="TrainPillarWood16" parent="Walls" instance=ExtResource("7_hd70v")]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 14, 4.06763, 2)
 
 [node name="TrainPillarWood" parent="Walls" instance=ExtResource("7_hd70v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 2)
@@ -311,6 +372,17 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4, 0, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98535, 2.0195, -1.84234)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Lights/Lamp"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0267167, 0.280738, 0.159808)
+light_color = Color(0.835294, 0.67451, 0.67451, 1)
+light_energy = 3.0
+light_indirect_energy = 0.0
+light_volumetric_fog_energy = 0.0
+light_size = 0.041
+
+[node name="Lamp6" parent="Lights" instance=ExtResource("11_rhd60")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10.0661, 2.0195, -2.0172)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights/Lamp6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0267167, 0.280738, 0.159808)
 light_color = Color(0.835294, 0.67451, 0.67451, 1)
 light_energy = 3.0
@@ -361,3 +433,50 @@ light_energy = 3.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 light_size = 0.041
+
+[node name="Exterior" type="Node3D" parent="."]
+
+[node name="TrainFront" parent="Exterior" instance=ExtResource("15_vrw80")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21.7349, 0, -2.17573)
+
+[node name="TrainLargeWheel" parent="." instance=ExtResource("17_r3wtv")]
+transform = Transform3D(1.612, 0, 0, 0, 1.612, 0, 0, 0, 1.612, 13.3814, 1.92074, 1.9898)
+
+[node name="TrainLargeWheel2" parent="." instance=ExtResource("17_r3wtv")]
+transform = Transform3D(-1.612, 0, -1.40926e-07, 0, 1.612, 0, 1.40926e-07, 0, -1.612, 13.3814, 1.92074, -6.35131)
+
+[node name="TrainLowerCover" parent="." instance=ExtResource("16_xvkvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2)
+
+[node name="TrainLowerCover6" parent="." instance=ExtResource("16_xvkvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
+
+[node name="TrainLowerWheelCover" parent="." instance=ExtResource("18_i68yi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.00063)
+
+[node name="TrainLowerWheelCover2" parent="." instance=ExtResource("18_i68yi")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -5.99937)
+
+[node name="TrainLowerCover2" parent="." instance=ExtResource("16_xvkvb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2.00063)
+
+[node name="TrainLowerCover3" parent="." instance=ExtResource("16_xvkvb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 0, -5.99936)
+
+[node name="TrainLowerCover4" parent="." instance=ExtResource("16_xvkvb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8, 0, -5.99936)
+
+[node name="TrainLowerCover5" parent="." instance=ExtResource("16_xvkvb")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12, 0, -5.99936)
+
+[node name="Furnace" parent="." instance=ExtResource("19_xfwum")]
+transform = Transform3D(-1.199, 0, -1.0482e-07, 0, 1.199, 0, 1.0482e-07, 0, -1.199, 12.7291, 0.0597833, -4)
+
+[node name="PipeDark" parent="." instance=ExtResource("20_h620b")]
+transform = Transform3D(1.985, 0, 0, 0, -3.88769e-07, -1.985, 0, 8.894, -8.67671e-08, 13.1727, 2.43619, -6.35907)
+
+[node name="PipeConnector" parent="." instance=ExtResource("13_m7b0g")]
+transform = Transform3D(2.345, 0, 0, 0, -1.02503e-07, -2.345, 0, 2.345, -1.02503e-07, 13.2, 2.42231, -4.1276)
+
+[node name="PipeConnector2" parent="." instance=ExtResource("13_m7b0g")]
+transform = Transform3D(2.345, 0, 0, 0, -1.02503e-07, -2.345, 0, 2.345, -1.02503e-07, 13.2, 2.42231, -5.88947)

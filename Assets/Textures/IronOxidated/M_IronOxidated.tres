@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=6 format=3 uid="uid://bdm4mn7mnyqva"]
+
+[ext_resource type="Texture2D" uid="uid://cnx52u4lagfkk" path="res://Assets/Textures/IronOxidated/Copper_Diffuse.png" id="1_isvjr"]
+[ext_resource type="Texture2D" uid="uid://dykvup1k25tqu" path="res://Assets/Textures/IronOxidated/Copper_Ao.png" id="2_ko6rl"]
+[ext_resource type="Texture2D" uid="uid://wn0p4sy380id" path="res://Assets/Textures/IronOxidated/Copper_Metallic.png" id="3_1qrxd"]
+[ext_resource type="Texture2D" uid="uid://bhnnkddb7sh7d" path="res://Assets/Textures/IronOxidated/Copper_output.png" id="4_cv4nk"]
+[ext_resource type="Texture2D" uid="uid://b2dy42ay5knhn" path="res://Assets/Textures/IronOxidated/Copper_Roughness.png" id="5_wow3i"]
+
+[resource]
+albedo_texture = ExtResource("1_isvjr")
+metallic = 1.0
+metallic_texture = ExtResource("3_1qrxd")
+roughness_texture = ExtResource("5_wow3i")
+normal_enabled = true
+normal_texture = ExtResource("4_cv4nk")
+ao_enabled = true
+ao_texture = ExtResource("2_ko6rl")
