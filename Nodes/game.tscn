@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://b8u4bo4mklj55"]
+[gd_scene load_steps=14 format=3 uid="uid://b8u4bo4mklj55"]
 
 [ext_resource type="Script" path="res://scripts/Logic/Game.gd" id="1_dubwq"]
-[ext_resource type="PackedScene" uid="uid://nxapkgcq2c70" path="res://Nodes/light_setup.tscn" id="2_1lh4t"]
+[ext_resource type="PackedScene" path="res://Nodes/light_setup.tscn" id="2_1lh4t"]
 [ext_resource type="PackedScene" uid="uid://bqe8ucbruto1j" path="res://Nodes/StartNode.tscn" id="3_xcgy2"]
 [ext_resource type="PackedScene" uid="uid://md2ofbviios3" path="res://Nodes/Train_P1.tscn" id="4_gg4ea"]
 [ext_resource type="PackedScene" uid="uid://bikdn7ep2vpxw" path="res://Nodes/Train_P2.tscn" id="5_wi6pu"]
@@ -9,6 +9,19 @@
 [ext_resource type="AudioStream" uid="uid://c5jhukuk8r3mf" path="res://Assets/Sounds/_MUSIC_/GameJamGameLoop.wav" id="7_wagg2"]
 [ext_resource type="AudioStream" uid="uid://n4ynf7hg2pcl" path="res://Assets/Sounds/_SOUNDFX_/GleiseLoop.wav" id="8_c6uwu"]
 [ext_resource type="AudioStream" uid="uid://dovvnflvxtqpi" path="res://Assets/Sounds/_SOUNDFX_/WindLoop.wav" id="9_q7v3t"]
+[ext_resource type="Shader" path="res://Nodes/game.gdshader" id="10_ugxfo"]
+[ext_resource type="Texture2D" uid="uid://cy6x8d3xe8lux" path="res://icon.svg" id="11_afstx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8kilj"]
+render_priority = 0
+shader = ExtResource("10_ugxfo")
+shader_parameter/albedo = ExtResource("11_afstx")
+shader_parameter/direction_and_speed = Vector2(0, 0)
+shader_parameter/flip = null
+shader_parameter/scale = null
+
+[sub_resource type="BoxMesh" id="BoxMesh_seoe7"]
+material = SubResource("ShaderMaterial_8kilj")
 
 [node name="Game" type="Node"]
 script = ExtResource("1_dubwq")
@@ -44,3 +57,7 @@ autoplay = true
 stream = ExtResource("9_q7v3t")
 volume_db = -2.476
 autoplay = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(79.3975, 0, 0, 0, 1, 0, 0, 0, 41.4052, 0, -1.65796, 0)
+mesh = SubResource("BoxMesh_seoe7")
