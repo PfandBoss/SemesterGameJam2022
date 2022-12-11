@@ -60,7 +60,7 @@ func shoot():
 		print(bullet.position)
 		var tween = bullet.create_tween()
 		tween.tween_property(bullet,"position",Vector3(70,0,0),0.5)
-		tween.tween_callback(queue_free)
+		tween.tween_callback(bullet.queue_free)
 		$AudioStreamPlayer.play(0)
 		return true
 	if currentStashValue >= 1 and currentPowderStashValue >= 2 and currentState == STATE.INACTIVE and ammoType == 1:
