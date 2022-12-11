@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://4vfvxfpy4wn2"]
+
+[ext_resource type="PackedScene" uid="uid://bj6bw54a873im" path="res://Assets/Model/Objects/CanonBall.glb" id="1_b7tpd"]
+
+[node name="CANNONBALL" type="Node3D"]
+
+[node name="CanonBall" parent="." instance=ExtResource("1_b7tpd")]

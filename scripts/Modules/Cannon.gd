@@ -55,9 +55,14 @@ func shoot():
 		currentStashValue -= 1
 		currentPowderStashValue = 0
 		currentState = STATE.INACTIVE
+		var bullet = preload("res://cannonball.tscn").instantiate()
+		add_child(bullet)
+		print(bullet.position)
+		var tween = bullet.create_tween()
+		tween.tween_property(bullet,"position",Vector3(70,0,0),0.5)
+		tween.tween_callback(bullet.queue_free)
 		$AudioStreamPlayer.play(0)
 		return true
-	
 	if currentStashValue >= 1 and currentPowderStashValue >= 2 and currentState == STATE.INACTIVE and ammoType == 1:
 		currentState = STATE.SHOOTING
 		currentStashValue -= 1
