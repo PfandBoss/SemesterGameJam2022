@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b8rsm7uapp583" path="res://undefined - Imgur (1).png" id="1_cb7ct"]
 [ext_resource type="Texture2D" uid="uid://44lfs83sax35" path="res://undefined - Imgur.png" id="2_udann"]
-[ext_resource type="PackedScene" uid="uid://dgr3cta6n1tg3" path="res://menu/stats_player_1.tscn" id="3_yhsvf"]
+[ext_resource type="PackedScene" path="res://menu/stats_player_1.tscn" id="3_yhsvf"]
 [ext_resource type="PackedScene" path="res://menu/stats_player_2.tscn" id="4_c4m18"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fir3c"]
@@ -23,7 +23,6 @@ size_flags_horizontal = 4
 
 [node name="Panel" type="Panel" parent="."]
 custom_minimum_size = Vector2(15, 0)
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -32,7 +31,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VSlider" type="VSlider" parent="."]
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -50,7 +48,6 @@ editable = false
 scrollable = false
 
 [node name="VSlider2" type="VSlider" parent="."]
-layout_mode = 1
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -68,20 +65,18 @@ editable = false
 scrollable = false
 
 [node name="Control" type="Control" parent="."]
-layout_mode = 1
+layout_mode = 3
 anchors_preset = 0
 offset_left = -579.0
 offset_right = 575.0
 offset_bottom = 649.0
 
 [node name="Stats_Player1" parent="Control" instance=ExtResource("3_yhsvf")]
-layout_mode = 1
 offset_right = 345.0
 offset_bottom = -288.0
 scale = Vector2(0.6, 0.6)
 
 [node name="Stats_Player2" parent="Control" instance=ExtResource("4_c4m18")]
-layout_mode = 1
 offset_left = -187.0
 offset_right = 125.0
 scale = Vector2(0.6, 0.6)
