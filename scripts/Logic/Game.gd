@@ -156,7 +156,7 @@ func approach():
 		tween.tween_property(p1_train, "position", Vector3(p1_train.position.x, p1_train.position.y, p2_train.position.z), 0.7)
 	else:
 		tween.tween_property(p2_train, "position", Vector3(p2_train.position.x, p2_train.position.y, p1_train.position.z), 0.7)
-	emit_signal("shoot")
+	tween.tween_callback(func(): emit_signal("shoot")).set_delay(0.5)
 	tween.tween_callback(fight).set_delay(1)
 
 func fight():

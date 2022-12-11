@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://md2ofbviios3"]
+[gd_scene load_steps=26 format=3 uid="uid://md2ofbviios3"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_0x664"]
 [ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="3_1ix85"]
@@ -15,7 +15,6 @@
 [ext_resource type="Texture2D" uid="uid://ctbxpx6p36bdi" path="res://walking_ball2.png" id="8_0u1e2"]
 [ext_resource type="Texture2D" uid="uid://ckdlv6b7okseq" path="res://walking_powder2.png" id="10_a137a"]
 [ext_resource type="Texture2D" uid="uid://b5ioch3ad8y6r" path="res://walking_coal2.png" id="11_1jgcf"]
-[ext_resource type="Texture2D" uid="uid://7qppu15lvd1j" path="res://Nodes/Keys.png" id="13_d8wle"]
 [ext_resource type="Texture2D" uid="uid://bhmyyu0uhx541" path="res://Assets/Textures/Opera_senza_titolo (2).png" id="14_503dh"]
 [ext_resource type="Texture2D" uid="uid://biyvvql2ufkdf" path="res://Assets/Textures/Opera_senza_titolo (1).png" id="15_dew1j"]
 [ext_resource type="PackedScene" uid="uid://bkpnrgcfr1jgl" path="res://Nodes/Bin.tscn" id="16_q3kvk"]
@@ -91,27 +90,6 @@ animation = &"walking_coal"
 speed_scale = 2.0
 playing = true
 
-[node name="MiniGameButton0" type="Sprite3D" parent="CharacterBody3D"]
-transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, 6, 0)
-texture = ExtResource("13_d8wle")
-hframes = 5
-vframes = 8
-frame = 26
-
-[node name="MiniGameButton1" type="Sprite3D" parent="CharacterBody3D"]
-transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 1.5, 6, 0)
-texture = ExtResource("13_d8wle")
-hframes = 5
-vframes = 8
-frame = 26
-
-[node name="MiniGameButton2" type="Sprite3D" parent="CharacterBody3D"]
-transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, 6, 0)
-texture = ExtResource("13_d8wle")
-hframes = 5
-vframes = 8
-frame = 26
-
 [node name="Storage" parent="." instance=ExtResource("4_5jw5g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.31598, 0.0193453, -5.2771)
 icon = ExtResource("14_503dh")
@@ -134,7 +112,7 @@ transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0.70291, -0.287106, 10.1948)
 
 [node name="Storage3" parent="." instance=ExtResource("4_5jw5g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.63306, -0.159192, -10.7834)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -11)
 currentType = 1
 icon = ExtResource("19_5df2b")
 audioClip = ExtResource("17_ajifv")
@@ -144,7 +122,7 @@ transform = Transform3D(-6.55671e-08, 0, 1.5, 0, 1.5, 0, -1.5, 0, -6.55671e-08, 
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="train"]
 transform = Transform3D(-2.91409e-08, 0, -0.666667, 0, 0.666667, 0, 0.666667, 0, -2.91409e-08, 6, -0.137826, -1.33333)
-collision_layer = 2
+collision_layer = 4
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="train/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 4.23516e-22)
