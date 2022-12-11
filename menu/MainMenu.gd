@@ -1,10 +1,12 @@
 extends Control
 
+var master_bus
 
 # Called when the node enters the scene tree for the first time.
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$VBoxContainer/Start.grab_focus() # Replace with function body.
+	master_bus = AudioServer.get_bus_index("Master")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,3 +35,12 @@ func _on_full_screen_pressed():
 			if DisplayServer.window_get_mode() != DisplayServer.WINDOW_MODE_WINDOWED:
 				DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		
+
+
+func _on_vol_slider_value_changed(value):
+	AudioServer.set_bus_volume_db(master_bus, value)
+	
+	if value == -30:
+		AudioServer.set_bus_mute(master_bus,true)
+	else:
+		AudioServer.set_bus_mute(master_bus, false)
