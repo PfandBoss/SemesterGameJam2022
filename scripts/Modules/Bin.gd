@@ -7,3 +7,4 @@ class_name Bin
 #------------Methods-------------#
 func interact(player):
 	player.clearInventory()
+	$AudioStreamPlayer.play()

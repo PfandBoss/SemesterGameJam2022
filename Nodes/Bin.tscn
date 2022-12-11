@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkpnrgcfr1jgl"]
+[gd_scene load_steps=5 format=3 uid="uid://bkpnrgcfr1jgl"]
 
 [ext_resource type="Texture2D" uid="uid://pwyskequsdls" path="res://bin.png" id="1_krl02"]
 [ext_resource type="Script" path="res://scripts/Modules/Bin.gd" id="1_saxpo"]
+[ext_resource type="AudioStream" uid="uid://csenkrbfeeds7" path="res://Assets/Sounds/_SOUNDFX_/Muell.wav" id="3_lg545"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_0suy8"]
 height = 3.84361
@@ -16,3 +17,6 @@ shape = SubResource("CylinderShape3D_0suy8")
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 2, 0)
 texture = ExtResource("1_krl02")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lg545")
