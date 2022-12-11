@@ -1,10 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bpvxwo2otee3b"]
+[gd_scene load_steps=5 format=3 uid="uid://d3cmkdvgaiypf"]
 
 [ext_resource type="PackedScene" uid="uid://bxlhdan6h6qwi" path="res://menu/Speedometer_player1.tscn" id="1_8v7ps"]
 [ext_resource type="Script" path="res://menu/stats_player_2.gd" id="1_buc37"]
 [ext_resource type="Texture2D" uid="uid://qud0m3iwlyed" path="res://Assets/Textures/GUI/frame_player2.png" id="3_mx7a4"]
-[ext_resource type="Texture2D" uid="uid://dfqal4ri4ftrf" path="res://Assets/Textures/Kohle.png" id="3_tjc2l"]
-[ext_resource type="Texture2D" uid="uid://clemmheiw1kq" path="res://Assets/Textures/Gunpowder.png" id="4_jn38u"]
 [ext_resource type="Texture2D" uid="uid://bhmyyu0uhx541" path="res://Assets/Textures/Opera_senza_titolo (2).png" id="5_b5gk5"]
 
 [node name="Stats_Player2" type="Control"]
@@ -12,12 +10,11 @@ layout_mode = 3
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -312.0
-offset_bottom = 409.0
 grow_horizontal = 0
 script = ExtResource("1_buc37")
 
 [node name="Speedometer_player1" parent="." instance=ExtResource("1_8v7ps")]
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -28,6 +25,7 @@ grow_horizontal = 0
 scale = Vector2(0.5, 0.5)
 
 [node name="Rahmen2" type="TextureRect" parent="."]
+layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -40,6 +38,7 @@ texture = ExtResource("3_mx7a4")
 
 [node name="RessourcenBox" type="HBoxContainer" parent="."]
 visible = false
+layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -55,50 +54,34 @@ scale = Vector2(0.05, 0.05)
 theme_override_constants/separation = 330
 
 [node name="Kohle" type="VBoxContainer" parent="RessourcenBox"]
-offset_right = 945.0
-offset_bottom = 1060.0
+layout_mode = 2
 theme_override_constants/separation = 10
 
 [node name="TextureRect" type="TextureRect" parent="RessourcenBox/Kohle"]
-offset_right = 945.0
-offset_bottom = 931.0
-texture = ExtResource("3_tjc2l")
+layout_mode = 2
 
 [node name="Label" type="Label" parent="RessourcenBox/Kohle"]
-offset_top = 941.0
-offset_right = 945.0
-offset_bottom = 967.0
+layout_mode = 2
 text = "5
 "
 
 [node name="GunPowder" type="VBoxContainer" parent="RessourcenBox"]
-offset_left = 1275.0
-offset_right = 2220.0
-offset_bottom = 1060.0
+layout_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="RessourcenBox/GunPowder"]
-offset_right = 945.0
-offset_bottom = 931.0
-texture = ExtResource("4_jn38u")
+layout_mode = 2
 
 [node name="Label" type="Label" parent="RessourcenBox/GunPowder"]
-offset_top = 935.0
-offset_right = 945.0
-offset_bottom = 958.0
+layout_mode = 2
 
 [node name="Munition" type="VBoxContainer" parent="RessourcenBox"]
-offset_left = 2550.0
-offset_right = 3495.0
-offset_bottom = 1060.0
+layout_mode = 2
 size_flags_stretch_ratio = 0.39
 
 [node name="MunitionSprite" type="TextureRect" parent="RessourcenBox/Munition"]
-offset_right = 945.0
-offset_bottom = 931.0
+layout_mode = 2
 texture = ExtResource("5_b5gk5")
 
 [node name="Label" type="Label" parent="RessourcenBox/Munition"]
-offset_top = 935.0
-offset_right = 945.0
-offset_bottom = 977.0
+layout_mode = 2
 theme_override_font_sizes/font_size = 30

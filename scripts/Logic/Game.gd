@@ -37,7 +37,9 @@ func _ready():
 	p2_train.is_P1 = false
 	p1_train.hit.connect(_on_hit_player)
 	p2_train.hit.connect(_on_hit_player)
-	p1_train.current_speed = 9
+	p1_train.game_over.connect(_on_player_game_over)
+	p2_train.game_over.connect(_on_player_game_over)
+	p1_train.current_speed = 1
 	p2_train.current_speed = 6
 
 func getMapSize(node, is_start):
@@ -51,7 +53,15 @@ func getMapSize(node, is_start):
 	else:
 		getMapSize(node.next, false)
 		active_map_nodes += 1
-	
+
+func _on_player_game_over():
+	p1_train.current_speed = 0
+	p2_train.current_speed = 0
+	p1_train.visible = false
+	p2_train.visible = false
+	for child in $Control.get_children():
+		child.hide()
+	$Control/GameOver.visible = true
 
 func _on_turn_event():
 	#
@@ -68,10 +78,11 @@ func _set_starting_Positions():
 
 func _on_hit_player(player1,dmg):
 	if not player1:
-		p2_train.current_speed -= dmg
-	else:
 		p1_train.current_speed -= dmg
-	
+	else:
+		p2_train.current_speed -= dmg
+
+
 func _process(delta):
 	if(active_pickups.size() < 1):
 		fillPickups()
