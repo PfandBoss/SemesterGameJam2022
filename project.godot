@@ -29,7 +29,7 @@ _global_script_classes=[{
 "language": &"GDScript",
 "path": "res://scripts/Logic/MapNode.gd"
 }, {
-"base": "Node",
+"base": "StaticBody3D",
 "class": &"Module",
 "language": &"GDScript",
 "path": "res://scripts/Modules/Module.gd"
