@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://db7atd4d3px2c"
+uid="uid://50qugnp8dmhk"
 path="res://.godot/imported/TrainFrameTop.glb-85b93764254982d03cdc6280d6fa2df8.scn"
 
 [deps]
@@ -32,6 +32,18 @@ _subresources={
 "Copper": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/Textures/Wood/M_Wood.tres"
+}
+},
+"meshes": {
+"TrainFrameTop_Cube009": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
 }
 }
 }

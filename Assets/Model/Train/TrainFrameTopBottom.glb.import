@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://cugtbjho4lj44"
+uid="uid://b7lntc0mh3g7q"
 path="res://.godot/imported/TrainFrameTopBottom.glb-248277fb627afa53cb8a0dcc98857754.scn"
 
 [deps]
@@ -32,6 +32,18 @@ _subresources={
 "Copper": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/Textures/CopperOxidated/M_Copper.tres"
+}
+},
+"meshes": {
+"TrainFrameTopBottom_Cube009": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
 }
 }
 }

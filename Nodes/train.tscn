@@ -1,11 +1,11 @@
 [gd_scene load_steps=16 format=3 uid="uid://c1mymb38wqdg6"]
 
-[ext_resource type="PackedScene" uid="uid://by5dkvik2ti0a" path="res://Assets/Model/Train/TrainFloorTile4x4.glb" id="1_ruoy4"]
+[ext_resource type="PackedScene" uid="uid://vpvpxwfpiao4" path="res://Assets/Model/Train/TrainFloorTile4x4.glb" id="1_ruoy4"]
 [ext_resource type="PackedScene" uid="uid://bbt38m8mno0d2" path="res://Assets/Model/Train/TrainWall.glb" id="2_ph0y0"]
 [ext_resource type="PackedScene" uid="uid://de8860yknve3i" path="res://Assets/Model/Train/TrainPillarFloorAdapter.glb" id="4_ub5ul"]
 [ext_resource type="PackedScene" uid="uid://dmraqtehsfo45" path="res://Assets/Model/Train/TrainWallArc.glb" id="5_lb36h"]
-[ext_resource type="PackedScene" uid="uid://cugtbjho4lj44" path="res://Assets/Model/Train/TrainFrameTopBottom.glb" id="6_0bbr0"]
-[ext_resource type="PackedScene" uid="uid://db7atd4d3px2c" path="res://Assets/Model/Train/TrainFrameTop.glb" id="7_2ua2q"]
+[ext_resource type="PackedScene" uid="uid://b7lntc0mh3g7q" path="res://Assets/Model/Train/TrainFrameTopBottom.glb" id="6_0bbr0"]
+[ext_resource type="PackedScene" uid="uid://50qugnp8dmhk" path="res://Assets/Model/Train/TrainFrameTop.glb" id="7_2ua2q"]
 [ext_resource type="PackedScene" uid="uid://gihk416gd7tx" path="res://Assets/Model/Train/TrainPillarArcExtention.glb" id="7_87n8g"]
 [ext_resource type="PackedScene" uid="uid://dfljj7kor8v2j" path="res://Assets/Model/Train/TrainPillarWood.glb" id="7_hd70v"]
 [ext_resource type="PackedScene" uid="uid://08f17h0im640" path="res://Assets/Model/Train/TrainWallInterior.glb" id="9_yvbc7"]
@@ -314,7 +314,6 @@ light_energy = 3.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 light_size = 0.041
-shadow_enabled = true
 
 [node name="Lamp3" parent="Lights" instance=ExtResource("11_rhd60")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.98784, 1.73746, -5.81179)
@@ -326,7 +325,6 @@ light_energy = 3.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 light_size = 0.041
-shadow_enabled = true
 
 [node name="Lamp4" parent="Lights" instance=ExtResource("11_rhd60")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.98783, 1.73746, -5.81179)
@@ -338,7 +336,6 @@ light_energy = 3.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 light_size = 0.041
-shadow_enabled = true
 
 [node name="Lamp5" parent="Lights" instance=ExtResource("11_rhd60")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98783, 1.73746, -5.81179)
@@ -350,7 +347,6 @@ light_energy = 3.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 light_size = 0.041
-shadow_enabled = true
 
 [node name="Lamp2" parent="Lights" instance=ExtResource("11_rhd60")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.0164, 2.0195, -1.84234)
@@ -362,4 +358,3 @@ light_energy = 3.0
 light_indirect_energy = 0.0
 light_volumetric_fog_energy = 0.0
 light_size = 0.041
-shadow_enabled = true

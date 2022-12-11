@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dlsypa31ymd0s"
+uid="uid://b5ge5gx71a3ts"
 path="res://.godot/imported/TrainPillar.glb-632c3dc906cb68f02d7a7a4c5f8d50d2.scn"
 
 [deps]
@@ -32,6 +32,18 @@ _subresources={
 "Copper": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/Textures/CopperOxidated/M_Copper.tres"
+}
+},
+"meshes": {
+"TrainPillar_Cube011": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
 }
 }
 }

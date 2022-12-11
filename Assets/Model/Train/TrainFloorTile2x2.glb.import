@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://6txyn6ijydsw"
+uid="uid://cevww8u6jgj35"
 path="res://.godot/imported/TrainFloorTile2x2.glb-ba382e99664348325ae483528963462f.scn"
 
 [deps]
@@ -27,4 +27,17 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"TrainFloorTile2x2_Cube": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+}
+}
+}

@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b6dmdhc2m5gb5"
+uid="uid://csf8sx2sjoblu"
 path="res://.godot/imported/TrainFrameTopBottomLarge.glb-4e4e9f4a72532a8b1458e0183cb83453.scn"
 
 [deps]
@@ -27,4 +27,17 @@ animation/import=true
 animation/fps=30
 animation/trimming=false
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"TrainFrameTopBottomLarge_Cube003": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
+}
+}
+}

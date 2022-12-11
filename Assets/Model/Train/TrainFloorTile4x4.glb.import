@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://by5dkvik2ti0a"
+uid="uid://vpvpxwfpiao4"
 path="res://.godot/imported/TrainFloorTile4x4.glb-1f1fdbdfaf196e39d4764fe0b6ca351d.scn"
 
 [deps]
@@ -32,6 +32,18 @@ _subresources={
 "Plank": {
 "use_external/enabled": true,
 "use_external/path": "res://Assets/Textures/Wood/M_Wood.tres"
+}
+},
+"meshes": {
+"TrainFloorTile4x4_Plane001": {
+"generate/lightmap_uv": 1,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": false,
+"save_to_file/make_streamable": "",
+"save_to_file/path": ""
 }
 }
 }
