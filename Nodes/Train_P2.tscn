@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://bikdn7ep2vpxw"]
+[gd_scene load_steps=27 format=3 uid="uid://bikdn7ep2vpxw"]
 
 [ext_resource type="Script" path="res://scripts/Train.gd" id="1_mcmgl"]
 [ext_resource type="PackedScene" uid="uid://c1mymb38wqdg6" path="res://Nodes/train.tscn" id="2_xoa1a"]
@@ -14,7 +14,6 @@
 [ext_resource type="Texture2D" uid="uid://ctssikrodjqvc" path="res://o_walking_powder2.png" id="11_eefgn"]
 [ext_resource type="Texture2D" uid="uid://nctqw3vt5q0y" path="res://o_walking_coal2.png" id="12_581v4"]
 [ext_resource type="PackedScene" uid="uid://bkpnrgcfr1jgl" path="res://Nodes/Bin.tscn" id="14_n2rwc"]
-[ext_resource type="Texture2D" uid="uid://7qppu15lvd1j" path="res://Nodes/Keys.png" id="14_otf4l"]
 [ext_resource type="PackedScene" uid="uid://byo1m0n20yl45" path="res://Nodes/cannon.tscn" id="15_sof53"]
 [ext_resource type="PackedScene" uid="uid://cet80w4yr8rse" path="res://Storage.tscn" id="16_7dojn"]
 [ext_resource type="PackedScene" uid="uid://bhivunrkj87cy" path="res://Nodes/engine.tscn" id="17_regf7"]
@@ -87,7 +86,7 @@ transform = Transform3D(1.96701e-07, 0, -1.5, 0, 1.5, 0, 1.5, 0, 1.96701e-07, -3
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="train"]
 transform = Transform3D(-2.91409e-08, 0, -0.666667, 0, 0.666667, 0, 0.666667, 0, -2.91409e-08, 6, -0.137826, -1.33333)
-collision_layer = 2
+collision_layer = 4
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="train/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 4.23516e-22)
@@ -122,27 +121,6 @@ frames = SubResource("SpriteFrames_ltjyh")
 animation = &"walking_coal"
 speed_scale = 2.0
 playing = true
-
-[node name="MiniGameButton0" type="Sprite3D" parent="CharacterBody3D"]
-transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 0, 6, 0)
-texture = ExtResource("14_otf4l")
-hframes = 5
-vframes = 8
-frame = 26
-
-[node name="MiniGameButton1" type="Sprite3D" parent="CharacterBody3D"]
-transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 1.5, 6, 0)
-texture = ExtResource("14_otf4l")
-hframes = 5
-vframes = 8
-frame = 26
-
-[node name="MiniGameButton2" type="Sprite3D" parent="CharacterBody3D"]
-transform = Transform3D(8, 0, 0, 0, -3.93403e-07, 1, 0, -9, -4.37114e-08, 3, 6, 0)
-texture = ExtResource("14_otf4l")
-hframes = 5
-vframes = 8
-frame = 26
 
 [node name="Bin" parent="." instance=ExtResource("14_n2rwc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18577, 0.622175, 10.6544)
