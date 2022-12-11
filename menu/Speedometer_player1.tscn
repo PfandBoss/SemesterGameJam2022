@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://cunv4n2t33057"]
+
+[ext_resource type="Texture2D" uid="uid://cj5tvg0uksgif" path="res://Assets/Textures/GUI/Speedometer_background.png" id="1_8h3os"]
+[ext_resource type="Script" path="res://menu/Scripts/Speedometer.gd" id="1_qr0vh"]
+[ext_resource type="Texture2D" uid="uid://hy1r4mahhob2" path="res://Assets/Textures/GUI/Speedometer_pointer.png" id="2_vm8nm"]
+[ext_resource type="Texture2D" uid="uid://c8087dusjhilc" path="res://Assets/Textures/GUI/Speedometer_foreground.png" id="3_7tp67"]
+
+[node name="Speedometer" type="CanvasLayer"]
+script = ExtResource("1_qr0vh")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 472.0
+offset_bottom = 463.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_8h3os")
+
+[node name="Pfeil" type="TextureRect" parent="."]
+offset_right = 472.0
+offset_bottom = 463.0
+scale = Vector2(0.9, 0.9)
+pivot_offset = Vector2(242, 320)
+texture = ExtResource("2_vm8nm")
+
+[node name="Foreground" type="TextureRect" parent="."]
+offset_right = 472.0
+offset_bottom = 463.0
+pivot_offset = Vector2(230, 230)
+texture = ExtResource("3_7tp67")
+metadata/_edit_use_anchors_ = true
